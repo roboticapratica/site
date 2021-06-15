@@ -1,0 +1,28 @@
+/**
+ * Folha de estilo do site roboticapratica.com.br
+ * @author Professor Jose de Assis
+ * Saiba+ [joseassis.com.br]
+ */
+
+* {
+    padding: 0;
+    margin: 0;       
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    color: #c00000;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: rgb(75, 75, 75);
+    margin: 0px 0px 15px 10px;
+}
