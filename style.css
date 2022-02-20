@@ -1,28 +1,583 @@
-/**
- * Folha de estilo do site roboticapratica.com.br
- * @author Professor Jose de Assis
- * Saiba+ [joseassis.com.br]
- */
+/*
+    Folha de estilo do site Professor josé de Assis
+    @author Professor José de Assis
+    joseassis.com.br
+    professorjosedeassis.com.br
+*/
 
+/* Importação (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+/* CSS Reset */
 * {
+    margin: 0;
+    border: 0;
     padding: 0;
-    margin: 0;       
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
 }
 
-h1 {
-    color: #c00000;
-    margin: 10px;
+/* Layout */
+.Container {
+    margin: 0 auto;
+    padding: 50px 10px;  
 }
 
-h2 {
+.ContainerEx {
+    margin: 0 auto;    
+}
+
+.Flex, .Flex2, .Flex3, .Flex4, .Flex5 {
+    display: flex;
+}
+
+.Flex {
+    justify-content: space-between;   
+}
+
+.Flex2 {
+    align-items: center;
+}
+
+
+.Flex3 {
+    flex-direction: column;
+    text-align: center;  
+}
+
+.Flex4 {
+    flex-direction: column-reverse;
+    text-align: center;  
+}
+
+.Flex5 {    
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+}
+
+.Botao, .Botao2, .Botao3 {
+    text-decoration: none;
+    color: #fff;
     font-size: 1.2em;
-    color: rgb(75, 75, 75);
-    margin: 0px 0px 15px 10px;
+    font-weight: 700;
+}
+
+.Botao {
+    background-color: #fba400;
+    padding: 10px 40px;
+    margin-right: 5px;
+}
+
+.Botao2 {
+    background-color: #c00000;
+    padding: 10px 48px;
+    margin-left: 5px;
+}
+
+.Botao3 {
+    background-color: #c00000;
+    padding: 10px 40px;    
+}
+
+.Banner2 {
+    height: 200px;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Card {
+    margin-top: 30px;
+    width: 338px;
+    height: 520px;
+    background-color: #f1f1f1;
+    border: 1px solid #e8e8e8;
+    border-radius: 25px;
+    text-align: center;    
+}
+
+.Card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.Card h3 {
+    margin: 15px 30px 0px 30px;
+}
+
+.Card p {
+    text-align: left;
+    color: #434343;
+    padding: 10px 30px 50px 30px;
+}
+
+.Card a {
+    padding: 10px 100px 10px 100px;
+    border: 0;
+    border-radius: 25px;
+    margin: 0;
+}
+
+.Todos {
+    text-align: center;    
+    margin-top: 50px;   
+}
+
+.Todos a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1.25em;
+}
+
+/* topo do site */
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Cabeçalho */
+header {
+    height: 80px;
+}
+
+#logo img {    
+    width: 229px;
+    height: 60px;
+    margin: 10px 0px 0px 10px;
+}
+
+#check {
+    display: none;
+}
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0,0,0,0.5);
+}
+
+nav ul {
+    list-style: none;
+    background-color: #fba400;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px 20px;
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Banner */
+#banner {
+    height: 75vh;
+    background: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#banner h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+       
+}
+
+#banner h2 {    
+    font-size: 1.15em;
+    font-weight: 700;
+    margin: 15px 0px 50px 0px; 
+}
+
+/* Introdução */
+#intro {
+    background: url(img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#destaqueIntro img {
+   width: 320px;
+   height: 320px;
+   border-radius: 50%;
+   margin-bottom: 30px;
+}
+
+#textoIntro {
+    color: #fff;
+    text-align: left;   
+}
+
+#textoIntro h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 7px;
+}
+
+#textoIntro > p {
+    margin-bottom: 25px;
+}
+
+.TopicosIntro {
+    margin-top: 10px;
+}
+
+.TopicosIntro p {
+    font-weight: 600;
+}
+
+.TopicosIntro img {
+    margin-right: 10px;
+}
+
+/* youtube */
+#youtube {
+    background: url(img/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#youtube h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;    
+    color: #fff;
+}
+
+#youtube a {
+    background-color: #c00000;
+}
+
+#destacado {    
+    font-weight: 700;
+}
+
+#youtube a {
+   margin: 40px 60px 0px 60px;   
+}
+
+/* Cursos */
+#cursos {
+    background-color: #b4c2bd;
+}
+
+#cursos h2 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+       
+}
+
+/* Projetos */
+#projetos {
+    background-color: #fba400;
+}
+
+#projetos h2 {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;    
+}
+
+#projeto {
+    font-weight: 700;
+}
+
+/* Rodapé */
+footer {
+    background-color: #343538;
+    color: #fff;
+    text-align: center; 
+    font-size: 0.875em; 
+}
+
+#social {
+    margin-bottom: 25px;    
+}
+
+/***** Página sobre *****/
+.Banner2 h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+#imgProf img {
+    width: 256px;
+    height: 256px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+}
+
+#textoProf h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+#textoProf p {
+    text-align: left;
+    margin-top: 15px;
+}
+
+#frase {
+    font-style: italic;
+}
+
+#autor {
+    font-size: 0.8em;
+}
+
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 576px) {
+    /* Layout */
+    .Container, .ContainerEx {
+        max-width: 540px;
+    }
+
+    /* Banner */
+    #banner h1 {
+        font-size: 1.75em;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    #banner h2 {    
+        font-size: 1em;
+    }
+    
+    /* Introdução */
+    #destaqueIntro img {
+        margin: 0;
+        width: 240px;
+        height: 240px;
+     }
+     
+     #textoIntro {
+        margin-left: 25px;    
+     }
+
+    /* youtube */
+    .Flex3 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;                    
+    }
+    
+    #youtube h2 {
+        font-size: 1.25em;
+    }
+
+    #youtube a {
+        margin: 0;
+        font-size: 1em; 
+        padding: 10px 20px;      
+    }
+
+    /* Rodapé */
+    .Flex4 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;  
+    }
+    
+    #social {
+        margin: 0;    
+    }
+
+    /***** Página sobre *****/
+    #imgProf img {
+        width: 180px;
+        height: 180px;
+        margin: 0;        
+    }
+    
+    #textoProf {
+        margin-left: 25px;
+    }
+
+    #textoProf h2 {        
+        font-size: 1.25em;       
+    }
+    
+    #textoProf p {       
+        margin-top: 6px;
+        font-size: 0.85em;   
+    }   
+    
+    #autor {
+        font-size: 0.75em;
+    }
+
+}
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 768px) {
+    /* Layout */
+    .Container, .ContainerEx {
+        max-width: 720px;
+    }
+
+    /* youtube */
+    #youtube h2 {
+        font-size: 1.5em;
+    }
+
+    /* cursos e Projetos */
+    #cursos h2, #projetos h2 {
+        font-size: 1.85em;
+    }
+}
+
+/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+    /* Layout */
+    .Container, .ContainerEx {
+        max-width: 960px;
+    }
+    
+    /***** Página sobre *****/
+    #imgProf img {
+        width: 288px;
+        height: 288px;              
+    }
+    
+    #textoProf {
+        margin-left: 50px;
+    }
+
+    #textoProf h2 {        
+        font-size: 1.5em;       
+    }
+    
+    #textoProf p {       
+        margin-top: 15px;
+        font-size: 1em;   
+    }   
+    
+    #autor {
+        font-size: 0.8em;       
+    }
+}
+
+/* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1200px) {
+    /* Layout */
+    .Container, .ContainerEx {
+        max-width: 1140px;
+    }
+    
+    /* Cabeçalho */
+    header {
+        height: 160px;        
+    }
+    
+    #logo img {
+        width: 458px;
+        height: 120px;
+        margin-top: 20px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color: transparent;
+        margin-top: 55px;        
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: #343538;
+    }
+
+    nav ul li a:hover {
+        color: #fba400;
+    }
+
+    /* Banner */
+    #banner{
+        height: 70vh;
+    }
+
+    #banner h1 {
+        font-size: 2.75em;       
+    }
+
+    #banner h2 {    
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+
+    /* Introdução */
+    #intro {
+        background-attachment: fixed;    
+    }
+
+    #destaqueIntro img {
+        width: 400px;
+        height: 400px;
+     }
+     
+     #textoIntro {
+        margin-left: 100px;    
+     }
+    
+    /* Projetos */
+    #projetos {        
+        background: url(img/background.png);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;    
+    }
+
+    /* cursos e projetos */
+    #cursos h2, #projetos h2 {
+        font-size: 2.5em;
+    }
 }
