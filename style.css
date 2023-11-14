@@ -63,30 +63,40 @@ body {
   justify-content: space-evenly;
 }
 
-.Botao,
+
 .Botao2,
 .Botao3 {
   text-decoration: none;
   color: #fff;
   font-size: 1.2em;
-  font-weight: 700;
+  font-weight: 700;  
 }
 
 .Botao {
-  background-color: #fba400;
+  background-color: #fff; 
   padding: 10px 48px;
-  margin-left: 5px;
+  text-decoration: none;
+  color: #d66903;
+  font-size: 1.2em;
+  font-weight: 700;  
+ 
 }
 
 .Botao2 {
-  background-color: #c00000;
+  background-color: #d66903;
   padding: 10px 40px;
-  margin-right: 5px;
+  margin-right: 5px;  
 }
 
 .Botao3 {
-  background-color: #c00000;
+  background-color: #d66903;
   padding: 10px 40px;
+}
+
+.Botao4 {
+  background-color: #fff;
+  color: #c00000;
+  padding: 10px 48px;
 }
 
 .Banner2 {
@@ -105,7 +115,7 @@ body {
   margin-top: 30px;
   width: 338px;
   height: 520px;
-  background-color: #f1f1f1;
+  background-color: #f1f3f4;
   border: 1px solid #e8e8e8;
   border-radius: 25px;
   text-align: center;
@@ -139,7 +149,7 @@ body {
 
 .Todos a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-weight: 600;
   font-size: 1.25em;
 }
@@ -178,7 +188,7 @@ label {
 
 nav ul {
   list-style: none;
-  background-color: #fba400;
+  background-color: #d66903;
   height: 100vh;
   position: fixed;
   top: 80px;
@@ -203,7 +213,7 @@ nav ul li a {
 
 /* Banner */
 #banner {
-  height: 75vh;
+  height: 60vh;
   background: url(img/banner.jpg);
   background-size: cover;
   background-position: center;
@@ -270,7 +280,7 @@ nav ul li a {
 
 /* youtube */
 #youtube {
-  background: url(img/banner2.jpg);
+  background-color: #c00000;
   background-size: cover;
   background-position: center;
 }
@@ -304,7 +314,7 @@ nav ul li a {
 
 /* Projetos */
 #projetos {
-  background-color: #fba400;
+  background-color: #4d4d4d;
 }
 
 #projetos h2 {
@@ -312,15 +322,18 @@ nav ul li a {
   font-family: "Orbitron", sans-serif;
   font-weight: 400;
   font-size: 1.4em;
+  margin-bottom: 15px;
+  color:#fff;
 }
 
 #projeto {
   font-weight: 700;
+  color: #fff;
 }
 
 /* Rodapé */
 footer {
-  background-color: #343538;
+  background-color: #d66903;
   color: #fff;
   text-align: center;
   font-size: 0.875em;
@@ -576,12 +589,12 @@ footer {
   }
 
   nav ul li a:hover {
-    color: #fba400;
+    color: #c00000;
   }
 
   /* Banner */
   #banner {
-    height: 70vh;
+    height: 60vh;
   }
 
   #banner h1 {
