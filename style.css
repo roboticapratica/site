@@ -76,20 +76,20 @@ body {
   background-color: #fff; 
   padding: 10px 48px;
   text-decoration: none;
-  color: #d66903;
+  color: #e6a326;
   font-size: 1.2em;
   font-weight: 700;  
  
 }
 
 .Botao2 {
-  background-color: #d66903;
+  background-color: #e6a326;
   padding: 10px 40px;
   margin-right: 5px;  
 }
 
 .Botao3 {
-  background-color: #d66903;
+  background-color: #e6a326;
   padding: 10px 40px;
 }
 
@@ -97,6 +97,7 @@ body {
   background-color: #fff;
   color: #c00000;
   padding: 10px 48px;
+  font-size: 1.1em;
 }
 
 .Banner2 {
@@ -188,7 +189,7 @@ label {
 
 nav ul {
   list-style: none;
-  background-color: #d66903;
+  background-color: #e6a326;
   height: 100vh;
   position: fixed;
   top: 80px;
@@ -333,7 +334,7 @@ nav ul li a {
 
 /* Rodapé */
 footer {
-  background-color: #d66903;
+  background-color: #e6a326;
   color: #fff;
   text-align: center;
   font-size: 0.875em;
@@ -589,7 +590,7 @@ footer {
   }
 
   nav ul li a:hover {
-    color: #c00000;
+    color: #e6a326;
   }
 
   /* Banner */
