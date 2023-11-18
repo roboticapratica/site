@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
+<head>  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,
    initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description"
-    content="Aprenda robótica de forma prática e divertida desenvolvendo projetos simples e de baixo custo.">
-  <title>Você faz. Você vê. Você aprende.</title>
+  <meta name="description" content="Um site dedicado ao ensino da robótica como você nunca viu.">
+  <title>Robótica prática</title>
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -26,7 +25,8 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="projetos.html">Projetos</a></li>        
+          <!--li><a href="projetos.html">Projetos</a></li-->
+          <li><a href="apoio.html">Apoio</a></li>
         </ul>
       </nav>
     </div>
@@ -36,34 +36,34 @@
   <main id="banner">
     <div class="ContainerEx">
       <h1>Você faz. Você vê. Você aprende.</h1>
-      <h2>Um site dedicado ao ensino da robótica como você nunca viu.</h2>
-      <a href="projetos.html" class="Botao">Projetos</a>     
+      <h2 id="subtitulo">Um site dedicado ao ensino da robótica como você nunca viu.</h2>      
+      <a href="#projetos" class="Botao2">Projetos</a>
     </div>
   </main>
 
   <!-- Introdução -->
   <section id="intro">
-    <div class="Container Flex3">
+    <div class="Container Flex2">
       <div id="destaqueIntro">
-        <img src="img/robotica.jpg" alt="robótica educacional" />
+        <img src="img/roboticaarduino.jpg" alt="robótica prática">
       </div>
       <div id="textoIntro">
         <h2>Aprender na prática</h2>
         <p>
-          Aprenda Robótica de forma prática e divertida desenvolvendo projetos simples e de baixo custo.
+          Aprenda robótica de forma prática e divertida desenvolvendo projetos simples e de baixo custo.
         </p>
         <div class="TopicosIntro Flex2">
-          <img src="img/robo.png" alt="robô">
+          <img src="img/robo.png" alt="robótica">
           <p>Robótica com Arduino</p>
         </div>
         <div class="TopicosIntro Flex2">
-          <img src="img/robot.png" alt="robot">
-          <p>Robótica com Sucata</p>
+          <img src="img/robot.png" alt="robô">
+          <p>Robótica com sucata</p>
         </div>
         <div class="TopicosIntro Flex2">
           <img src="img/chip.png" alt="chip">
-          <p>Arduino - Eletrônica</p>
-        </div>
+          <p>Arduino / Eletrônica</p>
+        </div>       
       </div>
     </div>
   </section>
@@ -72,8 +72,8 @@
   <section id="youtube">
     <div class="Container Flex3">
       <h2>Inscreva-se no canal do <span id="destacado">YouTube!</span></h2>
-      <a href="https://www.youtube.com/c/RoboticapraticaBr/?sub_confirmation=1" target="_blank"
-        class="Botao3 Botao4">INSCREVER-SE</a>
+      <a href="https://www.youtube.com/@ProfessorJosedeAssis?sub_confirmation=1" target="_blank"
+        class="Botao2">INSCREVER-SE</a>
     </div>
   </section>
 
@@ -85,23 +85,14 @@
       </h2>
       <div class="Cards Flex5">
         <div class="Card">
-          <img src="img/vader.png" alt="vader">
-          <h3>Metareciclagem - Floppy</h3>
+          <img src="img/aviso.jpg" alt="aviso">
+          <h3>Aviso!</h3>
           <p>
-            Este tutorial ensina a reutilizar unidades antigas de drives de
-            disquete para reproduzir música usando o Arduino.
+            Estou desenvolvendo o conteúdo deste site. Você pode acompanhar
+            pelo YouTube os tutoriais e projetos que estão sendo produzidos.
           </p>
-          <a href="projetos/musicalfloppy.html" class="Botao2">Saiba +</a>
-        </div>
-        <div class="Card">
-          <img src="img/genius.png" alt="arduino genius">
-          <h3>GENIUS (Simon game)</h3>
-          <p>
-            O objetivo deste jogo é acompanhar uma sequência de luzes e sons
-            sem errar. Este tutorial ensina a desenvolver este projeto no
-            Arduino.
-          </p>
-          <a href="projetos/genius.html" class="Botao2">Saiba +</a>
+          <a href="https://www.youtube.com/c/RoboticapraticaBr" class="Botao" target="_blank">Saiba
+            +</a>
         </div>
         <div class="Card">
           <img src="img/aviso.jpg" alt="aviso">
@@ -110,40 +101,49 @@
             Estou desenvolvendo o conteúdo deste site. Você pode acompanhar
             pelo YouTube os tutoriais e projetos que estão sendo produzidos.
           </p>
-          <a href="https://www.youtube.com/c/RoboticapraticaBr" class="Botao2" target="_blank">Saiba
+          <a href="https://www.youtube.com/c/RoboticapraticaBr" class="Botao" target="_blank">Saiba
             +</a>
         </div>
-      </div>
+        <div class="Card">
+          <img src="img/aviso.jpg" alt="aviso">
+          <h3>Aviso!</h3>
+          <p>
+            Estou desenvolvendo o conteúdo deste site. Você pode acompanhar
+            pelo YouTube os tutoriais e projetos que estão sendo produzidos.
+          </p>
+          <a href="https://www.youtube.com/c/RoboticapraticaBr" class="Botao" target="_blank">Saiba
+            +</a>
+        </div>
+      </div>     
       <div class="Todos">
-        <a href="projetos.html">Conheça todos >></a>
+        <a href="https://www.youtube.com/c/RoboticapraticaBr" target="_blank">Conheça todos >></a>
       </div>
     </div>
-  </section>  
+  </section>
 
   <!-- Rodapé -->
   <footer>
     <div class="Container Flex4">
       <div id="copyright">
-        <p>©2023 - Robótica Prática</p>
+        <p>©2023 - Professor José de Assis</p>
       </div>
       <div id="social">
         <a href="https://www.youtube.com/c/RoboticapraticaBr" target="_blank"><img src="img/youtube.png"
-            alt="youtube" /></a>
+            alt="youtube"></a>
         <a href="https://www.linkedin.com/in/professorjosedeassis" target="_blank"><img src="img/linkedin.png"
-            alt="linkedin" /></a>
+            alt="linkedin"></a>
         <a href="https://www.facebook.com/professorjosedeassis" target="_blank"><img src="img/facebook.png"
-            alt="facebook" /></a>
+            alt="facebook"></a>
         <a href="https://www.instagram.com/prof.joseassis/" target="_blank"><img src="img/instagram.png"
-            alt="instagram" /></a>
-        <a href="https://twitter.com/joseassis" target="_blank"><img src="img/twitter.png" alt="twitter" /></a>
+            alt="instagram"></a>
+        <a href="https://twitter.com/joseassis" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll -->
-  <a href="#" id="topo"><img src="img/topo.png" alt="topo do site" /></a>
-  <!-- Scripts -->
-  <script src="scripts/scroll.js"></script>
+  <!-- Topo -->
+  <a href="#" id="topo"><img src="img/topo.png" alt="topo do site"></a>
+
 </body>
 
 </html>

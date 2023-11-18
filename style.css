@@ -1,12 +1,11 @@
 /*
-    Folha de estilo do site Professor josé de Assis
+    Folha de estilo do site Robótica prática
     @author Professor José de Assis
-    joseassis.com.br
-    professorjosedeassis.com.br
+    joseassis.com.br    
 */
 
 /* Importação (Google Fonts) */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
 
@@ -17,6 +16,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1em;
@@ -25,7 +28,7 @@ body {
 /* Layout */
 .Container {
   margin: 0 auto;
-  padding: 50px 10px;
+  padding: 50px 15px;
 }
 
 .ContainerEx {
@@ -63,41 +66,23 @@ body {
   justify-content: space-evenly;
 }
 
-
-.Botao2,
-.Botao3 {
+.Botao,
+.Botao2 {
   text-decoration: none;
   color: #fff;
   font-size: 1.2em;
-  font-weight: 700;  
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 10px 40px; 
 }
 
 .Botao {
-  background-color: #fff; 
-  padding: 10px 48px;
-  text-decoration: none;
-  color: #c00000;
-  font-size: 1.2em;
-  font-weight: 700;  
- 
+  background-color: #c00000;   
 }
 
 .Botao2 {
-  background-color: #e6a326;
-  padding: 10px 40px;
-  margin-right: 5px;  
-}
-
-.Botao3 {
-  background-color: #e6a326;
-  padding: 10px 40px;
-}
-
-.Botao4 {
   background-color: #fff;
-  color: #c00000;
-  padding: 10px 48px;
-  font-size: 1.1em;
+  color: #c00000;   
 }
 
 .Banner2 {
@@ -117,7 +102,7 @@ body {
   width: 338px;
   height: 520px;
   background-color: #f1f3f4;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #a1a1a1;
   border-radius: 25px;
   text-align: center;
 }
@@ -143,6 +128,12 @@ body {
   margin: 0;
 }
 
+.pix {
+  background-color: #fff;
+  padding: 1px 3px;
+  font-weight: 600;
+}
+
 .Todos {
   text-align: center;
   margin-top: 50px;
@@ -150,7 +141,7 @@ body {
 
 .Todos a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   font-weight: 600;
   font-size: 1.25em;
 }
@@ -167,12 +158,13 @@ body {
 /* Cabeçalho */
 header {
   height: 80px;
+  background-color: #1f1f1f;
 }
 
 #logo img {
-  width: 229px;
-  height: 60px;
-  margin: 10px 0px 0px 10px;
+  width: 274.8px;
+  height: 63.6px;
+  margin: 8px 0px 0px 5px;
 }
 
 #check {
@@ -182,14 +174,14 @@ header {
 label {
   font-size: 3em;
   position: fixed;
-  top: 5px;
-  right: 15px;
-  color: rgba(230, 163, 38, 0.5);
+  top: 7px;
+  right: 20px;
+  color: rgba(253, 205, 0, 0.5);
 }
 
 nav ul {
   list-style: none;
-  background-color: #e6a326;
+  background-color: #1f1f1f;
   height: 100vh;
   position: fixed;
   top: 80px;
@@ -198,23 +190,23 @@ nav ul {
   transition: all 0.5s;
 }
 
-#check:checked ~ ul {
+#check:checked~ul {
   right: 0;
 }
 
 nav ul li {
-  padding: 20px 20px;
-  border-bottom: 1px solid #fff;
+  padding: 17px 20px;
+  border-bottom: 1px solid #a9a9a9;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #fdcd00;
 }
 
 /* Banner */
 #banner {
-  height: 60vh;
+  height: 50vh;
   background: url(img/banner.jpg);
   background-size: cover;
   background-position: center;
@@ -227,14 +219,13 @@ nav ul li a {
 
 #banner h1 {
   font-family: "Orbitron", sans-serif;
-  font-weight: 400;
-  font-size: 2em;
+  font-weight: 500;
+  font-size: 1.75em;
+  margin-bottom: 55px;
 }
 
-#banner h2 {
-  font-size: 1.15em;
-  font-weight: 700;
-  margin: 15px 0px 50px 0px;
+#subtitulo {
+  display: none;
 }
 
 /* Introdução */
@@ -244,16 +235,12 @@ nav ul li a {
   background-position: center;
 }
 
-#destaqueIntro img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  margin-bottom: 30px;
+#destaqueIntro {
+  display: none;
 }
 
 #textoIntro {
   color: #fff;
-  text-align: left;
 }
 
 #textoIntro h2 {
@@ -263,12 +250,12 @@ nav ul li a {
   margin-bottom: 7px;
 }
 
-#textoIntro > p {
+#textoIntro>p {
   margin-bottom: 25px;
 }
 
 .TopicosIntro {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .TopicosIntro p {
@@ -281,9 +268,7 @@ nav ul li a {
 
 /* youtube */
 #youtube {
-  background-color: #c00000;
-  background-size: cover;
-  background-position: center;
+  background-color: #c00000; 
 }
 
 #youtube h2 {
@@ -295,46 +280,31 @@ nav ul li a {
 
 #destacado {
   font-weight: 700;
+  font-size: 1.2em;
 }
 
 #youtube a {
-  margin: 40px 60px 0px 60px;
-}
-
-/* Cursos */
-#cursos {
-  background-color: #b4c2bd;
-}
-
-#cursos h2 {
-  text-align: center;
-  font-family: "Orbitron", sans-serif;
-  font-weight: 400;
-  font-size: 1.4em;
+  margin: 40px 72px 0px 72px;
+  font-size: 1.1em;
 }
 
 /* Projetos */
-#projetos {
-  background-color: #4d4d4d;
-}
-
 #projetos h2 {
   text-align: center;
   font-family: "Orbitron", sans-serif;
   font-weight: 400;
-  font-size: 1.4em;
-  margin-bottom: 15px;
-  color:#fff;
+  font-size: 1.7em;
+  margin-bottom: 20px;
 }
 
 #projeto {
   font-weight: 700;
-  color: #fff;
+  color: #c00000;
 }
 
 /* Rodapé */
 footer {
-  background-color: #e6a326;
+  background-color: #1f1f1f;
   color: #fff;
   text-align: center;
   font-size: 0.875em;
@@ -347,6 +317,7 @@ footer {
 /***** Página sobre *****/
 .Banner2 h1 {
   font-family: "Orbitron", sans-serif;
+  text-shadow: #000 0.05em 0.05em 0.05em;
   font-weight: 700;
   font-size: 2.5em;
 }
@@ -378,9 +349,36 @@ footer {
   font-size: 0.8em;
 }
 
+/***** Página apoio *****/
+#apoio h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: 7px;
+}
+
+#apoio h3 {
+  font-weight: 500;
+  margin-top: 25px;
+  font-size: 1.1em;
+}
+
+#apoio h4 {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+#apoio form {
+  margin: 8px 0px 10px 0px;
+}
+
+#apoio img {
+  margin: 12px 0px 10px 0px;
+}
+
 /***** Páginas de conteúdo *****/
 #conteudo h2 {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 1.5em;
   margin-bottom: 8px;
@@ -394,7 +392,7 @@ footer {
 }
 
 #conteudo h3 {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 1.25em;
   margin: 25px 0px 10px 0px;
@@ -405,12 +403,17 @@ footer {
   height: 106px;
 }
 
+#conteudo ul li {
+  margin-left: 20px;
+}
+
 #conteudo a {
   text-decoration: none;
 }
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px) {
+
   /* Layout */
   .Container,
   .ContainerEx {
@@ -421,22 +424,7 @@ footer {
   #banner h1 {
     font-size: 1.75em;
     font-weight: 400;
-    margin: 0;
-  }
-
-  #banner h2 {
-    font-size: 1em;
-  }
-
-  /* Introdução */
-  #destaqueIntro img {
-    margin: 0;
-    width: 240px;
-    height: 240px;
-  }
-
-  #textoIntro {
-    margin-left: 25px;
+    margin-bottom: 30px;
   }
 
   /* youtube */
@@ -447,13 +435,13 @@ footer {
   }
 
   #youtube h2 {
-    font-size: 1.25em;
+    font-size: 1.1em;
   }
 
   #youtube a {
     margin: 0;
-    font-size: 1em;
-    padding: 10px 20px;
+    padding: 10px 25px;
+    font-size: 1.1em;
   }
 
   /* Rodapé */
@@ -500,19 +488,19 @@ footer {
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px) {
+
   /* Layout */
   .Container,
   .ContainerEx {
     max-width: 720px;
-  }
+  }  
 
   /* youtube */
   #youtube h2 {
     font-size: 1.5em;
   }
 
-  /* cursos e Projetos */
-  #cursos h2,
+  /* Projetos */
   #projetos h2 {
     font-size: 1.85em;
   }
@@ -520,6 +508,7 @@ footer {
 
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 992px) {
+
   /* Layout */
   .Container,
   .ContainerEx {
@@ -552,6 +541,7 @@ footer {
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px) {
+
   /* Layout */
   .Container,
   .ContainerEx {
@@ -560,12 +550,12 @@ footer {
 
   /* Cabeçalho */
   header {
-    height: 160px;
+    height: 150px;
   }
 
   #logo img {
     width: 458px;
-    height: 120px;
+    height: 106px;
     margin-top: 20px;
   }
 
@@ -577,7 +567,7 @@ footer {
     position: static;
     height: auto;
     background-color: transparent;
-    margin-top: 55px;
+    margin-top: 70px;
   }
 
   nav ul li {
@@ -586,51 +576,39 @@ footer {
   }
 
   nav ul li a {
-    color: #343538;
+    color: #e8eaed;
   }
 
   nav ul li a:hover {
-    color: #c00000;
+    color: #fdcd00;
   }
 
   /* Banner */
-  #banner {
-    height: 60vh;
-  }
-
   #banner h1 {
-    font-size: 2.75em;
+    font-size: 3em;   
   }
 
-  #banner h2 {
+  #subtitulo {
+    display: block;
     font-size: 1.3em;
-    font-weight: 600;
+    text-shadow: #000 0.05em 0.05em 0.05em;
+    margin-bottom: 50px;
+  }  
+
+  #intro {
+    background-attachment: fixed;    
   }
 
-  /* Introdução */
-  #intro {
-    background-attachment: fixed;
+  #destaqueIntro {
+    display: inline;
+    margin-right: 100px;
   }
 
   #destaqueIntro img {
-    width: 400px;
-    height: 400px;
+    border-radius: 50%;
   }
 
-  #textoIntro {
-    margin-left: 100px;
-  }
-
-  /* Projetos */
-  #projetos {
-    background: url(img/background.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
-  /* cursos e projetos */
-  #cursos h2,
+  /* projetos */
   #projetos h2 {
     font-size: 2.5em;
   }
