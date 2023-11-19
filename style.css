@@ -284,9 +284,8 @@ nav ul li a {
   font-size: 1.2em;
 }
 
-#youtube a {
-  margin: 40px 75px 0px 75px;
-  font-size: 1.15em;
+#youtube img {
+  margin-top: 25px;
 }
 
 /* Projetos */
@@ -435,14 +434,8 @@ footer {
     justify-content: space-between;
   }
 
-  #youtube h2 {
-    font-size: 1.1em;
-  }
-
-  #youtube a {
-    margin: 0;
-    padding: 10px 27px;
-    font-size: 1.1em;
+  #youtube img {
+    margin: 0;    
   }
 
   /* Rodapé */
@@ -498,7 +491,7 @@ footer {
 
   /* youtube */
   #youtube h2 {
-    font-size: 1.5em;
+    font-size: 1.9em;
   }
 
   /* Projetos */
@@ -609,6 +602,15 @@ footer {
 
   #destaqueIntro img {
     border-radius: 50%;
+  }
+
+  /* youtube */
+  #youtube h2 {
+    margin-left: 100px;
+  }
+
+  #youtube img {
+    margin-right: 100px;
   }
 
   /* projetos */
