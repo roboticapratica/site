@@ -1,5 +1,5 @@
 /*
-    Folha de estilo do site Robótica prática
+    Folha de estilo do site Robótica Prática
     @author Professor José de Assis
     joseassis.com.br    
 */
@@ -81,7 +81,7 @@ body {
 }
 
 .Botao2 {
-  background-color: #fff;
+  background-color: #f1f3f4;
   color: #c00000;   
 }
 
@@ -141,8 +141,8 @@ body {
 
 .Todos a {
   text-decoration: none;
-  color: #000;
-  font-weight: 600;
+  color: #1f1f1f;
+  font-weight: 700;
   font-size: 1.25em;
 }
 
@@ -174,19 +174,19 @@ header {
 label {
   font-size: 3em;
   position: fixed;
-  top: 7px;
-  right: 20px;
+  top: 18px;
+  right: 10px;
   color: rgba(253, 205, 0, 0.5);
 }
 
 nav ul {
   list-style: none;
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.95);
   height: 100vh;
   position: fixed;
   top: 80px;
-  right: -100%;
-  width: 100%;
+  right: -70%;
+  width: 70%;
   transition: all 0.5s;
 }
 
@@ -195,13 +195,14 @@ nav ul {
 }
 
 nav ul li {
-  padding: 17px 20px;
-  border-bottom: 1px solid #a9a9a9;
+  padding: 15px 20px;
+  border-bottom: 0.5px solid #fdcd00;
+  text-align: right;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #fdcd00;
+  color: #fdcd00;  
 }
 
 /* Banner */
@@ -224,7 +225,7 @@ nav ul li a {
   margin-bottom: 55px;
 }
 
-#subtitulo {
+#banner h2 {
   display: none;
 }
 
@@ -284,8 +285,8 @@ nav ul li a {
 }
 
 #youtube a {
-  margin: 40px 72px 0px 72px;
-  font-size: 1.1em;
+  margin: 40px 75px 0px 75px;
+  font-size: 1.15em;
 }
 
 /* Projetos */
@@ -440,7 +441,7 @@ footer {
 
   #youtube a {
     margin: 0;
-    padding: 10px 25px;
+    padding: 10px 27px;
     font-size: 1.1em;
   }
 
@@ -564,15 +565,17 @@ footer {
   }
 
   nav ul {
+    width: 100%;
     position: static;
     height: auto;
     background-color: transparent;
-    margin-top: 70px;
+    margin-top: 85px;
   }
 
   nav ul li {
     float: left;
     border: 0;
+    
   }
 
   nav ul li a {
@@ -588,7 +591,7 @@ footer {
     font-size: 3em;   
   }
 
-  #subtitulo {
+  #banner h2 {
     display: block;
     font-size: 1.3em;
     text-shadow: #000 0.05em 0.05em 0.05em;
