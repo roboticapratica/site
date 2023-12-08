@@ -146,7 +146,7 @@ body {
 /* Cabeçalho */
 header {
   height: 80px;
-  background-color: #1f1f1f;
+  background-color: #252526;
 }
 
 #logo img {
@@ -169,7 +169,7 @@ label {
 
 nav ul {
   list-style: none;
-  background-color: rgba(31, 31, 31, 0.95);
+  background-color: rgba(37, 37, 38, 0.95);
   height: 100vh;
   position: fixed;
   top: 80px;
@@ -292,7 +292,7 @@ nav ul li a {
 
 /* Rodapé */
 footer {
-  background-color: #1f1f1f;
+  background-color: #252526;
   color: #fff;
   text-align: center;
   font-size: 0.875em;
@@ -387,8 +387,7 @@ footer {
 }
 
 #conteudo img {
-  width: 125px;
-  height: 106px;
+  max-width: 100%;
 }
 
 #conteudo ul li {
@@ -397,6 +396,11 @@ footer {
 
 #conteudo a {
   text-decoration: none;
+}
+
+#pasta {
+  width: 125px;
+  height: 106px;
 }
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
