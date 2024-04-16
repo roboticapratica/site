@@ -1,0 +1,726 @@
+/**
+ Folha de estilo do site roboticapratica.com
+ @author Professor José de Assis
+ @link https://joseassis.com.br
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap");
+
+/* LAYOUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+:root {
+    --branco: #ffffff;
+    --gelo: #f1f3f4;
+    --cinza: #535b57;
+    --cinzaClaro: #a1a1a1;
+    --cinzaMedio: #4D4D4D;
+    --cinzaEscuro: #3c3c3c;
+    --preto: #000000;
+    --laranja: #faa300;
+    --vermelho: #cc280f;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estrutura do site */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Orbitron", sans-serif;
+}
+
+.Container {
+    margin: 0 auto;
+    padding: 50px 15px 50px 15px;
+}
+
+.Flex,
+.FlexCard,
+.FlexMenu,
+.FlexPage,
+.FlexSection {
+    display: flex;
+}
+
+.Flex,
+.FlexPage {
+    flex-direction: column;
+}
+
+.FlexCard {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.FlexMenu,
+.FlexMenu {
+    justify-content: space-between;
+}
+
+.FlexSection {
+    align-items: center;
+}
+
+.Linha {
+    border: 1px solid var(--gelo);
+    background-color: var(--cinzaClaro);
+    width: 90%;
+    height: 1px;
+    padding: 0px;
+}
+
+/* Cartões */
+.Card {
+    margin-top: 30px;
+    width: 338px;
+    height: 520px;
+    background-color: var(--gelo);
+    border: 1px solid var(--cinzaClaro);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.Card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.Card h3 {
+    margin: 15px 30px 0px 30px;
+}
+
+.Card p {
+    padding: 10px 15px 50px 15px;
+    text-align: left;
+    color: var(--cinzaEscuro);
+}
+
+.pixCard {
+    background-color: var(--branco);
+    padding: 1px 6px;
+    font-weight: 600;
+}
+
+/* Botão */
+.Button {
+    text-decoration: none;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 10px 100px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Banner de páginas */
+.BannerPaginas {
+    height: 35vh;
+    background: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.BannerPaginas h1 {
+    color: var(--gelo);
+    font-weight: 600;
+    font-size: 2.75em;
+    text-shadow: #000 0.05em 0.05em 0.05em;
+}
+
+/* Topo do site */
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+}
+
+/* LAYOUT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+/* Smartphone portrait >>>>>>>>>>>>>>>>> */
+/* Cabeçalho */
+header {
+    height: 80px;
+}
+
+#logo img {
+    width: 265px;
+    height: 60.88px;
+    margin: 10px 0px 0px 10px;
+}
+
+/* Menu */
+#check {
+    display: none;
+}
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    color: rgba(60, 60, 60, 0.6);
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    background-color: rgba(60, 60, 60, 0.9);
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    right: -70%;
+    width: 70%;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    border-bottom: 0.5px solid var(--cinzaClaro);
+    text-align: right;
+    padding: 15px;
+
+}
+
+#s1,
+#s2,
+#s3,
+#s4 {
+    display: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gelo)
+}
+
+/* Destaque */
+#destaque {
+    position: relative;
+    height: 55vh;
+}
+
+#destaque video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Banner {
+    display: none;
+}
+
+/* Introdução */
+#intro {
+    background: url(../img/fundo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#destaqueIntro {
+    display: none;
+}
+
+#textoIntro {
+    color: var(--branco);
+}
+
+.TopicosIntro {
+    margin-top: 10px;
+}
+
+.TopicosIntro img {
+    margin-right: 20px;
+}
+
+#textoIntro h1,
+#textoYoutube h2 {
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* YouTube */
+#youtube {
+    background: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--branco)
+}
+
+#imagemYoutube {
+    display: none;
+}
+
+#textoYoutube p {
+    margin-bottom: 35px;
+    text-shadow: 0px 5px 10px var(--cinza),
+        0px 10px 10px rgba(0, 0, 0, 0.15),
+        0px 15px 15px rgba(0, 0, 0, 0.1),
+        0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Destacado {
+    font-weight: 700;
+}
+
+#youtube .Button {
+    padding: 10px 20px;
+    background-color: var(--gelo);
+    color: var(--cinzaEscuro);
+    font-size: 1em;
+}
+
+/* projetos */
+#projetos h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+#destacado2 {
+    color: var(--vermelho);
+    font-weight: 600;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cinzaEscuro);
+    text-align: center;
+}
+
+#social {
+    margin-bottom: 25px;
+}
+
+#copyright p {
+    color: var(--gelo)
+}
+
+/*** Página sobre ***/
+
+.TextoSobre h2 {
+    margin: 20px 0px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.TextoSobre h3 {
+    margin: 20px 0px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.TextoSobre ol {
+    margin-left: 20px;
+}
+
+.TextoSobre h4 {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+/*** Página apoio ***/
+#cafe h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#cafe h3,
+h4 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#cafe h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+#cafe h4 {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+#pix {
+    font-weight: 600;
+    font-size: 1.1em;
+    background-color: var(--gelo);
+    width: 238px;
+    padding: 1px 10px;
+    border: 1px solid var(--cinzaClaro);
+    margin-top: 5px;
+}
+
+/*** Página Índice de projetos ***/
+#indice {
+    background-color: var(--gelo);
+}
+
+.CardProject {
+    margin-top: 30px;
+    width: 338px;
+    height: 260px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--branco);
+}
+
+.CardProject a {
+    text-decoration: none;
+    color: var(--cinzaEscuro);
+}
+
+.CardProject h3 {
+    color: var(--vermelho);
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.CardProject p {
+    padding: 15px;
+}
+
+/*** Páginas de conteúdo ***/
+#conteudo h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+}
+
+.Video iframe {
+    margin-top: 15px;
+    width: 340px;
+    height: 191px;
+    border: 0;
+}
+
+#conteudo h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.25em;
+    margin: 25px 0px 10px 0px;
+}
+
+#conteudo img {
+    max-width: 100%;
+}
+
+#conteudo ul li {
+    margin-left: 20px;
+}
+
+#conteudo a {
+    text-decoration: none;
+}
+
+#pasta {
+    width: 125px;
+    height: 106px;
+}
+
+/* Smartphone portrait <<<<<<<<<<<<<<<<< */
+
+
+/* Smartphone landscape >>>>>>>>>>>>>>>> */
+@media (min-width: 576px) {
+
+    /* Layout */
+    .Container {
+        max-width: 540px;
+    }
+
+    .Flex {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Banner de páginas */
+    .BannerPaginas h1 {
+        margin: 0;
+    }
+
+    /* Cabeçalho */
+    header {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    /* Rodapé */
+    #social {
+        margin: 0;
+    }
+}
+
+/* Smartphone landscape <<<<<<<<<<<<<<<< */
+
+
+/* Tablet portrait >>>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 768px) {
+
+    /* Layout */
+    .Container {
+        max-width: 720px;
+    }
+
+    /* Cabeçalho */
+    header {
+        max-width: 720px;
+        height: 100px;
+    }
+
+    #logo img {
+        width: 353.34px;
+        height: 81.2px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    /* Menu */
+    label {
+        font-size: 4em;
+        top: 25px;
+        right: 5px;
+    }
+
+    nav ul {
+        top: 100px;
+        right: -50%;
+        width: 50%;
+    }
+
+    /* Destaque */
+    .Banner {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        color: var(--branco);
+    }
+
+    #slogan {
+        font-family: "Orbitron", sans-serif;
+        font-size: 1.75em;
+    }
+
+    #textoDestaque {
+        margin-bottom: 10px;
+    }
+
+    /* Projetos */
+    #projetos h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Tablet portrait <<<<<<<<<<<<<<<<<<<<< */
+
+
+/* Tablet landscape >>>>>>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+
+    /* Layout */
+    .Container {
+        max-width: 960px;
+    }
+
+    /* Cabeçalho */
+    header {
+        max-width: 992px;
+    }
+
+    /* Introdução */
+    #destaqueIntro {
+        display: inline;
+    }
+
+    #destaqueIntro img {
+        margin-right: 50px;
+        border-radius: 50%;
+    }
+
+    /* Youtube */
+    #textoYoutube p {
+        margin-right: 60px;
+        text-shadow: none;
+    }
+
+    #imagemYoutube {
+        display: inline;
+    }
+
+    #imagemYoutube img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Projetos */
+    #projetos h2 {
+        font-size: 2em;
+    }
+
+    /*** Página Sobre ***/
+    .FlexPage {
+        flex-direction: row;
+    }
+
+    .ImagemSobre {
+        margin-right: 50px;
+    }
+
+    .ImagemSobre img {
+        width: 256px;
+        height: 256px;
+    }
+}
+
+/* Tablet landscape <<<<<<<<<<<<<<<<<<<< */
+
+
+/* PCs ou notebooks HD >>>>>>>>>>>>>>>>> */
+@media (min-width: 1200px) {
+
+    /* Layout */
+    .Container {
+        max-width: 1140px;
+    }
+
+    /* Cabeçalho */
+    header {
+        max-width: 1140px;
+        height: 125px;
+    }
+
+    #logo img {
+        width: 424px;
+        height: 97.4px;
+    }
+
+    /* Menu */
+    label {
+        display: none;
+    }
+
+    nav ul {
+        width: 100%;
+        position: static;
+        height: auto;
+        background-color: var(--branco);
+        margin-top: 51px;
+    }
+
+    nav ul li {
+        border: 0;
+        float: left;
+    }
+
+    nav ul li a {
+        color: var(--cinzaEscuro);
+        font-weight: 500;
+    }
+
+    /* Destacar link ativo do menu */
+    #index span#s1,
+    #sobre span#s2,
+    #projetos span#s3,
+    #apoio span#s4 {
+        display: inline;
+        color: var(--vermelho);
+    }
+
+    /* Destaque */
+    #destaque {
+        height: 75vh;
+    }
+
+    #slogan {
+        font-size: 2em;
+        font-weight: 400;
+    }
+
+    #textoDestaque {
+        font-size: 1.1em;
+    }
+
+    /* Introdução */
+    #intro {
+        background-attachment: fixed;
+    }
+
+    #textoIntro h1 {
+        font-size: 2em;
+    }
+
+    #textoIntro p {
+        font-size: 1.25em;
+    }
+
+    /* Youtube */
+    #textoYoutube h2 {
+        font-size: 2em;
+    }
+
+    #textoYoutube p {
+        font-size: 1.25em;
+        margin-bottom: 50px;
+    }
+
+    #imagemYoutube img {
+        margin-left: 100px;
+    }
+
+    /* Projetos */
+    #projetos h2 {
+        font-size: 2.5em;
+        font-weight: 500;
+    }
+}
+
+/* PCs ou notebooks HD <<<<<<<<<<<<<<<<< */
+
+
+/* PCs ou notebooks Full HD+ >>>>>>>>>>> */
+@media (min-width: 1400px) {
+
+    /* Cabeçalho */
+    header {
+        height: 150px;
+    }
+
+    #logo img {
+        width: 530px;
+        height: 121.75px;
+    }
+}
+
+/* PCs ou notebooks Full HD+ <<<<<<<<<<< */

@@ -2,95 +2,112 @@
 <html lang="pt-br">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDXZ3H5ZVR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-TDXZ3H5ZVR');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,
-   initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Olá! Eu sou o professor José de Assis">
-  <title>Olá! Eu sou o professor José de Assis</title>
-  <link rel="icon" href="img/favicon.png">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá!</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="description" content="Olá! Eu sou o professor José de Assis">
+    <link rel="icon" href="./img/favicon.png">
 </head>
 
-<body>
-  <!-- Cabeçalho -->
-  <header>
-    <div class="ContainerEx Flex">
-      <div id="logo">
-        <img src="img/logo.png" alt="hal 9000">
-      </div>
-      <nav>
-        <input type="checkbox" id="check">
-        <label for="check">&#x268c;</label>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <!--li><a href="projetos.html">Projetos</a></li-->
-          <li><a href="apoio.html">Apoio</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<body id="sobre">
+    <!-- Cabeçalho -->
+    <header>
+        <div class="FlexMenu">
+            <div id="logo">
+                <img src="./img/logo.png" alt="logo robótica prática">
+            </div>
+            <!-- Menu -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268c;</label>
+                <ul>
+                    <li><a href="index.html"><span id="s1">&#9733;</span> Home</a></li>
+                    <li><a href="sobre.html"><span id="s2">&#9733;</span> Sobre</a></li>
+                    <li><a href="projetos.html"><span id="s3">&#9733;</span> Projetos</a></li>
+                    <li><a href="apoio.html"><span id="s4">&#9733;</span> Apoio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Destaque Sobre -->
-  <main class="Banner2">
-    <div class="Container">
-      <h1>SOBRE</h1>
-    </div>
-  </main>
+    <!-- Banner das páginas -->
+    <main class="BannerPaginas Flex">
+        <div class="Container">
+            <h1>SOBRE</h1>
+        </div>
+    </main>
 
-  <!-- Conteúdo Sobre -->
-  <section id="professor">
-    <div class="Container Flex3">
-      <div id="imgProf">
-        <img src="img/professor.png" alt="Professor José de Assis">
-      </div>
-      <div id="textoProf">
-        <h2>Olá!</h2>
-        <p>Eu sou o professor José de Assis.</p>
-        <p>Boas-vindas, aqui você encontra projetos e conteúdo de qualidade nas áreas de robótica educacional e arduino.
-        </p>
-        <p>Sou formado em eletrônica e gestão de TI, pós-graduado em Robótica Educacional e certificado em Linux LPIC-1.
-          Atuo como professor em cursos de Tecnologia da Informação, Robótica Educacional e Arduino.</p>
-        <p><span id=frase>"A vida é como andar de bicicleta. Para ter equilíbrio, você tem que se manter em
-            movimento..."</span></p>
-        <p><span id="autor">(Albert Einstein)</span></p>        
-      </div>
-    </div>
-  </section>
+    <!-- Sobre -->
+    <section>
+        <div class="Container FlexPage">
+            <div class="ImagemSobre">
+                <img src="./img/robob9.png" alt="Robô B9">
+            </div>
+            <div class="TextoSobre">
+                <h2>Olá, humano. Boas vindas!</h2>
+                <h3>Leis da robótica:</h3>
+                <ol>
+                    <li>Robôs não podem ferir um ser humano ou, por omissão permitir que um ser humano sofra algum mal.
+                    </li>
+                    <li>Robôs devem obedecer às ordens dos humanos, exceto nos casos em que essas ordens entrem em
+                        conflito com a primeira lei.</li>
+                    <li>Um robô deve proteger sua própria existência, desde que não entre em conflito com as leis
+                        anteriores.</li>
+                </ol>
+                <h4>"Isaac Asimov"</h4>
+            </div>
+        </div>
+    </section>
 
-  <!-- Rodapé -->
-  <footer>
-    <div class="Container Flex4">
-      <div id="copyright">
-        <p>©2023 - Professor José de Assis</p>
-      </div>
-      <div id="social">
-        <a href="https://www.youtube.com/c/RoboticapraticaBr" target="_blank"><img src="img/youtube.png"
-            alt="youtube"></a>
-        <a href="https://www.linkedin.com/in/professorjosedeassis" target="_blank"><img src="img/linkedin.png"
-            alt="linkedin"></a>
-        <a href="https://www.facebook.com/professorjosedeassis" target="_blank"><img src="img/facebook.png"
-            alt="facebook"></a>
-        <a href="https://www.instagram.com/prof.joseassis/" target="_blank"><img src="img/instagram.png"
-            alt="instagram"></a>
-        <a href="https://twitter.com/joseassis" target="_blank"><img src="img/twitter.png" alt="twitter"></a>
-      </div>
-    </div>
-  </footer>
+    <div class="Container Linha"></div>
 
-  <!-- Topo -->
-  <a href="#" id="topo"><img src="img/topo.png" alt="topo do site"></a>
+    <section>
+        <div class="Container FlexPage">
+            <div class="ImagemSobre">
+                <img src="./img/professor.png" alt="Professor José de Assis">
+            </div>
+            <div class="TextoSobre">
+                <h2>Olá!</h2>
+                <p>Eu sou o professor José de Assis.</p>
+                <br>
+                <p>Sou formado em eletrônica e gestão de sistemas de TI, pós-graduado em Robótica Educacional e
+                    certificado em Linux LPIC-1. Atuo como professor em cursos de Tecnologia da Informação, Robótica
+                    Educacional e Arduino.
+                </p>
+                <br>
+                <p>Visite também meu site de cursos de programação e linux: <a href="https://joseassis.com.br/"
+                        target="_blank">joseassis.com.br</a></p>
+                <br>
+                <p>&#9993; josedeassisfilho@gmail.com</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Rodapé -->
+    <footer>
+        <div class="Container Flex">
+            <div id="social">
+                <a href="https://www.youtube.com/c/RoboticapraticaBr" target="_blank"><img src="./img/youtube.png"
+                        alt="youtube"></a>
+                <a href="https://www.linkedin.com/in/professorjosedeassis" target="_blank"><img src="./img/linkedin.png"
+                        alt="linkedin"></a>
+                <a href="https://www.facebook.com/professorjosedeassis" target="_blank"><img src="./img/facebook.png"
+                        alt="facebook"></a>
+                <a href="https://www.instagram.com/prof.joseassis/" target="_blank"><img src="./img/instagram.png"
+                        alt="instagram"></a>
+                <a href="https://twitter.com/joseassis" target="_blank"><img src="./img/twitter.png" alt="twitter"></a>
+            </div>
+            <div id="copyright">
+                <p>©<span id="copyrightYear"></span> - Robótica Prática</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Topo do site -->
+    <a href="#logo" id="topo"><img src="./img/topo.png" alt="seta topo"></a>
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
