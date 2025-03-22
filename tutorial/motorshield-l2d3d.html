@@ -44,19 +44,20 @@
             <h2>Configuração do Motor Shield L293D ponte H no Arduino</h2>
             <img src="../img/motorshield.jpg" alt="diagrama elétrico HC-06">
             <p>
-                O motor shield L293D é um shield que pode ser conectado ao arduino, permitindo controlar até 4 motores
+                O motor shield L293D é uma placa que pode ser conectada ao arduino, permitindo controlar até 4 motores
                 DC ou 2 motores de passo e 2 servos, sendo muito utilizado em projetos de robótica. Este tutorial mostra
                 como ligar este shield no arduino e controlar 4 motores DC, 1 micro servo 9g e também um sensor
                 ultrassônico HC-SR04.
             </p>
+            <h3>Como funciona?</h3>
+            <p>O L293D recebe sinais do Arduino e amplifica a corrente para movimentar os motores. Como o Arduino sozinho não consegue fornecer corrente suficiente para motores, o L293D age como um intermediário.</p>
             <h3>Dados técnicos:</h3>
             <ul>
-                <li>Chip: L293D (Cada chip vem com 2 pontes H)</li>
+                <li>2 chips L293D (Cada chip vem com 2 pontes H)</li>
                 <li>Tensão de operação: 5V a 12V</li>
                 <li>Tensão de saída: 4.5V a 36V</li>
                 <li>Corrente de saída: 600mA por canal</li>
-                <li>Até 4 motores DC bi-direcional com seleção individual de velocidades de 8 bits (cerca de 0,5% de
-                    resolução)</li>
+                <li>Controle de até 4 motores DC </li>
                 <li>Até 2 Motores de Passo (Unipolar ou Bipolar) com bobina unica, dupla ou passos interlaçados</li>
                 <li>4 Pontes H: 0,6A por Ponte (1,2A de pico) com proteção térmica e diodos de proteção contra
                     retro-alimentação</li>
