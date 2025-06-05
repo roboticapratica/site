@@ -601,7 +601,7 @@ h4 {
 
     .ImagemSobre {
         margin-right: 50px;
-    }    
+    }
 }
 
 /* Tablet landscape <<<<<<<<<<<<<<<<<<<< */
@@ -704,6 +704,113 @@ h4 {
         font-size: 2.5em;
         font-weight: 500;
     }
+
+
+    /*** Conteúdo ***/
+    /* Container principal que envolve trilha e conteúdo */
+    /* Container principal */
+    .main-content-wrapper {
+        display: flex;       
+    }
+
+
+    /* Trilha lateral */
+    .trilha-container {
+       
+        padding: 6px 0px 6px 7px;       
+        width: 160px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 50px;
+        align-self: flex-start;
+        height: calc(100vh - 40px);
+        overflow-y: auto;
+    }
+
+    .trilha {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    /* ===== LINHA VERTICAL ===== */
+    .linha,
+    .linha-progresso {
+        position: absolute;
+        left: 10px;
+        /* centro exato dos bullets (20px / 2) */
+        transform: translateX(-50%);
+        width: 4px;
+        border-radius: 2px;
+        z-index: 0;
+        background-color: #ccc;
+        transition: none;
+    }
+
+    .linha {
+        top: 0;
+        height: 100%;
+    }
+
+    .linha-progresso {
+        top: 10px;
+        /* começa no centro do primeiro bullet */
+        height: 0px;
+        /* zero para não aparecer retângulo atrás do bullet */
+    }
+
+    /* ===== LINKS DA TRILHA ===== */
+    .trilha a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        position: relative;
+        z-index: 2;
+        /* acima da linha */
+        cursor: pointer;
+    }
+
+    .bullet {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #aaa;
+        margin-right: 10px;
+        flex-shrink: 0;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        position: relative;
+        z-index: 2;
+        /* garantir que fique acima da linha */
+        box-shadow: none;
+    }
+
+    .trilha a.completed .bullet {
+        background-color: #007bff;
+    }
+
+    .trilha a.active .bullet {
+        box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.2);
+    }
+
+    /* ===== TEXTO DO TÓPICO ===== */
+    .trilha a span {
+        font-size: 16px;
+        user-select: none;
+    }
+
+    section {
+        min-height: 100vh;
+        scroll-margin-top: 50px;
+        /* para não encobrir ao rolar */
+    }
+
+    section:nth-child(odd) {
+        background: #f5f5f5;
+    }
+
 }
 
 /* PCs ou notebooks HD <<<<<<<<<<<<<<<<< */
