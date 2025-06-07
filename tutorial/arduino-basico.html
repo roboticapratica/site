@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial básico de Arduino</title>
     <link rel="stylesheet" href="../css/style.css">
-    <meta name="description" content="Tutorial básico da programação com Arduino">
+    <meta name="description" content="Tutorial básico de programação com Arduino">
     <link rel="icon" href="../img/favicon.png">
 </head>
 
@@ -33,11 +33,11 @@
     <!-- Banner das páginas -->
     <main class="BannerPaginas Flex">
         <div class="Container">
-            <h1>ARDUINO BÁSICO</h1>
+            <h1>Arduino básico</h1>
         </div>
     </main>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo -->
     <div class="Container main-content-wrapper">
         <div class="trilha-container">
             <nav class="trilha" aria-label="Trilha de tópicos">
@@ -58,33 +58,144 @@
                 <a href="#topico5">
                     <div class="bullet"></div><span>Aula 5</span>
                 </a>
+                <a href="#topico6">
+                    <div class="bullet"></div><span>Aula 6</span>
+                </a>
+                <a href="#topico7">
+                    <div class="bullet"></div><span>Aula 7</span>
+                </a>
+                <a href="#topico8">
+                    <div class="bullet"></div><span>Aula 8</span>
+                </a>
+                <a href="#topico9">
+                    <div class="bullet"></div><span>Aula 9</span>
+                </a>
+                <a href="#topico10">
+                    <div class="bullet"></div><span>Aula 10</span>
+                </a>
             </nav>
         </div>
 
         <div class="content">
             <section id="topico1">
-                <h2>Aula 1</h2>
-                <p>Conteúdo do tópico 1. Lorem ipsum dolor sit amet, consectssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssetur adipiscing elit. Praesent sit amet.</p>
+                <h2>Aula 1 – Introdução ao Arduino</h2>
+                <p>
+                    Boas vindas! Hoje vamos conhecer uma das ferramentas mais incríveis para quem quer colocar a mão na
+                    massa com eletrônica e programação: o Arduino.
+                </p>
+                <br>
+                <img src="../img/arduino-uno-R3.png" alt="arduino uno r3">
+                <br><br>
+                <p>
+                    Arduino é uma plataforma de prototipagem eletrônica de hardware e software livre, ou seja, você
+                    pode criar seus próprios projetos de forma simples, prática e com baixo custo. Ele é ideal para quem
+                    está começando, mas também é poderoso o suficiente para projetos mais avançados.
+                </p>
+                <p>
+                    As placas Arduino podem ser fabricadas artesanalmente ou compradas prontas. O software usado para
+                    programá-las é gratuito e está disponível para download.
+                </p>
+                <h3>O que dá pra fazer com o Arduino?</h3>
+                <p>Aqui vai um spoiler: quase tudo! 😄
+                    Com o Arduino, você pode desenvolver projetos de automação residencial, robótica, Internet das
+                    Coisas (IoT), e até projetos criativos como brinquedos, instrumentos musicais, instalações
+                    artísticas e muito mais.
+                </p>
+                <p>
+                    Quer ir mais longe? Há projetos incríveis com impressoras 3D, drones e até satélites feitos com base
+                    no Arduino. As possibilidades são praticamente infinitas!
+                </p>
+                <h3>Arduino UNO R3</h3>
+                <p>Existem diversos modelos de placas Arduino. O Arduino UNO R3 é a versão mais popular e mais documentada de toda a família Arduino, sendo recomendado para iniciantes.</p>
+                <br>
+                <img src="../img/unoR3-esquema.png" alt="arduino uno r3">
+                <br>
+                <ol>
+                    <li>Conector USB (alimentação externa e comunicação serial)</li>
+                    <li>Botão de reset da placa Arduino</li>
+                    <li>Polyfuse (proteção da porta USB do computador contra curtos e sobrecargas).</li>
+                    <li>LED indicativo que a placa está ligada</li>
+                    <li>Pinos de entrada e saída digital (~ podem ser usados com PWM)</li>
+                    <li>LED embutido ligado ao pino 13 (LED_BUILTIN)</li>
+                    <li>ATmega 16U2 (conversor USB/serial)</li>
+                    <li>LED TX (transmissor) e RX (receptor) - comunicação serial</li>
+                    <li>Pinos 0 e 1 (também podem ser usados para comunicação com um módulo bluetooth)</li>
+                    <li>Porta ICSP (programação direta via protocolo serial)</li>
+                    <li>Microcontrolador ATmega 328P</li>
+                    <li>Cristal de quartzo 16Mhz (clock)</li>
+                    <li>Conector fêmea 2,1mm com centro positivo (alimentação externa)</li>
+                    <li>Regulador de tensão (5V)</li>
+                    <li>Pinos de tensão e GND</li>
+                    <li>Entradas analógicas</li>
+                </ol>                
             </section>
+            <hr>
             <section id="topico2">
-                <h2>Aula 2</h2>
-                <p>Conteúdo do tópico 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet.</p>
+                <h2>Parte 2 - Montagem do circuito elétrico:</h2>
+                <h3>Lista de material:</h3>
+                <ul>
+                    <li>1 Arduino UNO ou compatível</li>
+                    <li>1 módulo bluetooth HC-06</li>
+                    <li>1 resistor de 1K (marrom preto vermelho)</li>
+                    <li>1 resistor de 2K (vermelho preto vermelho)</li>
+                </ul>
+                <br>
+                <p>Ligue o módulo HC-06 no Arduino, conforme diagrama abaixo. Os resistores são usados como divisor de
+                    tensão
+                    para reduzir a tensão de 5V para 3.3V no pino RX do módulo (importante para não danificar o módulo
+                    bluetooth).
+                </p>
+                <br>
+                <img src="../img/diagrama-hc06.png" alt="diagrama elétrico HC-06">
             </section>
+            <hr>
             <section id="topico3">
-                <h2>Aula 3</h2>
-                <p>Conteúdo do tópico 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet.</p>
+                <h2>Parte 3 - Código fonte</h2>
+                <p>Baixe o código no link abaixo e faça o upload para a placa Arduino.</p>
+                <br>
+                <a href="../codigo-fonte/setar_HC-06.ino">🔗 setar_HC-06.ino</a>
+                <br><br>
+                <img src="../img/arduino_ide.png" alt="arduino ide">
             </section>
+            <hr>
             <section id="topico4">
-                <h2>Aula 4</h2>
-                <p>Conteúdo do tópico 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet.</p>
+                <h2>Parte 4 - Configuração</h2>
+                <ul>
+                    <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud]. ATENÇÃO! Pode ser
+                        necessário reiniciar o Serial Monitor. (Passo 1)</li>
+                    <li>Digite o comando desejado na caixa de entrada. (Passo 2)</li>
+                    <li>Se tudo estiver OK o módulo irá responder, executando a ação desejada. (Passo 3)</li>
+                    <li>Faça um teste pareando o módulo no celular! 📱</li>
+                </ul>
+                <br>
+                <img src="../img/serial_monitor.png" alt="arduino ide">
             </section>
+            <hr>
             <section id="topico5">
-                <h2>Aula 5</h2>
-                <p>Conteúdo do tópico 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet.</p>
+                <h2>Parte - Configuração</h2>
+            </section>
+            <hr>
+            <section id="topico6">
+                <h2>Parte - Configuração</h2>
+            </section>
+            <hr>
+            <section id="topico7">
+                <h2>Parte - Configuração</h2>
+            </section>
+            <hr>
+            <section id="topico8">
+                <h2>Parte - Configuração</h2>
+            </section>
+            <hr>
+            <section id="topico9">
+                <h2>Parte - Configuração</h2>
+            </section>
+            <hr>
+            <section id="topico10">
+                <h2>Parte - Configuração</h2>
             </section>
         </div>
     </div>
-
 
     <!-- Rodapé -->
     <footer>
