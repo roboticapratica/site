@@ -176,6 +176,10 @@ h4 {
     margin-bottom: 8px;
 }
 
+.content ol li {
+    margin-left: 25px;
+}
+
 .Video iframe {
     margin-top: 15px;
     width: 340px;
@@ -478,10 +482,6 @@ h4 {
     padding: 15px;
 }
 
-/* Páginas de conteúdo */
-
-
-
 /* Smartphone portrait <<<<<<<<<<<<<<<<< */
 
 
@@ -747,7 +747,7 @@ h4 {
     .trilha-container {
         display: inline;
         padding: 6px 0px 6px 7px;
-        width: 160px;
+        width: 180px;
         flex-shrink: 0;
         position: sticky;
         top: 50px;
