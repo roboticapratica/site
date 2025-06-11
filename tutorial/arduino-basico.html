@@ -119,8 +119,7 @@
                     no Arduino. As possibilidades são praticamente infinitas!
                 </p>
                 <h3>Arduino UNO R3</h3>
-                <p>Existem diversos modelos de placas Arduino. O Arduino UNO R3 é a versão mais popular e mais
-                    documentada de toda a família Arduino, sendo recomendado para iniciantes.</p>
+                <p>Existem diversos modelos de placas Arduino. O Arduino UNO R3 é a versão mais popular e mais documentada de toda a família Arduino, sendo inclusive usado em simuladores e é recomendado para iniciantes.</p>
                 <br>
                 <img src="../img/unoR3-esquema.png" alt="arduino uno r3">
                 <br>
@@ -180,23 +179,19 @@
                     e valores, desde frações de ohm até milhões de ohms (também conhecidos como megaohms). Eles são
                     pequenos, geralmente com listras coloridas no corpo (uma espécie de código secreto que indica o
                     valor da resistência).</p> 
-                    <h3>Calculadora de resistores (4 faixas)</h3>
-                    <p>🎨 Cores → Valor</p>
-                    <label>Faixa 1:</label>
-                    <select id="faixa1"></select>
-                    <label>Faixa 2:</label>
-                    <select id="faixa2"></select>
-                    <label>Faixa 3 (multiplicador):</label>
-                    <select id="multiplicador"></select>
-                    <label>Faixa 4 (tolerância):</label>
+                    <h3>Calculadora de resistores ( 4 faixas )</h3>
+                    <p>🎨 Cores → Valor</p>                   
+                    <p class="faixa">Faixa 1 | Faixa 2 | Faixa 3 ( multiplicador ) | Faixa 4 ( tolerância )</p>                                   
+                    <select id="faixa1" placeholder="Faixa 1"></select>                    
+                    <select id="faixa2"></select>                    
+                    <select id="multiplicador"></select>                    
                     <select id="tolerancia"></select>
                     <button onclick="calcularResistor()">Calcular</button>
                     <div id="resultado"></div>
                     <br>
-                    <p>🔢 Valor → Cores</p>
-                    <label>Valor (Ω):</label>
-                    <input type="number" id="valorResistor" placeholder="Ex: 4700">
-                    <label>Tolerância:</label>
+                    <p>🔢 Valor → Cores</p>                    
+                    <p class="faixa">Valor em ohms (Ω) | Tolerância</p>                                    
+                    <input type="number" id="valorResistor" placeholder="Ex: 4700">                    
                     <select id="tolInverso"></select>
                     <button onclick="calcularCores()">Mostrar Cores</button>
                     <div id="coresResultado"></div>              

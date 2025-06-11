@@ -153,7 +153,7 @@ h4 {
     z-index: 2;
 }
 
-/* Páginas de cConteúdo */
+/* Páginas de conteúdo */
 .content p {
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -220,58 +220,58 @@ hr {
     opacity: 0.6;
 }
 
+.faixa {
+    margin: 15px 0px;
+    font-size: 0.95em;
+    color: var(--cinzaMedio);
+}
 
-select, input[type="number"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+select,
+input[type="number"] {
+    width: 85%;
+    padding: 8px;
+    font-size: 0.95em;
+    color: var(--cinzaMedio);
+    border: 1px solid var(--cinzaClaro);
     border-radius: 6px;
-    background-color: #fff;
-  }
+    background-color: var(--branco);
+}
 
-  option {
+option {
     font-weight: bold;
     color: black;
-  }
+}
 
-  option:first-child {
-    color: #999;
+option:first-child {   
     font-style: italic;
-    font-weight: normal;
-  }
+}
 
-  button {
-    padding: 12px 20px;
-    font-size: 16px;
-    background-color: #3498db;
-    color: #fff;
+button {
+    padding: 8px 20px;
+    font-size: 1.1em;
+    background-color: var(--azul);
+    color: var(--branco);
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin: 10px 0;
-    transition: background 0.3s ease;
-  }
+    margin-top: 15px;
+}
 
-  button:hover {
-    background-color: #2980b9;
-  }
-
-  .cor-preview {
+.cor-preview {
     display: inline-block;
     width: 40px;
     height: 20px;
     border: 1px solid #000;
     margin: 5px;
     vertical-align: middle;
-  }
+}
 
-  #resultado, #coresResultado {
+#resultado,
+#coresResultado {
     margin-top: 20px;
     font-weight: bold;
     font-size: 18px;
-  }
+}
 
 
 /* LAYOUT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -796,8 +796,6 @@ h4 {
         display: flex;
     }
 
-
-    /* Trilha lateral */
     .trilha-container {
         display: inline;
         padding: 6px 0px 6px 7px;
@@ -818,12 +816,10 @@ h4 {
         align-items: flex-start;
     }
 
-    /* ===== LINHA VERTICAL ===== */
     .linha,
     .linha-progresso {
         position: absolute;
         left: 10px;
-        /* centro exato dos bullets (20px / 2) */
         transform: translateX(-50%);
         width: 4px;
         border-radius: 2px;
@@ -839,12 +835,9 @@ h4 {
 
     .linha-progresso {
         top: 10px;
-        /* começa no centro do primeiro bullet */
         height: 0px;
-        /* zero para não aparecer retângulo atrás do bullet */
     }
 
-    /* ===== LINKS DA TRILHA ===== */
     .trilha a {
         display: flex;
         align-items: center;
@@ -852,7 +845,6 @@ h4 {
         color: var(--cinzaMedio);
         position: relative;
         z-index: 2;
-        /* acima da linha */
         cursor: pointer;
     }
 
@@ -866,7 +858,6 @@ h4 {
         transition: background-color 0.3s, box-shadow 0.3s;
         position: relative;
         z-index: 2;
-        /* garantir que fique acima da linha */
         box-shadow: none;
     }
 
@@ -878,13 +869,19 @@ h4 {
         box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.2);
     }
 
-    /* ===== TEXTO DO TÓPICO ===== */
     .trilha a span {
         font-size: 16px;
         user-select: none;
     }
 
+    select,
+    input[type="number"] {
+        width: 120px;
+    }
 
+    button {
+        margin-left: 15px;
+    }
 
 }
 

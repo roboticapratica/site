@@ -26,7 +26,7 @@ function adicionarOpcao(select, texto, valor, cor) {
     opt.style.backgroundColor = cor;
     if (cor.toLowerCase() === "#ffffff") {
         opt.style.color = "#000"
-    } else if (["#000000", "#8b4513", "#0000ff"].includes(cor.toLowerCase())) {
+    } else if (["#000000", "#8b4513", "#0000ff", "#ff0000", "#008000", "#8a2be2", "#808080" ].includes(cor.toLowerCase())) {
         opt.style.color = "#fff"
     }
     select.appendChild(opt)
@@ -35,7 +35,7 @@ function adicionarOpcao(select, texto, valor, cor) {
 function adicionarSelecionar(select) {
     const opt = document.createElement("option")
     opt.value = ""
-    opt.textContent = "Selecionar cor"
+    opt.textContent = "Selecionar"
     opt.disabled = true
     opt.selected = true
     select.appendChild(opt)
@@ -73,9 +73,9 @@ function calcularResistor() {
     let valorFormatado
 
     if (resistencia >= 1e6) {
-        valorFormatado = (resistencia / 1e6).toFixed(2) + " MΩ"
+        valorFormatado = (resistencia / 1e6).toFixed(1) + " MΩ"
     } else if (resistencia >= 1e3) {
-        valorFormatado = (resistencia / 1e3).toFixed(2) + " kΩ"
+        valorFormatado = (resistencia / 1e3).toFixed(1) + " kΩ"
     } else {
         valorFormatado = resistencia + " Ω"
     }
