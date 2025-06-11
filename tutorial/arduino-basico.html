@@ -84,12 +84,12 @@
                     pra você que quer começar a programar com Arduino sem mistério e sem dor de cabeça.
                     Aqui, vamos aprender passo a passo como programar a placa Arduino e criar projetos que acendem LEDs,
                     leem sensores, tocam buzzer… enfim, tudo aquilo que faz a gente se sentir um verdadeiro engenheiro
-                    de filmes futuristas (só que com fios bagunçados e uma bancada cheia de resistores).
+                    de filmes futuristas (só que com fios bagunçados e uma bancada cheia de leds, fios e resistores).
                 </p>
                 <p>
-                    Se você nunca programou antes, fique tranquilo. A ideia aqui é começar do zero e evoluir com calma,
+                    Se você nunca programou antes, não se preocupe. A ideia aqui é começar do zero e evoluir com calma,
                     sempre com exemplos práticos, explicações claras e uma boa dose de paciência. E sim, errar faz parte
-                    do processo — se a luz não acender de primeira, a culpa provavelmente não é do universo. 😄
+                    do processo. (se a luz não acender de primeira, a culpa provavelmente não é do universo 😄)
                 </p>
                 <p>
                     Prepare seu computador, sua plaquinha Arduino e o famoso cabo USB (aquele que sempre some quando a
@@ -100,9 +100,9 @@
                 <br>
                 <h3>O que é Arduino?</h3>
                 <p>
-                    Arduino é uma plataforma de prototipagem eletrônica de hardware e software livre, ou seja, você
-                    pode criar seus próprios projetos de forma simples, prática e com baixo custo. Ele é ideal para quem
-                    está começando, mas também é poderoso o suficiente para projetos mais avançados.
+                    Arduino é uma plataforma de prototipagem eletrônica de hardware e software livre, ou seja, você pode
+                    criar seus próprios projetos de forma simples, prática e com baixo custo. Ele é ideal para quem está
+                    começando, mas também é poderoso o suficiente para projetos mais avançados.
                 </p>
                 <p>
                     As placas Arduino podem ser fabricadas artesanalmente ou compradas prontas. O software usado para
@@ -152,13 +152,54 @@
                 <br>
                 <img src="../img/arduinoide.png" alt="ide arduino">
                 <h3>Componentes eletrônicos básicos</h3>
-                <p>Antes de programar, é importante entender com quem estamos lidando no mundo físico: os componentes eletrônicos. São eles que dão vida aos nossos projetos, controlam a corrente elétrica e fazem a mágica acontecer ou pelo menos, piscarem LEDs! 😄</p>
-                <p>A Eletrônica é a área da ciência que estuda e utiliza circuitos formados por esses componentes, com o objetivo de representar, armazenar, transmitir ou processar informações. Em outras palavras, ela transforma sinais elétricos em ações e é assim que controlamos sensores, motores, botões e muito mais com o Arduino.</p>
-                <p>Mas calma! Não vamos estudar tudo de uma vez. A cada aula, conforme os experimentos forem evoluindo, vamos conhecer novos componentes: resistores, LEDs, botões, capacitores, sensores, e por aí vai. Vamos ver para que servem, como se comportam e como usá-los com segurança e criatividade. Você não precisa decorar nada agora, vamos aprender fazendo, explorando e testando juntos.</p>
+                <p>Antes de programar, é importante entender com quem estamos lidando no mundo físico: os componentes
+                    eletrônicos. São eles que dão vida aos nossos projetos, controlam a corrente elétrica e fazem a
+                    mágica acontecer ou pelo menos, piscarem LEDs! 😄</p>
+                <p>A Eletrônica é a área da ciência que estuda e utiliza circuitos formados por esses componentes, com o
+                    objetivo de representar, armazenar, transmitir ou processar informações. Em outras palavras, ela
+                    transforma sinais elétricos em ações e é assim que controlamos sensores, motores, botões e muito
+                    mais com o Arduino.</p>
+                <p>Mas calma! Não vamos estudar tudo de uma vez. A cada aula, conforme os experimentos forem evoluindo,
+                    vamos conhecer novos componentes: resistores, LEDs, botões, sensores, e por aí vai. Vamos ver para
+                    que servem, como se comportam e como usá-los com segurança e criatividade. Você não precisa decorar
+                    nada agora, vamos aprender fazendo, explorando e testando juntos.</p>
                 <h3>Protoboard</h3>
-                <p>Usada para prototipação de circuitos elétricos, a protoboard permite a montagem dos componentes eletrônicos sem uso de solda. Ela é feita por blocos de plástico perfurados e possui internamente várias lâminas que fazem o contato elétrico.</p>
-                <br>
                 <img src="../img/protoboard.png" alt="protoboard">
+                <br>
+                <p>Usada para prototipação de circuitos elétricos, a protoboard permite a montagem dos componentes
+                    eletrônicos sem uso de solda. Ela é feita por blocos de plástico perfurados e possui internamente
+                    várias lâminas que fazem o contato elétrico.</p>
+                <h3>Resistores</h3>
+                <img src="../img/resistores.png" alt="resistores">
+                <br>
+                <p>O resistor é um dos componentes mais básicos e também mais importantes da eletrônica. Sua principal
+                    função é simples e essencial: limitar a corrente elétrica que passa por um circuito, evitando que
+                    outros componentes "tomem um choque de realidade". 😄</p>
+                <p>A resistência elétrica é medida em ohms (Ω), em homenagem ao físico Georg Ohm (o cara que descobriu
+                    que sim, a eletricidade também precisa de limites!). Você vai encontrar resistores de todos os tipos
+                    e valores, desde frações de ohm até milhões de ohms (também conhecidos como megaohms). Eles são
+                    pequenos, geralmente com listras coloridas no corpo (uma espécie de código secreto que indica o
+                    valor da resistência).</p> 
+                    <h3>Calculadora de resistores (4 faixas)</h3>
+                    <p>🎨 Cores → Valor</p>
+                    <label>Faixa 1:</label>
+                    <select id="faixa1"></select>
+                    <label>Faixa 2:</label>
+                    <select id="faixa2"></select>
+                    <label>Faixa 3 (multiplicador):</label>
+                    <select id="multiplicador"></select>
+                    <label>Faixa 4 (tolerância):</label>
+                    <select id="tolerancia"></select>
+                    <button onclick="calcularResistor()">Calcular</button>
+                    <div id="resultado"></div>
+                    <br>
+                    <p>🔢 Valor → Cores</p>
+                    <label>Valor (Ω):</label>
+                    <input type="number" id="valorResistor" placeholder="Ex: 4700">
+                    <label>Tolerância:</label>
+                    <select id="tolInverso"></select>
+                    <button onclick="calcularCores()">Mostrar Cores</button>
+                    <div id="coresResultado"></div>              
             </section>
             <hr>
             <section id="topico2">
@@ -251,6 +292,7 @@
     <!-- Topo do site -->
     <a href="#logo" id="topo"><img src="../img/topo.png" alt="seta topo"></a>
 
+    <script src="../js/resistor.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/trilha.js"></script>
 </body>

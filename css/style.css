@@ -220,6 +220,60 @@ hr {
     opacity: 0.6;
 }
 
+
+select, input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+
+  option {
+    font-weight: bold;
+    color: black;
+  }
+
+  option:first-child {
+    color: #999;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  .cor-preview {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border: 1px solid #000;
+    margin: 5px;
+    vertical-align: middle;
+  }
+
+  #resultado, #coresResultado {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+
 /* LAYOUT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 
