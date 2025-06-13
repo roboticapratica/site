@@ -78,13 +78,13 @@
 
         <div class="content">
             <section id="topico1">
-                <h2>Aula 1 – Introdução</h2>
+                <h2>Aula 1 – Introdução | Pisca LED</h2>
                 <p>
                     Olá! Seja muito bem-vindo(a) ao tutorial de Arduino Básico, uma série com 10 aulas feita sob medida
-                    pra você que quer começar a programar com Arduino sem mistério e sem dor de cabeça.
+                    para você que quer começar a programar com Arduino sem mistério e sem dor de cabeça.
                     Aqui, vamos aprender passo a passo como programar a placa Arduino e criar projetos que acendem LEDs,
                     leem sensores, tocam buzzer… enfim, tudo aquilo que faz a gente se sentir um verdadeiro engenheiro
-                    de filmes futuristas (só que com fios bagunçados e uma bancada cheia de leds, fios e resistores).
+                    de filmes futuristas (só que com fios bagunçados e uma bancada cheia de LEDs, fios e resistores).
                 </p>
                 <p>
                     Se você nunca programou antes, não se preocupe. A ideia aqui é começar do zero e evoluir com calma,
@@ -119,7 +119,7 @@
                     no Arduino. As possibilidades são praticamente infinitas!
                 </p>
                 <h3>Arduino UNO R3</h3>
-                <p>Existem diversos modelos de placas Arduino. O Arduino UNO R3 é a versão mais popular e mais documentada de toda a família Arduino, sendo inclusive usado em simuladores e é recomendado para iniciantes.</p>
+                <p>Entre os diversos modelos de placas Arduino, o UNO R3 se destaca por ser o mais utilizado, o mais bem documentado e o mais indicado para quem está começando. Até os simuladores o preferem!</p>
                 <br>
                 <img src="../img/unoR3-esquema.png" alt="arduino uno r3">
                 <br>
@@ -135,8 +135,8 @@
                     <li>Pinos 0 e 1 (também podem ser usados para comunicação com um módulo bluetooth)</li>
                     <li>Porta ICSP (programação direta via protocolo serial)</li>
                     <li>Microcontrolador ATmega 328P</li>
-                    <li>Cristal de quartzo 16Mhz (clock)</li>
-                    <li>Conector fêmea 2,1mm com centro positivo (alimentação externa: 7 a 12V)</li>
+                    <li>Cristal de quartzo 16 Mhz (clock)</li>
+                    <li>Conector fêmea 2.1 mm com centro positivo (alimentação externa: 7 a 12 V)</li>
                     <li>Regulador de tensão (5V)</li>
                     <li>Pinos de tensão e GND</li>
                     <li>Entradas analógicas</li>
@@ -156,10 +156,10 @@
                     mágica acontecer ou pelo menos, piscarem LEDs! 😄</p>
                 <p>A Eletrônica é a área da ciência que estuda e utiliza circuitos formados por esses componentes, com o
                     objetivo de representar, armazenar, transmitir ou processar informações. Em outras palavras, ela
-                    transforma sinais elétricos em ações e é assim que controlamos sensores, motores, botões e muito
-                    mais com o Arduino.</p>
+                    transforma sinais elétricos em ações, e é assim que controlamos sensores, motores, botões e muito
+                    mais.</p>
                 <p>Mas calma! Não vamos estudar tudo de uma vez. A cada aula, conforme os experimentos forem evoluindo,
-                    vamos conhecer novos componentes: resistores, LEDs, botões, sensores, e por aí vai. Vamos ver para
+                    vamos conhecer novos componentes: resistores, LEDs, botões, sensores e por aí vai. Vamos ver para
                     que servem, como se comportam e como usá-los com segurança e criatividade. Você não precisa decorar
                     nada agora, vamos aprender fazendo, explorando e testando juntos.</p>
                 <h3>Protoboard</h3>
@@ -178,89 +178,128 @@
                     que sim, a eletricidade também precisa de limites!). Você vai encontrar resistores de todos os tipos
                     e valores, desde frações de ohm até milhões de ohms (também conhecidos como megaohms). Eles são
                     pequenos, geralmente com listras coloridas no corpo (uma espécie de código secreto que indica o
-                    valor da resistência).</p> 
-                    <h3>Calculadora de resistores ( 4 faixas )</h3>
-                    <p>🎨 Cores → Valor</p>                   
-                    <p class="faixa">Faixa 1 | Faixa 2 | Faixa 3 ( multiplicador ) | Faixa 4 ( tolerância )</p>                                   
-                    <select id="faixa1" placeholder="Faixa 1"></select>                    
-                    <select id="faixa2"></select>                    
-                    <select id="multiplicador"></select>                    
-                    <select id="tolerancia"></select>
-                    <button onclick="calcularResistor()">Calcular</button>
-                    <div id="resultado"></div>
-                    <br>
-                    <p>🔢 Valor → Cores</p>                    
-                    <p class="faixa">Valor em ohms (Ω) | Tolerância</p>                                    
-                    <input type="number" id="valorResistor" placeholder="Ex: 4700">                    
-                    <select id="tolInverso"></select>
-                    <button onclick="calcularCores()">Mostrar Cores</button>
-                    <div id="coresResultado"></div>              
+                    valor da resistência).</p>
+                <h3>Calculadora de resistores ( 4 faixas )</h3>
+                <p>🎨 Cores → Valor</p>
+                <p class="faixa">Faixa 1 | Faixa 2 | Faixa 3 ( multiplicador ) | Faixa 4 ( tolerância )</p>
+                <select id="faixa1" placeholder="Faixa 1"></select>
+                <select id="faixa2"></select>
+                <select id="multiplicador"></select>
+                <select id="tolerancia"></select>
+                <button onclick="calcularResistor()">Calcular</button>
+                <div id="resultado"></div>
+                <br>
+                <p>🔢 Valor → Cores</p>
+                <p class="faixa">Valor em ohms (Ω) | Tolerância</p>
+                <input type="number" id="valorResistor" placeholder="Ex: 4700">
+                <select id="tolInverso"></select>
+                <button onclick="calcularCores()">Mostrar Cores</button>
+                <div id="coresResultado"></div>
+                <h3>LEDs</h3>
+                <img src="../img/leds.png" alt="leds coloridos">
+                <br>
+                <p>O LED (sigla para Diodo Emissor de Luz) é aquele componente simpático que acende quando tudo está
+                    funcionando como deveria. O LED funciona como um diodo especial, que em vez de só conduzir a
+                    corrente elétrica em um sentido,
+                    também emite luz nesse processo. Mas atenção: o LED tem polaridade, ou seja, não dá pra ligar de
+                    qualquer jeito! O terminal menor (ou o lado do chanfro na base) indica o cátodo, que é o lado
+                    negativo. Já o terminal maior é o ânodo (lado positivo).
+                <p>Os LEDs estão por toda parte: em várias cores, formatos e tamanhos. Alguns piscam, outros mudam de
+                    cor, e outros são tão potentes que parecem holofotes de show! Mas cuidado! LEDs são sensíveis e não
+                    gostam de corrente demais. Se você ligar direto no Arduino sem um resistor para limitar a
+                    corrente... bem, digamos que o LED vai brilhar forte e brevemente. 😬
+                </p>
+                <p>Então, regra de ouro: sempre use um resistor em série com o LED. Assim, você garante luz na medida
+                    certa e um circuito saudável.</p>
+                <h3>Qual o resistor ideal para ligar um LED?</h3>
+                <p>A saída digital do Arduino fornece 5V, e a corrente segura para a maioria dos LEDs é 20 mA. Cada cor
+                    de LED tem uma queda típica de tensão:</p>
+                <br>
+                <ul>
+                    <li>🔴 Vermelho: ~2.0V</li>
+                    <li>🟢 Verde: ~2.2V</li>
+                    <li>🟡 Amarelo: ~2.1V</li>
+                </ul>
+                <br>
+                <p>Usando a famosa Lei de Ohm (V = R × I), podemos calcular o resistor ideal. Mas calma, você não
+                    precisa virar um matemático agora! Aqui vai a dica prática:</p>
+                <br>
+                <p>🔹 Resistor de 220Ω ou 330Ω já está ótimo para a maioria dos casos.
+                    Eles garantem segurança tanto para o LED quanto para o Arduino.</p>
+                <br>
+                <p>🔹 Quer ajustar o brilho? Veja a mágica na prática:</p>
+                <br>
+                <ul>
+                    <li>150Ω → LED bem brilhante (20 mA – ideal)</li>
+                    <li>220Ω → Brilho equilibrado (~13 mA)</li>
+                    <li>330Ω → Brilho mais suave (~9 mA)</li>
+                    <li>470Ω → LED discreto (~6 mA)</li>
+                </ul>
+                <br>
+                <p>⚠️ Evite resistores abaixo de 150Ω — podem forçar o LED e a saída do Arduino.</p>
+                <h3>Laboratório prático: Pisca LED</h3>
+                <p>Objetivo: Desenvolver um simples circuito para acionamento de um LED.</p>
+                <br>
+                <p>Lista de material:</p>
+                <br>
+                <img src="../img/tabela1.png" alt="lista de material">
+                <br><br>
+                <p>Diagrama elétrico:</p>
+                <br>
+                <img src="../img/diagrama1.png" alt="diagrama arduino">
+                <br><br>
+                <p>Código fonte:</p>
+                <br>
+                <img src="../img/blinkLed.png" alt="código arduino">
             </section>
             <hr>
             <section id="topico2">
-                <h2>Parte 2 - Montagem do circuito elétrico:</h2>
-                <h3>Lista de material:</h3>
-                <ul>
-                    <li>1 Arduino UNO ou compatível</li>
-                    <li>1 módulo bluetooth HC-06</li>
-                    <li>1 resistor de 1K (marrom preto vermelho)</li>
-                    <li>1 resistor de 2K (vermelho preto vermelho)</li>
-                </ul>
-                <br>
-                <p>Ligue o módulo HC-06 no Arduino, conforme diagrama abaixo. Os resistores são usados como divisor de
-                    tensão
-                    para reduzir a tensão de 5V para 3.3V no pino RX do módulo (importante para não danificar o módulo
-                    bluetooth).
-                </p>
-                <br>
-                <img src="../img/diagrama-hc06.png" alt="diagrama elétrico HC-06">
+                <h2>Aula 2 - Fundamentos da programação com Arduino | Semáforo simples</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
-            <hr>
             <section id="topico3">
-                <h2>Parte 3 - Código fonte</h2>
-                <p>Baixe o código no link abaixo e faça o upload para a placa Arduino.</p>
-                <br>
-                <a href="../codigo-fonte/setar_HC-06.ino">🔗 setar_HC-06.ino</a>
-                <br><br>
-                <img src="../img/arduino_ide.png" alt="arduino ide">
+                <h2>Aula 3 - Estruturas de controle 1 (laços de repetições) | A super máquina</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
-            <hr>
             <section id="topico4">
-                <h2>Parte 4 - Configuração</h2>
-                <ul>
-                    <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud]. ATENÇÃO! Pode ser
-                        necessário reiniciar o Serial Monitor. (Passo 1)</li>
-                    <li>Digite o comando desejado na caixa de entrada. (Passo 2)</li>
-                    <li>Se tudo estiver OK o módulo irá responder, executando a ação desejada. (Passo 3)</li>
-                    <li>Faça um teste pareando o módulo no celular! 📱</li>
-                </ul>
-                <br>
-                <img src="../img/serial_monitor.png" alt="arduino ide">
+                <h2>Aula 4 - Estruturas de controle 2 (estruturas condicionais) | Botões</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
-            <hr>
             <section id="topico5">
-                <h2>Parte - Configuração</h2>
+                <h2>Aula 5 - Operadores lógicos: AND - OR - NOT | Simuladores</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
-            <hr>
             <section id="topico6">
-                <h2>Parte - Configuração</h2>
+                <h2>Aula 6 - Desafio: Semáforo de pedestres</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
-            <hr>
             <section id="topico7">
-                <h2>Parte - Configuração</h2>
+                <h2>Aula 7 - Leituras analógicas | Luz de cortesia</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
-            <hr>
             <section id="topico8">
-                <h2>Parte - Configuração</h2>
+                <h2>Aula 8 - PWM e Função Random | Efeito de fogo</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
-            <hr>
             <section id="topico9">
-                <h2>Parte - Configuração</h2>
+                <h2>Aula 9 - Encadeamento de estruturas condicionais | Pianinho</h2>
+                <h3>Em produção...</h3>
+                <p></p>
+            </section>
+            <section id="topico10">
+                <h2>Aula 10 - Array (vetor) | Jogo GENIUS</h2>
+                <h3>Em produção...</h3>
+                <p></p>
             </section>
             <hr>
-            <section id="topico10">
-                <h2>Parte - Configuração</h2>
-            </section>
+
         </div>
     </div>
 
