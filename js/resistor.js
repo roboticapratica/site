@@ -53,7 +53,7 @@ function preencherSelects() {
         }
         if (c.tol !== undefined) {
             adicionarOpcao(tol, c.tol, c.tol, c.cor)
-            adicionarOpcao(tolInv, c.tol, c.tol, c.cor)
+            adicionarOpcao(tolInv, c.tol, c.tol, c.tol)
         }
     })
 }
