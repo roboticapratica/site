@@ -242,7 +242,7 @@ option {
     color: black;
 }
 
-option:first-child {   
+option:first-child {
     font-style: italic;
 }
 
@@ -567,6 +567,12 @@ h4 {
     /* Rodapé */
     #social {
         margin: 0;
+    }
+
+    /* Conteúdo */
+    .Video iframe {
+        width: 560px;
+        height: 315px;
     }
 }
 
