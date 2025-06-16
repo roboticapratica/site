@@ -273,6 +273,11 @@ button {
     font-size: 18px;
 }
 
+#lamp,
+#sw1,
+#sw2 {
+  cursor: pointer;
+}
 
 /* LAYOUT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
