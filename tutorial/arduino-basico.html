@@ -163,10 +163,10 @@
                     vamos conhecer novos componentes: resistores, LEDs, botões, sensores e por aí vai. Vamos ver para
                     que servem, como se comportam e como usá-los com segurança e criatividade. Você não precisa decorar
                     nada agora, vamos aprender fazendo, explorando e testando juntos.</p>
-                <h3>Protoboard</h3>
+                <h3>Breadboard (protoboard)</h3>
                 <img src="../img/protoboard.png" alt="protoboard">
                 <br>
-                <p>Usada para prototipação de circuitos elétricos, a protoboard permite a montagem dos componentes
+                <p>Usada para prototipação de circuitos elétricos, a protoboard é uma placa de ensaios que permite a montagem dos componentes
                     eletrônicos sem uso de solda. Ela é feita por blocos de plástico perfurados e possui internamente
                     várias lâminas que fazem o contato elétrico.</p>
                 <h3>Resistores</h3>
@@ -263,20 +263,22 @@
             <hr>
             <section id="topico2">
                 <h2>Aula 2 - Fundamentos da programação</h2>
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <p>Nesta aula, vamos explorar os fundamentos da programação com a linguagem Arduino. Você vai conhecer
-                    os principais elementos que compõem um programa, como sketches, variáveis, operadores, estruturas de
-                    controle e funções, e entender como esses blocos se conectam para dar vida aos seus projetos.</p>
+                <p>Olá, futuro mestre do Arduino! 😄</p>
+                <p>Se você já fez o LED piscar, parabéns! Agora é hora de dar o próximo passo e começar a programar de
+                    verdade.</p>
+                <p>Nesta aula você vai aprender a exibir o famoso Hello World, usar variáveis, fazer contas simples e
+                    dar os primeiros passos na lógica de programação, mas não se preocupe: nada de fórmulas malucas ou
+                    matemática assustadora. Aqui a ideia é aprender de forma simples e prática. Vamos lá!
                 <h3>Linguagem de programação</h3>
                 <p>Imagine a linguagem de programação como um idioma criado especialmente para conversar com as máquinas
                     (mas nada de "Oi, tudo bem?"). Aqui, as conversas são cheias de instruções que dizem exatamente o
                     que o computador deve fazer. Cada linguagem tem sua própria gramática, com símbolos e regras que
                     organizam essa conversa de forma que o computador entenda.</p>
-                <h3>Linguagem de Máquina (Baixo Nível)</h3>
-                <p>Essa é a linguagem nativa dos processadores. Aqui, a conversa é crua, direta e sem rodeios: só zeros
+                <h3>Linguagem de máquina (baixo nível)</h3>
+                <p>Essa é a linguagem nativa dos microcontroladores e processadores. Aqui, a conversa é crua, direta e sem rodeios: só zeros
                     e uns (o famoso sistema binário). O processador entende isso como dois níveis de tensão elétrica.
                     Para a gente, parece código alienígena, mas para a máquina, é poesia pura.</p>
-                <h3>Linguagem de Alto Nível</h3>
+                <h3>Linguagem de alto nível</h3>
                 <p>Agora sim, entramos no mundo dos programadores! As linguagens de alto nível (como C, Python ou Java)
                     são bem mais amigáveis para os humanos. Elas se parecem um pouco mais com frases que conseguimos
                     entender e estão bem distantes daquela sopa de bits da linguagem de máquina. O melhor: você não
@@ -287,15 +289,16 @@
                     escreveu em uma linguagem compreensível é traduzido para linguagem de máquina, pronta para ser
                     executada direto no microcontrolador. Sem compilar, a máquina fica olhando pro código igual você
                     olha pra uma receita de bolo em japonês!</p>
-                <h3>Programação de Sistemas Embarcados</h3>
-                <p>Quando o assunto é programar sistemas embarcados (como placas Arduino, microcontroladores e afins),
-                    usamos linguagens bem conhecidas, como:</p>
+                <h3>Linguagens de programação para microcontroladores e sistemas embarcados</h3>
+                <p>Quando falamos em programar sistemas embarcados (como placas Arduino, microcontroladores e
+                    dispositivos inteligentes) devemos usar linguagens capazes de lidar com recursos limitados e tempo
+                    real, usamos linguagens bem conhecidas, como: </p>
                 <br>
                 <ul>
-                    <li>Assembly (para os corajosos)</li>
-                    <li>C/C++ (queridinhas do Arduino)</li>
-                    <li>Python (o xodó dos iniciantes)</li>
-                    <li>Java (sim, ela também aparece por aqui)</li>
+                    <li>Assembly (para quem gosta de emoção)</li>
+                    <li>C/C++ (as estrelas dos microcontroladores)</li>
+                    <li>Python (aparece na lista, mas seu negócio mesmo é outro)</li>
+                    <li>Java (sim, ela insiste em participar também 😅)</li>
                 </ul>
                 <h3>Linguagem de Programação Arduino</h3>
                 <p>A linguagem do Arduino é baseada em C/C++ e possui uma estrutura simples, feita sob medida para
@@ -308,32 +311,49 @@
                     <li>Estruturas de controle (para tomar decisões)</li>
                     <li>Funções (para organização e reutilização do código)</li>
                 </ul>
-                <h3>Fundamentos da programação com Arduino</h3>
-                <h3>Simulador dos operadores lógicos</h3>
-                <h3>AND</h3>                
-                    <img src="../img/swoff.png" alt="interruptor" id="sw1" onclick="sw(1)">
-                    <img src="../img/swoff.png" alt="interruptor" id="sw2" onclick="sw(2)">
-                    <img src="../img/off.jpg" alt="lâmpada" id="lamp" onclick="sw(3)">
-                    <br>
-                    <p>
-                        <img src="../img/circ_and.png" alt="circuito">
-                        <img src="../img/tabeland.png" alt="operador and">
-                    </p>                               
+                <h3>Hello World</h3>
+                <p>Vamos começar com o clássico “Hello World”, um verdadeiro rito de passagem para todo programador. 😄
+                </p>
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/u0Cm9LA9G9A?si=GrD1nNegNn3KpDg5"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3>Variáveis e operadores aritméticos na prática</h3>
+                <p>Vamos agora explorar um dos fundamentos mais importantes da programação: o uso de variáveis e
+                    operadores aritméticos. É com eles que você começa a dar inteligência ao seu projeto!</p>
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUAVRvwyHKY?si=XWElNmBHu0spUsXo"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </section>
+            <hr>
             <section id="topico3">
-                <h2>Aula 3 - Loop Infinito: A Super Máquina</h2>
+                <h2>Aula 3 - Decisões Inteligentes: Botão Liga-Desliga</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
                 <p></p>
             </section>
             <section id="topico4">
-                <h2>Aula 4 - Decisões Inteligentes: Botão Liga-Desliga</h2>
+                <h2>Aula 4 - Loop Infinito: A Super Máquina</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
                 <p></p>
             </section>
             <section id="topico5">
                 <h2>Aula 5 - Operadores Lógicos com Simuladores</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <p></p>
+                <h3>Simulador dos operadores lógicos</h3>
+                <h3>AND</h3>
+                <img src="../img/swoff.png" alt="interruptor" id="sw1" onclick="sw(1)">
+                <img src="../img/swoff.png" alt="interruptor" id="sw2" onclick="sw(2)">
+                <img src="../img/off.jpg" alt="lâmpada" id="lamp" onclick="sw(3)">
+                <br>
+                <p>
+                    <img src="../img/circ_and.png" alt="circuito">
+                    <img src="../img/tabeland.png" alt="operador and">
+                </p>
             </section>
             <section id="topico6">
                 <h2>Aula 6 - Desafio: Semáforo de pedestres</h2>
