@@ -43,6 +43,9 @@
             <nav class="trilha" aria-label="Trilha de tópicos">
                 <div class="linha"></div>
                 <div class="linha-progresso"></div>
+                <a href="#topico0">
+                    <div class="bullet"></div><span>Introdução</span>
+                </a>
                 <a href="#topico1">
                     <div class="bullet"></div><span>Aula 1</span>
                 </a>
@@ -77,28 +80,65 @@
         </div>
 
         <div class="content">
-            <section id="topico1">
-                <h2>Aula 1 – Pisca LED: Seu Primeiro Código</h2>
-                <h3 id="sub">💡 Introdução</h3>
-                <p>
-                    Olá! Seja muito bem-vindo(a) ao tutorial de Arduino Básico, uma série com 10 aulas feita sob medida
-                    para você que quer começar a programar com Arduino sem mistério e sem dor de cabeça.
-                    Aqui, vamos aprender passo a passo como programar a placa Arduino e criar projetos que acendem LEDs,
-                    leem sensores, tocam buzzer… enfim, tudo aquilo que faz a gente se sentir um verdadeiro engenheiro
-                    de filmes futuristas (só que com fios bagunçados e uma bancada cheia de LEDs, fios e resistores).
-                </p>
-                <p>
-                    Se você nunca programou antes, não se preocupe. A ideia aqui é começar do zero e evoluir com calma,
-                    sempre com exemplos práticos, explicações claras e uma boa dose de paciência. E sim, errar faz parte
-                    do processo. (se a luz não acender de primeira, a culpa provavelmente não é do universo 😄)
-                </p>
-                <p>
-                    Prepare seu computador, sua plaquinha Arduino e o famoso cabo USB (aquele que sempre some quando a
-                    gente mais precisa). Está tudo pronto? Então bora começar!
-                </p>
+            <section id="topico0">
+                <h2>Introdução</h2>
+                <p>Olá! Seja muito bem-vindo(a) ao <strong>tutorial de Arduino Básico</strong>, uma jornada com 10 aulas
+                    feita sob medida para quem quer começar a programar com Arduino de forma simples, prática e sem dor
+                    de cabeça.</p>
                 <br>
                 <img src="../img/arduino-uno-R3.png" alt="arduino uno r3">
+                <br><br>
+                <p>Aqui você vai aprender a criar projetos que acendem LEDs, leem sensores, tocam buzzers… tudo isso
+                    enquanto desenvolve lógica de programação e entende o mundo da eletrônica com as próprias mãos — e
+                    alguns fios bagunçados. 😄</p>
+
+                <p>Mesmo que você nunca tenha programado antes, não tem problema. Vamos começar do zero e avançar com
+                    calma, com exemplos práticos, explicações claras e foco total no aprendizado. E sim, errar faz parte
+                    do caminho. Se o LED não acender de primeira, respira: isso também é aprender.</p>
                 <br>
+                <p>Para facilitar o seu progresso, cada aula será organizada em blocos temáticos que ajudam a visualizar
+                    melhor o conteúdo:</p>
+                <br>
+                <ul>
+                    <li>🔎 <strong>O que vem pela frente</strong></li>
+                    <p>Apresenta de forma rápida o que você vai aprender na aula.</p>
+                    <br>
+                    <li>🔋 <strong>Componentes Eletrônicos</strong></li>
+                    <p>Mostra os itens físicos utilizados no projeto, como LEDs, resistores, botões e sensores.</p>
+                    <br>
+                    <li>🔲 <strong>Funcionamento do Arduino no Projeto</strong></li>
+                    <p>Explica o papel do Arduino no circuito e como ele irá controlar os componentes.</p>
+                    <br>
+                    <li>💻 <strong>Lógica de Programação</strong></li>
+                    <p>Apresenta os conceitos do código, como comandos, variáveis e estruturas de controle.</p>
+                    <br>
+                    <li>🛠️ <strong>Laboratório Prático</strong></li>
+                    <p>hora de colocar a mão na massa! Aqui você monta o circuito, escreve o código e testa tudo
+                        funcionando.</p>
+                    <br>
+                    <li>🎯 <strong>Desafio</strong></li>
+                    <p>Uma proposta extra para aplicar o que aprendeu e explorar novas possibilidades.</p>
+                </ul>
+                <br>
+                <p>⚠️ Nem todas as aulas terão todos esses blocos, mas sempre vamos focar no que realmente importa para
+                    aprender de forma leve, eficiente e divertida.</p>
+                <br>
+                <p>Prepare seu computador, sua plaquinha Arduino e o famoso cabo USB (aquele que sempre some quando a
+                    gente mais precisa). Está tudo pronto? Então vamos começar!</p>
+            </section>
+            <hr>
+            <section id="topico1">
+                <h2>Aula 1 – Pisca LED: Seu Primeiro Código</h2>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <p>Chegou a hora de dar o primeiro passo! 😄</p>
+                <p>Nesta aula você vai conhecer de perto o Arduino, uma plataforma de prototipagem eletrônica que é
+                    simples de usar, acessível e poderosa o suficiente para projetos bem criativos. De LEDs piscando a
+                    robôs fazendo acrobacias (ok, um passo de cada vez 😅).</p>
+                <p>Vamos explorar a placa Arduino UNO, entender como funciona a programação com a IDE, conhecer os
+                    principais componentes eletrônicos e montar nosso primeiro circuito. Sim, hoje o LED vai piscar, e
+                    com isso, você entra oficialmente para o clube dos que fazem a eletrônica obedecer.</p>
+                <p>Tudo explicado de forma prática, clara e no seu ritmo. Prepare a bancada e vamos transformar teoria
+                    em ação.</p>
                 <h3>O que é Arduino?</h3>
                 <p>
                     Arduino é uma plataforma de prototipagem eletrônica de hardware e software livre, ou seja, você pode
@@ -152,7 +192,7 @@
                     primeiros programas.</p>
                 <br>
                 <img src="../img/arduinoide.png" alt="ide arduino">
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
                 <p>Antes de programar, é importante entender com quem estamos lidando no mundo físico: os componentes
                     eletrônicos. São eles que dão vida aos nossos projetos, controlam a corrente elétrica e fazem a
                     mágica acontecer ou pelo menos, piscarem LEDs! 😄</p>
@@ -233,14 +273,14 @@
                 <p>🔹 Quer ajustar o brilho? Veja a mágica na prática:</p>
                 <br>
                 <ul>
-                    <li>150Ω → LED bem brilhante (20 mA – ideal)</li>
-                    <li>220Ω → Brilho equilibrado (~13 mA)</li>
-                    <li>330Ω → Brilho mais suave (~9 mA)</li>
-                    <li>470Ω → LED discreto (~6 mA)</li>
+                    <li>150Ω → LED bem brilhante</li>
+                    <li>220Ω → Brilho equilibrado</li>
+                    <li>330Ω → Brilho mais suave</li>
+                    <li>470Ω → LED discreto</li>
                 </ul>
                 <br>
                 <p>⚠️ Evite resistores abaixo de 150Ω — podem forçar o LED e a saída do Arduino.</p>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <p>No laboratório prático desta aula, o Arduino controla uma saída digital para acender e apagar um LED
                     em intervalos regulares. Utilizando os comandos digitalWrite() e delay(), o LED é ligado, permanece
                     aceso por um curto período e, em seguida, desligado por outro intervalo. Esse ciclo se repete
@@ -293,12 +333,12 @@
             <hr>
             <section id="topico2">
                 <h2>Aula 2 - Fundamentos da programação</h2>
-                <h3 id="sub">💡 Introdução</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
                 <p>Olá, futuro mestre do Arduino! 😄</p>
                 <p>Se você já fez o LED piscar, parabéns! Agora é hora de dar o próximo passo e começar a programar de
                     verdade.</p>
                 <p>Nesta aula você vai aprender a exibir o famoso Hello World, usar variáveis, fazer contas simples e
-                    dar os primeiros passos na lógica de programação, mas não se preocupe: nada de fórmulas malucas ou
+                    dar os primeiros passos na lógica de programação, mas não se preocupe, nada de fórmulas malucas ou
                     matemática assustadora. Aqui a ideia é aprender de forma simples e prática. Vamos lá!
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <p>Lógica de programação é como ensinar o Arduino (ou qualquer computador) a pensar passo a passo, tipo
@@ -373,7 +413,7 @@
             <hr>
             <section id="topico3">
                 <h2>Aula 3 - Decisões Inteligentes: Botão Liga-Desliga</h2>
-                <h3 id="sub">💡 Introdução</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
                 <p>Já piscou, já somou... agora é hora de decidir!</p>
                 <p>Se você já exibiu o “Hello World” e entendeu como funcionam variáveis e contas simples, agora é hora
                     de dar um passo importante: tomar decisões com o seu código!</p>
@@ -387,7 +427,7 @@
                     <li>Ligar e desligar o LED com dois botões</li>
                     <li>Fazer o mesmo com apenas um botão</li>
                 </ul>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
                 <h3>Interruptor elétrico (chave Liga-Desliga)</h3>
                 <img src="../img/on-off.png" alt="interruptor simples">
                 <br>
@@ -398,14 +438,7 @@
                 <br>
                 <p>Um interruptor de pressão é um botão utilizado para ativar alguma função. Interruptores de pressão
                     funcionam como um interruptor elétrico e podem ser normalmente fechados ou abertos.</p>
-                <h3>Micro switch</h3>
-                <img src="../img/fim-curso.png" alt="chave fim de curso">
-                <br>
-                <p>Também conhecido como “chave de fim de curso” é um tipo de interruptor de pressão que pode ser usado
-                    como um simples sensor mecânico e pode ser usado no robô para detectar um obstáculo. Encontramos
-                    diversos tipos de micro switches cujas especificações são o tamanho, o tipo de alavanca e a
-                    capacidade de corrente.</p>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <p>No laboratório prático desta aula vamos explorar como o Arduino interpreta sinais vindos de botões e
                     interruptores, utilizando os modos pull-up, pull-down e o prático INPUT_PULLUP. Esses conceitos
                     garantem que os
@@ -435,7 +468,12 @@
                 <br>
                 <p>Essa é uma mão na roda! É uma função interna do Arduino que ativa automaticamente um resistor pull-up
                     no pino digital, ou seja, você não precisa colocar o resistor na protoboard pois o Arduino já tem um
-                    escondido lá dentro. Basta configurar o pino como: pinMode(pinoBotao, INPUT_PULLUP);</p>
+                    escondido lá dentro. Basta configurar o pino como:
+                </p>
+                <br>
+                <pre>
+pinMode(pinoBotao, INPUT_PULLUP);
+</pre>
                 <p>E pronto! O pino fica em 1 por padrão, e vai para 0 quando o botão for pressionado (ligado ao GND).
                 </p>
                 <h3 id="sub">💻 Lógica de Programação</h3>
@@ -443,20 +481,64 @@
                 <p>O if é usado quando queremos que o Arduino tome uma decisão simples. Ele verifica se uma condição é
                     verdadeira, se for, ele executa o comando que vem em seguida. É como dizer: se isso acontecer, faça
                     isso. 😄</p>
+                <br>
+                <pre>
+if (condição) {
+    //condição verdadeira
+}
+</pre>
                 <h3>Comando if-else (se... senão)</h3>
                 <p>Com o if-else, o Arduino tem duas opções: se a condição for verdadeira, ele executa um bloco de
                     comandos. Se não for, faz outra coisa no lugar. É como dizer: se o botão foi apertado, acenda o LED,
                     senão, mantenha apagado. Bem direto, como um bom ajudante deve ser!
                 </p>
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
+                <br>
+                <pre>
+if (condição) {
+    //condição verdadeira
+} else {
+    //condição falsa
+}
+</pre>
+                <h3 id="sub">🛠️ Laboratório Prático</h3>
+                <p>Experimento 1: Desenvolver um circuito para ligar e desligar um LED usando dois botões.</p>
+                <br>
+                <p>Lista de material:</p>
+                <br>
+                <img src="../img/listaLed.png" alt="lista de material">
+                <br><br>
+                <p>Diagrama elétrico:</p>
+                <br>
+                <img src="../img/Ligar_Desligar_Led.png" alt="diagrama arduino">
+                <br><br>
+                <p>Código fonte:</p>
+                <br>
+                <img src="../img/codigo_led_botao2.png" alt="codigo_led_botao2">
+                <br><br>
+                <p>Experimento 2: Desenvolver um circuito para ligar e desligar um LED usando apenas 1 botão. O LED deve
+                    acender enquanto o botão estiver sendo pressionado e apagar quando o botão deixar de ser
+                    pressionado.</p>
+                <br>
+                <p>Lista de material:</p>
+                <br>
+                <img src="../img/lista1led1botao.png" alt="lista de material">
+                <br><br>
+                <p>Diagrama elétrico:</p>
+                <br>
+                <img src="../img/controle_led.png" alt="diagrama arduino led">
+                <br><br>
+                <p>Código fonte:</p>
+                <br>
+                <img src="../img/codigo_led_botao1.png" alt="codigo_led_botao1">
+                <br>
             </section>
             <hr>
             <section id="topico4">
-                <h2>Aula 4 - Desafio: Semáforo de pedestres</h2>
+                <h2>Aula 4 - Semáforo de Pedestres</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">💡 Introdução</h3>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
@@ -465,9 +547,9 @@
             <section id="topico5">
                 <h2>Aula 5 - Operadores Lógicos com Simuladores</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">💡 Introdução</h3>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
@@ -485,9 +567,9 @@
             <section id="topico6">
                 <h2>Aula 6 - Loop Infinito: A Super Máquina</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">💡 Introdução</h3>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
@@ -496,9 +578,9 @@
             <section id="topico7">
                 <h2>Aula 7 - Leitura Analógica: Iluminação de Cortesia</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">💡 Introdução</h3>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
@@ -507,9 +589,9 @@
             <section id="topico8">
                 <h2>Aula 8 - PWM e Aleatoriedade: Simulando Fogo</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">💡 Introdução</h3>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
@@ -518,9 +600,9 @@
             <section id="topico9">
                 <h2>Aula 9 - Melodia Condicional: Crie seu Pianinho</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">💡 Introdução</h3>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
@@ -529,9 +611,9 @@
             <section id="topico10">
                 <h2>Aula 10 - Vetores no Controle: Jogo Genius</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">💡 Introdução</h3>
-                <h3 id="sub">🔌 Componentes Eletrônicos</h3>
-                <h3 id="sub">🤖 Funcionamento do Arduino no Projeto</h3>
+                <h3 id="sub">🔎 O que vem pela frente</h3>
+                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3 id="sub">🔲 Funcionamento do Arduino no Projeto</h3>
                 <h3 id="sub">💻 Lógica de Programação</h3>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
