@@ -227,7 +227,7 @@ hr {
 }
 
 pre {
-    
+
     background-color: #f6f8fa;
     border: 1px solid #d0d7de;
     border-radius: 6px;
@@ -294,8 +294,13 @@ button {
 }
 
 #lamp,
+#lampor,
+#lampnot,
 #sw1,
-#sw2 {
+#sw2,
+#sw1or,
+#sw2or,
+#sw1not {
     cursor: pointer;
 }
 
@@ -303,6 +308,19 @@ button {
 
 
 /* Smartphone portrait >>>>>>>>>>>>>>>>> */
+/* Layout */
+@media (hover: none) and (pointer: coarse) {
+    img {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
 /* Cabeçalho */
 header {
     height: 80px;

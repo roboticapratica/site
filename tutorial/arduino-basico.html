@@ -88,7 +88,9 @@
                 <br>
                 <img src="../img/arduino-uno-R3.png" alt="arduino uno r3">
                 <br><br>
-                <p>Neste tutorial, você vai aprender a programar com Arduino de forma prática e divertida, criando projetos que acendem LEDs, leem sensores, tocam buzzers e muito mais. Enquanto coloca a mão na massa, você desenvolve sua lógica de programação e se familiariza com o universo da eletrônica.</p>
+                <p>Neste tutorial, você vai aprender a programar com Arduino de forma prática e divertida, criando
+                    projetos que acendem LEDs, leem sensores, tocam buzzers e muito mais. Enquanto coloca a mão na
+                    massa, você desenvolve sua lógica de programação e se familiariza com o universo da eletrônica.</p>
                 <p>Mesmo que você nunca tenha programado antes, não tem problema. Vamos começar do zero e avançar com
                     calma, com exemplos práticos, explicações claras e foco total no aprendizado.</p>
                 <br>
@@ -127,8 +129,11 @@
                 <h2>Aula 1 – Pisca LED: Seu Primeiro Código</h2>
                 <h3 id="sub">🔎 O que vem pela frente</h3>
                 <p>Chegou a hora de dar o primeiro passo no mundo do Arduino! 😄</p>
-                <p>Nesta aula, você vai conhecer de perto o Arduino, uma plataforma de prototipagem eletrônica que é simples, acessível e, ao mesmo tempo, poderosa o bastante para dar vida a ideias incríveis.</p>
-                <p>Vamos explorar a placa Arduino UNO, entender suas funções básicas, conhecer os principais componentes eletrônicos e montar nosso primeiro circuito. Spoiler: hoje o LED vai piscar! E com esse simples piscar, você entra oficialmente para o clube de quem faz a eletrônica obedecer.</p>
+                <p>Nesta aula, você vai conhecer de perto o Arduino, uma plataforma de prototipagem eletrônica que é
+                    simples, acessível e, ao mesmo tempo, poderosa o bastante para dar vida a ideias incríveis.</p>
+                <p>Vamos explorar a placa Arduino UNO, entender suas funções básicas, conhecer os principais componentes
+                    eletrônicos e montar nosso primeiro circuito. Spoiler: hoje o LED vai piscar! E com esse simples
+                    piscar, você entra oficialmente para o clube de quem faz a eletrônica obedecer.</p>
                 <p>Prepare a bancada, ajeite os fios e bora transformar teoria em ação. </p>
                 <h3>O que é Arduino?</h3>
                 <p>
@@ -446,18 +451,15 @@ delay();</pre>
                     comandos sejam lidos de forma estável e confiável, deixando o botão no controle e o Arduino bem
                     comportado. 😄</p>
                 <h3>Pull-down</h3>
-                <img src="../img/pulldown.png" alt="pull-down gpio">
-                <br>
                 <p>Aqui o pino é puxado para o GND por padrão, com um resistor.</p>
                 <ul>
                     <li>Quando o botão não está pressionado, o pino está em 0.</li>
                     <li>Quando você pressiona o botão e liga no 5V, ele vai para 1. </li>
                 </ul>
                 <p>É como se disséssemos: "Ei, Arduino, considera isso 0... até alguém apertar o botão!"</p>
-
-                <h3>Pull-up</h3>
-                <img src="../img/pullup.png" alt="pull-up gpio">
                 <br>
+                <img src="../img/pulldown.png" alt="pull-down gpio">
+                <h3>Pull-up</h3>
                 <p>Agora o pino é puxado para o 5V usando um resistor.</p>
                 <ul>
                     <li>Quando o botão não está pressionado, o pino está em 1.</li>
@@ -465,9 +467,9 @@ delay();</pre>
                 </ul>
                 <p>É o oposto do pull-down, mas a ideia é a mesma: manter o pino num estado fixo até que o botão diga o
                     contrário.</p>
-                <h3>INPUT_PULLUP</h3>
-                <img src="../img/inputpullup.png" alt="input_pullup gpio">
                 <br>
+                <img src="../img/pullup.png" alt="pull-up gpio">        
+                <h3>INPUT_PULLUP</h3>
                 <p>Essa é uma mão na roda! É uma função interna do Arduino que ativa automaticamente um resistor pull-up
                     no pino digital, ou seja, você não precisa colocar o resistor na protoboard pois o Arduino já tem um
                     escondido lá dentro. Basta configurar o pino como:
@@ -478,6 +480,8 @@ pinMode(pinoBotao, INPUT_PULLUP);
 </pre>
                 <p>E pronto! O pino fica em 1 por padrão, e vai para 0 quando o botão for pressionado (ligado ao GND).
                 </p>
+                <br>
+                <img src="../img/inputpullup.png" alt="input_pullup gpio">               
                 <h3 id="sub">💻 Pensando como o Arduino</h3>
                 <h3>Comando if (se)</h3>
                 <p>O if é usado quando queremos que o Arduino tome uma decisão simples. Ele verifica se uma condição é
@@ -536,36 +540,129 @@ if (condição) {
             </section>
             <hr>
             <section id="topico4">
-                <h2>Aula 4 - Operadores Lógicos</h2>                                
+                <h2>Aula 4 - Operadores Lógicos</h2>
                 <h3 id="sub">🔎 O que vem pela frente</h3>
-                <p>Depois de piscar LEDs, fazer contas e tomar decisões com if...else, chegou a hora de turbinar a lógica do seu código 😄</p>
-                <p>Nesta aula, você vai conhecer os operadores lógicos AND, OR e NOT, que ajudam o Arduino a tomar decisões um pouco mais sofisticadas. Sabe quando você quer que algo aconteça só se duas condições forem verdadeiras? Ou se pelo menos uma delas for? Ou quando quer inverter tudo só por teimosia? Pois é, o Arduino também sabe fazer isso.</p>
-                <p>Vamos entender como esses operadores funcionam e aplicar tudo na prática com botões, LEDs e combinações criativas. Parece complicado, mas na verdade é simples, útil e até divertido de testar.</p>
-                <p>Então prepare os botões, afie a lógica e bora deixar seu Arduino mais esperto!</p>                
-                <h3 id="sub">💻 Pensando como o Arduino</h3>               
+                <p>Depois de piscar LEDs, fazer contas e tomar decisões com if...else, chegou a hora de turbinar a
+                    lógica do seu código 😄</p>
+                <p>Nesta aula, você vai conhecer os operadores lógicos AND, OR e NOT, que ajudam o Arduino a tomar
+                    decisões um pouco mais sofisticadas. Sabe quando você quer que algo aconteça só se duas condições
+                    forem verdadeiras? Ou se pelo menos uma delas for? Ou quando quer inverter tudo só por teimosia?
+                    Pois é, o Arduino também sabe fazer isso.</p>
+                <p>Vamos entender como esses operadores funcionam e aplicar tudo na prática com botões, LEDs e
+                    combinações criativas. Parece complicado, mas na verdade é simples, útil e até divertido de testar.
+                </p>
+                <p>Então prepare os botões, afie a lógica e bora deixar seu Arduino mais esperto!</p>
+                <h3 id="sub">💻 Pensando como o Arduino</h3>
                 <h3>Operador AND</h3>
-                <p>Imagine dois interruptores ligados em série controlando uma lâmpada. Para que a lâmpada acenda, os dois precisam estar ligados ao mesmo tempo. Se um deles estiver desligado, não tem conversa: a corrente não passa e a luz continua apagada.</p>
-                <p>Esse é o comportamento do operador AND na lógica digital. Ele só resulta em verdadeiro se ambas as entradas forem verdadeiras. Um único “não” já é suficiente para barrar tudo.</p>
-                <p>Agora é com você! Use o simulador abaixo para testar os interruptores e descobrir como o operador AND funciona. Mas cuidado... se clicar direto na lâmpada, ela quebra e não acende mais 😅 Teste com responsabilidade e divirta-se programando!</p>                
-                <img src="../img/swoff.png" alt="interruptor" id="sw1" onclick="sw(1)">
-                <img src="../img/swoff.png" alt="interruptor" id="sw2" onclick="sw(2)">
-                <img src="../img/off.jpg" alt="lâmpada" id="lamp" onclick="sw(3)">
+                <p>Imagine dois interruptores ligados em série controlando uma lâmpada. Para que a lâmpada acenda, os
+                    dois precisam estar ligados ao mesmo tempo. Se um deles estiver desligado, não tem conversa: a
+                    corrente não passa e a luz continua apagada.</p>
+                <p>Esse é o comportamento do operador AND na lógica digital. Ele só resulta em verdadeiro se ambas as
+                    entradas forem verdadeiras. Um único “não” já é suficiente para barrar tudo.</p>
+                <p>Agora é com você! Use o simulador abaixo para testar os interruptores e descobrir como o operador AND
+                    funciona. Mas cuidado... se clicar direto na lâmpada, ela quebra e não acende mais. 😅 Teste com
+                    responsabilidade!</p>
+                <br>
+                <img src="../img/swoff.png" id="sw1" onclick="alternar('sw1', 'and', 'sw1')">
+                <img src="../img/swoff.png" id="sw2" onclick="alternar('sw2', 'and', 'sw2')">
+                <img src="../img/off.jpg" id="lamp" onclick="alternar('lamp', 'and', 'lamp')">
                 <br>
                 <p>
-                    <img src="../img/circ_and.png" alt="circuito">
+                    <img src="../img/circ_and.png" alt="circuito AND">
                     <img src="../img/tabeland.png" alt="operador and">
                 </p>
                 <h3>Operador OR</h3>
-                <p>Agora imagine dois interruptores, mas dessa vez ligados em paralelo com a lâmpada. Aqui, a lógica é mais “flexível”: se pelo menos um dos interruptores estiver ligado, a corrente passa e a lâmpada acende.</p>
-                <p>É assim que funciona o operador OR. Ele só fica desligado quando tudo está desligado. Qualquer entrada verdadeira já é suficiente para iluminar o caminho.</p>
-                <p>Experimente ligar os interruptores em diferentes combinações e veja quando a lâmpada acende. E claro, se clicar direto na lâmpada... bem, ela ainda quebra 😅</p>
+                <p>Agora imagine dois interruptores, mas dessa vez ligados em paralelo com a lâmpada. Aqui, a lógica é
+                    mais “flexível”: se pelo menos um dos interruptores estiver ligado, a corrente passa e a lâmpada
+                    acende.</p>
+                <p>É assim que funciona o operador OR. Ele só fica desligado quando tudo está desligado. Qualquer
+                    entrada verdadeira já é suficiente para iluminar o caminho.</p>
+                <p>Experimente ligar os interruptores em diferentes combinações e veja quando a lâmpada acende. E claro,
+                    se clicar direto na lâmpada... bem, ela ainda quebra 😅</p>
+                <br>
+                <img src="../img/swoff.png" id="sw1or" onclick="alternar('sw1or', 'or', 'sw1')">
+                <img src="../img/swoff.png" id="sw2or" onclick="alternar('sw2or', 'or', 'sw2')">
+                <img src="../img/off.jpg" id="lampor" onclick="alternar('lampor', 'or', 'lamp')">
+                <br>
+                <p>
+                    <img src="../img/circ_or.png" alt="circuito OR">
+                    <img src="../img/tabelor.png" alt="operador or">
+                </p>
                 <h3>Operador NOT</h3>
                 <p>Esse aqui é o do contra.</p>
                 <p>O operador NOT inverte o valor da entrada. Se for 1, ele vira 0. Se for 0, vira 1. Simples assim.</p>
-                <p>Na prática, pense em um único interruptor que desliga a lâmpada quando está ligado e acende quando está desligado. Parece estranho no começo, mas é super útil quando você quer fazer o contrário do que está sendo lido.</p>
-                <p>Ative o interruptor e veja o que acontece. Lembre-se: com o NOT, o mundo está sempre de cabeça para baixo. E sim, a lâmpada continua quebrando se você insistir em clicar nela 😄</p>
-                <h3 id="sub">🛠️ Laboratório Prático</h3>
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
+                <p>Na prática, pense em um único interruptor que desliga a lâmpada quando está ligado e acende quando
+                    está desligado. Parece estranho no começo, mas é super útil quando você quer fazer o contrário do
+                    que está sendo lido.</p>
+                <p>Ative o interruptor e veja o que acontece. E sim, a lâmpada continua quebrando se você insistir em
+                    clicar nela 😄</p>
+                <br>
+                <img src="../img/swoff.png" id="sw1not" onclick="alternar('sw1not', 'not', 'sw1')">
+                <img src="../img/on.jpg" id="lampnot" onclick="alternar('lampnot', 'not', 'lamp')">
+                <br>
+                <p>
+                    <img src="../img/circ_not.png" alt="circuito NOT">
+                    <img src="../img/tabelnot.png" alt="operador not">
+                </p>
+                <h3 id="sub">🎯 Desafio</h3>
+                <p>Agora que você já entendeu como funcionam os operadores lógicos AND, OR e NOT, chegou a hora de
+                    colocá-los em ação com um desafio cheio de botões, LEDs e lógica digna de um verdadeiro mestre Jedi
+                    da programação! 😄</p>
+                <h3>Objetivo:</h3>
+                <p>Montar três mini circuitos simulando no Arduino o funcionamento dos operadores lógicos usando botões e LEDs.</p>
+                <h3>⚠️ Atenção!</h3>
+                <p>Esse desafio é para treinar <strong>lógica de programação</strong>, não montagem elétrica. Não vale ligar os botões em série ou paralelo como na vida real. A ideia aqui é simular o comportamento dos operadores lógicos usando <strong>código</strong>, e não atalhos com fios.</p>
+                <br>
+                <p>Você já tem tudo o que precisa. Agora é só confiar na força da programação e resistir ao lado sombrio... do ChatGPT. Que os LEDs estejam com você. 😎✨</p>
+                <h3>Circuito AND</h3>
+                <ul>
+                    <li>Use dois botões ligados a entradas digitais.</li>
+                    <li>Use um LED como saída.</li>
+                    <li>O LED só deve acender quando os dois botões forem pressionados ao mesmo tempo.</li>
+                </ul>
+
+                <h3>Circuito OR</h3>
+                <ul>
+                    <li>Também com dois botões e um LED.</li>
+                    <li>O LED deve acender se pelo menos um dos botões estiver pressionado.</li>
+                    <li>Se os dois estiverem pressionados, também acende!</li>
+                </ul>
+
+                <h3>Circuito NOT</h3>
+                <ul>
+                    <li>Use um único botão e um LED.</li>
+                    <li>O LED deve acender quando o botão estiver solto, e apagar quando o botão for pressionado.</li>
+                    <li>Parece do contra? É exatamente essa a ideia! 😄</li>
+                </ul>
+
+                <h3>Dicas:</h3>
+                <ul>
+                    <li>Os operadores lógicos em C/C++ são:</li>
+                    <br>
+                    <pre>
+&& para AND
+|| para OR
+!  para NOT
+                    </pre>
+                    <li>Use:</li>
+                    <br>
+                    <pre>
+digitalRead() //para ler os botões
+digitalWrite() //para acender os LEDs
+
+if-else (se... senão) para simular os circuitos
+exemplo: operador AND
+
+if (condição1 && condição2) {
+    //condições 1 e 2 verdadeiras
+} else {
+    //somente uma verdadeira ou tudo falso
+}
+                    </pre>
+                    <li>Coloque resistores de 10KΩ (pull-up ou pull-down) nos botões ou use INPUT_PULLUP (não requer resistor).</li>                    
+                    <li>Não se esqueça dos resistores nos LEDs. Eles são os verdadeiros heróis silenciosos que salvam seu circuito da destruição total. 🦸‍♂️💡</li>
+                    <li>Teste bem cada circuito antes de passar para o próximo.</li>
+                </ul>
             </section>
             <hr>
             <section id="topico5">
@@ -589,7 +686,7 @@ if (condição) {
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
             </section>
-            <hr>           
+            <hr>
             <section id="topico7">
                 <h2>Aula 7 - Leitura Analógica: Iluminação de Cortesia</h2>
                 <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>

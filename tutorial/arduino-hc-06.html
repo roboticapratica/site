@@ -61,30 +61,29 @@
 
         <div class="content">
             <section id="topico1">
-                <h2>Preparar, apontar... conectar!</h2>
-                <p>Se você já sonhou em conversar com seu Arduino sem usar fios, como num bate-papo tecnológico à distância, este tutorial é pra você. 😄</p>
-                <br>
+                <h2>Como configurar o módulo Bluetooth HC-06 no Arduino</h2>
+                <h3 id="sub">Preparar, apontar... conectar!</h3>
                 <img src="../img/modulo-bluetooth-hc06.png" alt="módulo bluetooth HC-06">
-                <br><br>
-                <p>
-                    O módulo Bluetooth HC-06 permite estabelecer uma comunicação via Bluetooth com placas Arduino que
-                    não dispõem desse recurso. Neste tutorial, vamos mostrar como configurar os principais parâmetros
-                    desse módulo: SSID, senha e velocidade de comunicação.
+                <br>
+                <p>Neste tutorial, você vai aprender passo a passo como configurar o módulo HC-06 para se
+                    comunicar com o Arduino usando Bluetooth. O HC-06 permite estabelecer uma comunicação sem fio com
+                    placas Arduino que não dispõem desse recurso. Aqui, vamos mostrar como ajustar os principais
+                    parâmetros: nome do dispositivo (SSID), senha de pareamento e velocidade de comunicação.
                 </p>
                 <h3>Por padrão, o HC-06 vem com os seguintes parâmetros:</h3>
                 <ul>
-                    <li>📛 SSID: HC-06</li>
-                    <li>🔐 Senha: 1234</li>
-                    <li>🚀 Velocidade: 9600 bps</li>
-                    <li>📡 Frequência: 2.4Ghz (padrão Bluetooth V2.0 + EDR)</li>
-                    <li>📏 Alcance: 10 metros</li>
+                    <li>SSID: HC-06</li>
+                    <li>Senha: 1234</li>
+                    <li>Velocidade: 9600 bps</li>
+                    <li>Frequência: 2.4Ghz (padrão Bluetooth V2.0 + EDR)</li>
+                    <li>Alcance: 10 metros</li>
                 </ul>
                 <br>
                 <p>Mas como bons makers, não vamos nos contentar com as configurações de fábrica. Para personalizar o
-                    SSID, senha e velocidade, usaremos uma placa Arduino para enviar comandos AT, que são basicamente
-                    instruções que o módulo entende, tipo uma linguagem secreta dos modems. 🤖</p>
-                <p>Vamos montar o circuito, fazer o upload de um código simples, abrir o Serial Monitor e dar os
-                    primeiros comandos para colocar o HC-06 do jeitinho que a gente quer.</p>
+                    SSID, a senha e a velocidade, usaremos uma placa Arduino para enviar comandos AT, que são
+                    basicamente instruções que o módulo entende, como uma linguagem secreta dos modems. 🤖</p>
+                <p>Vamos montar o circuito, fazer o upload de um código simples, abrir o Serial Monitor e enviar os
+                    primeiros comandos para deixar o HC-06 do jeitinho que a gente quer.</p>
                 <p>Pronto para esse papo sem fio? Então bora começar! 📡✨</p>
             </section>
             <hr>
@@ -98,11 +97,9 @@
                     <li>1 resistor de 2K (vermelho preto vermelho)</li>
                 </ul>
                 <br>
-                <p>Ligue o módulo HC-06 no Arduino, conforme diagrama abaixo. Os resistores são usados como divisor de
-                    tensão
-                    para reduzir a tensão de 5V para 3.3V no pino RX do módulo (importante para não danificar o módulo
-                    bluetooth).
-                </p>
+                <p>Ligue o módulo HC-06 ao Arduino conforme o diagrama abaixo. Os resistores são usados como divisor de
+                    tensão para reduzir os 5V do Arduino para 3,3V no pino RX do módulo (importante para não danificar o
+                    Bluetooth).</p>
                 <br>
                 <img src="../img/diagrama-hc06.png" alt="diagrama elétrico HC-06">
             </section>
@@ -118,17 +115,17 @@
             <hr>
             <section id="topico4">
                 <h2>Parte 3 - Configuração</h2>
-                <ul>
-                    <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud]. ATENÇÃO! Pode ser
-                        necessário reiniciar o Serial Monitor. (Passo 1)</li>
-                    <li>Digite o comando desejado na caixa de entrada. (Passo 2)</li>
-                    <li>Se tudo estiver OK o módulo irá responder, executando a ação desejada. (Passo 3)</li>
-                    <li>Faça um teste pareando o módulo no celular! 📱</li>
-                </ul>
+                <ol>
+                    <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud].</li>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Pode ser necessário reiniciar o Serial Monitor.</p>
+                    <li>Digite o comando desejado na caixa de entrada.</li>
+                    <li>Se tudo estiver OK, o módulo irá responder e executar a ação desejada.</li>                    
+                </ol>
+                <br>
+                <p>✅ Por fim, faça um teste pareando o módulo no celular! 📱</p>
                 <br>
                 <img src="../img/serial_monitor.png" alt="arduino ide">
             </section>
-
         </div>
     </div>
 

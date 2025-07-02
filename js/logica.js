@@ -1,55 +1,40 @@
-let sw1 = false
-let sw2 = false
-let broken = false
-let receive
+let estados = {
+  and: { sw1: false, sw2: false, broken: false },
+  or: { sw1: false, sw2: false, broken: false },
+  not: { sw1: false, broken: false }
+};
 
-function sw(receive) {
-  if (receive === 1 && sw1 === false) {
-    document.getElementById("sw1").src = "../img/swon.png";
-    sw1 = true
-  } else if (receive === 1 && sw1 === true) {
-    document.getElementById("sw1").src = "../img/swoff.png";
-    sw1 = false
-  } else if (receive === 2 && sw2 === false) {
-    document.getElementById("sw2").src = "../img/swon.png";
-    sw2 = true
-  } else if (receive === 2 && sw2 === true) {
-    document.getElementById("sw2").src = "../img/swoff.png";
-    sw2 = false
-  }
-  //lamp
-  if (receive === 3) {
-    let beep = new Audio();
-    beep.src = "glassbreaking.wav";
-    beep.play()
-    document.getElementById("lamp").src = "../img/broken.jpg";
-    broken = true
-  }
-  //and  
-  if (broken !== true) {
-    if (sw1 === true && sw2 === true) {
-      document.getElementById("lamp").src = "../img/on.jpg"
-    } else {
-      document.getElementById("lamp").src = "../img/off.jpg"
+function tocarSomVidro() {
+  const beep = new Audio("glassbreaking.wav");
+  beep.play();
+}
+
+function alternar(id, modo, qual) {
+  const grupo = estados[modo];
+
+  // Clicou na lâmpada → quebra
+  if (qual === "lamp") {
+    if (!grupo.broken) {
+      document.getElementById(id).src = "../img/broken.jpg";
+      grupo.broken = true;
+      tocarSomVidro();
     }
-  }
-/*
-  //or
-  if (broken !== true) {
-    if (sw1 === true || sw2 === true) {
-      document.getElementById("lamp").src = "img/on.jpg"
-    } else {
-      document.getElementById("lamp").src = "img/off.jpg"
-    }
+    return;
   }
 
-  //not
-  if (broken !== true) {
-    if (!sw1) {
-      document.getElementById("lamp").src = "img/on.jpg"
-    } else {
-      document.getElementById("lamp").src = "img/off.jpg"
-    }
-  }
-  */
+  // Alternar estado do interruptor
+  grupo[qual] = !grupo[qual];
+  document.getElementById(id).src = grupo[qual] ? "../img/swon.png" : "../img/swoff.png";
+
+  // Atualizar lâmpada com base no operador lógico
+  if (grupo.broken) return;
+
+  const lampId = "lamp" + (modo === "and" ? "" : modo);
+  let acende = false;
+
+  if (modo === "and") acende = grupo.sw1 && grupo.sw2;
+  else if (modo === "or") acende = grupo.sw1 || grupo.sw2;
+  else if (modo === "not") acende = !grupo.sw1;
+
+  document.getElementById(lampId).src = acende ? "../img/on.jpg" : "../img/off.jpg";
 }
