@@ -468,7 +468,7 @@ delay();</pre>
                 <p>É o oposto do pull-down, mas a ideia é a mesma: manter o pino num estado fixo até que o botão diga o
                     contrário.</p>
                 <br>
-                <img src="../img/pullup.png" alt="pull-up gpio">        
+                <img src="../img/pullup.png" alt="pull-up gpio">
                 <h3>INPUT_PULLUP</h3>
                 <p>Essa é uma mão na roda! É uma função interna do Arduino que ativa automaticamente um resistor pull-up
                     no pino digital, ou seja, você não precisa colocar o resistor na protoboard pois o Arduino já tem um
@@ -481,7 +481,7 @@ pinMode(pinoBotao, INPUT_PULLUP);
                 <p>E pronto! O pino fica em 1 por padrão, e vai para 0 quando o botão for pressionado (ligado ao GND).
                 </p>
                 <br>
-                <img src="../img/inputpullup.png" alt="input_pullup gpio">               
+                <img src="../img/inputpullup.png" alt="input_pullup gpio">
                 <h3 id="sub">💻 Pensando como o Arduino</h3>
                 <h3>Comando if (se)</h3>
                 <p>O if é usado quando queremos que o Arduino tome uma decisão simples. Ele verifica se uma condição é
@@ -493,8 +493,8 @@ if (condição) {
     //condição verdadeira
 }
 </pre>
-                <h3>Comando if-else (se... senão)</h3>
-                <p>Com o if-else, o Arduino tem duas opções: se a condição for verdadeira, ele executa um bloco de
+                <h3>Comando if...else (se... senão)</h3>
+                <p>Com o if...else, o Arduino tem duas opções: se a condição for verdadeira, ele executa um bloco de
                     comandos. Se não for, faz outra coisa no lugar. É como dizer: se o botão foi apertado, acenda o LED,
                     senão, mantenha apagado. Bem direto, como um bom ajudante deve ser!
                 </p>
@@ -506,6 +506,19 @@ if (condição) {
     //condição falsa
 }
 </pre>
+                <h3>Comando if...else if...else (encadeado)</h3>
+                <p>Às vezes o Arduino se depara com mais de duas possibilidades. Aí entra o encadeamento de condições com else...if. Ele verifica uma por uma, na ordem, até encontrar uma que seja verdadeira. Quando encontra, executa aquela e ignora o resto.</p>
+                <p>Esse tipo de encadeamento é útil quando temos várias condições diferentes e apenas uma deve ser executada. O Arduino decide com sabedoria, sem entrar em conflito interno. Afinal, equilíbrio é o caminho da programação 🧘‍♂️💡</p>
+                <br>
+                <pre>
+if (condição1) {
+    //condição1 verdadeira
+} else if (condição2) {
+    //condição2 verdadeira
+} else {
+    //falso
+}
+                    </pre>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <p>Experimento 1: Desenvolver um circuito para ligar e desligar um LED usando dois botões.</p>
                 <br>
@@ -609,11 +622,15 @@ if (condição) {
                     colocá-los em ação com um desafio cheio de botões, LEDs e lógica digna de um verdadeiro mestre Jedi
                     da programação! 😄</p>
                 <h3>Objetivo:</h3>
-                <p>Montar três mini circuitos simulando no Arduino o funcionamento dos operadores lógicos usando botões e LEDs.</p>
+                <p>Montar três mini circuitos simulando no Arduino o funcionamento dos operadores lógicos usando botões
+                    e LEDs.</p>
                 <h3>⚠️ Atenção!</h3>
-                <p>Esse desafio é para treinar <strong>lógica de programação</strong>, não montagem elétrica. Não vale ligar os botões em série ou paralelo como na vida real. A ideia aqui é simular o comportamento dos operadores lógicos usando <strong>código</strong>, e não atalhos com fios.</p>
+                <p>Esse desafio é para treinar <strong>lógica de programação</strong>, não montagem elétrica. Não vale
+                    ligar os botões em série ou paralelo como na vida real. A ideia aqui é simular o comportamento dos
+                    operadores lógicos usando <strong>código</strong>, e não atalhos com fios.</p>
                 <br>
-                <p>Você já tem tudo o que precisa. Agora é só confiar na força da programação e resistir ao lado sombrio... do ChatGPT. Que os LEDs estejam com você. 😎✨</p>
+                <p>Você já tem tudo o que precisa. Agora é só confiar na força da programação e resistir ao lado
+                    sombrio... do ChatGPT. Que os LEDs estejam com você. 😎✨</p>
                 <h3>Circuito AND</h3>
                 <ul>
                     <li>Use dois botões ligados a entradas digitais.</li>
@@ -659,21 +676,52 @@ if (condição1 && condição2) {
     //somente uma verdadeira ou tudo falso
 }
                     </pre>
-                    <li>Coloque resistores de 10KΩ (pull-up ou pull-down) nos botões ou use INPUT_PULLUP (não requer resistor).</li>                    
-                    <li>Não se esqueça dos resistores nos LEDs. Eles são os verdadeiros heróis silenciosos que salvam seu circuito da destruição total. 🦸‍♂️💡</li>
+                    <li>Coloque resistores de 10KΩ (pull-up ou pull-down) nos botões ou use INPUT_PULLUP (não requer
+                        resistor).</li>
+                    <li>Não se esqueça dos resistores nos LEDs. Eles são os verdadeiros heróis silenciosos que salvam
+                        seu circuito da destruição total. 🦸‍♂️💡</li>
                     <li>Teste bem cada circuito antes de passar para o próximo.</li>
                 </ul>
             </section>
             <hr>
             <section id="topico5">
                 <h2>Aula 5 – Laços em Ação: Sequência de LEDs</h2>
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
                 <h3 id="sub">🔎 O que vem pela frente</h3>
-                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
-                <h3 id="sub">🔲 O papel do Arduino</h3>
+                <p>Já fizemos o Arduino tomar decisões sérias com o if...else. Agora ele vai entrar no modo repetitivo,
+                    e dessa vez por vontade própria. 😄</p>
+                <p>Nesta aula, você vai conhecer os laços de repetição for, while e do...while, que são ótimos para
+                    quando queremos repetir comandos sem ficar copiando e colando o mesmo código dez vezes. É tipo
+                    ensinar o Arduino a fazer tarefas chatas por você, sem reclamar e com precisão de robô.</p>
+                <p>Vamos colocar tudo isso em prática criando uma sequência de LEDs que simulam a seta de um carro
+                    moderno, aquele efeito estiloso que todo mundo acha que é mágica, mas que na verdade é só código bem
+                    feito. </p>
+                <br>
+                <div class="leds" id="ledContainer"></div>
                 <h3 id="sub">💻 Pensando como o Arduino</h3>
+                <h3>Laços de Repetição (for, while, do...while)</h3>
+                <p>Quando o Arduino percebe que precisa fazer a mesma coisa várias vezes, ele entra no modo repetição.
+                    Em vez de copiar e colar o mesmo comando várias vezes, usamos laços (ou loops) para deixar o
+                    código mais inteligente e preguiçoso, no bom sentido, claro. 😄</p>
+                <h3>Comando for</h3>
+                <p>O for é ótimo quando já sabemos quantas vezes algo deve acontecer. Ele tem três partes: o ponto de
+                    partida (início), a regra de parada (condição) e o ritmo (incremento).
+                    É como dizer: comece no zero, vá até cinco e vá pulando de um em um. O Arduino adora essa clareza.
+                </p>
+                <h3>Comando while</h3>
+                <p>O while é o loop que age enquanto a condição for verdadeira. Ele não sabe quando vai parar, só sabe
+                    que vai continuar até alguém dizer chega. Se você não mudar a condição dentro dele, prepare-se, o
+                    Arduino vai entrar num loop infinito e não sai nem com café. ☕😅</p>
+                <p>Útil para situações onde a repetição depende de algo externo, como um sensor ou botão</p>
+                <h3>Comando do...while</h3>
+                <p>O do...while é o mais otimista dos laços. Ele acredita que deve agir pelo menos uma vez, mesmo que a
+                    condição nem seja verdadeira. Depois, ele verifica se deve continuar.</p>
+                <p>É tipo: primeiro age, depois pergunta se devia. Ideal para menus ou ações que precisam acontecer ao
+                    menos uma vez antes de decidir repetir.</p>
+                <p>Com esses laços, o Arduino domina a repetição como um Jedi domina a Força… mas cuidado com loops
+                    infinitos, eles levam ao lado negro da programação. 👾🧠✨</p>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
+                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
             </section>
             <hr>
             <section id="topico6">
@@ -756,6 +804,7 @@ if (condição1 && condição2) {
     <!-- Topo do site -->
     <a href="#logo" id="topo"><img src="../img/topo.png" alt="seta topo"></a>
 
+    <script src="../js/leds.js"></script>
     <script src="../js/logica.js"></script>
     <script src="../js/resistor.js"></script>
     <script src="../js/script.js"></script>
