@@ -1,5 +1,5 @@
 const ledContainer = document.getElementById('ledContainer')
-const totalLeds = 5
+const totalLeds = 6
 const leds = []
 
 for (let i = 0; i < totalLeds; i++) {
