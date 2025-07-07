@@ -507,8 +507,12 @@ if (condição) {
 }
 </pre>
                 <h3>Comando if...else if...else (encadeado)</h3>
-                <p>Às vezes o Arduino se depara com mais de duas possibilidades. Aí entra o encadeamento de condições com else...if. Ele verifica uma por uma, na ordem, até encontrar uma que seja verdadeira. Quando encontra, executa aquela e ignora o resto.</p>
-                <p>Esse tipo de encadeamento é útil quando temos várias condições diferentes e apenas uma deve ser executada. O Arduino decide com sabedoria, sem entrar em conflito interno. Afinal, equilíbrio é o caminho da programação 🧘‍♂️💡</p>
+                <p>Às vezes o Arduino se depara com mais de duas possibilidades. Aí entra o encadeamento de condições
+                    com else...if. Ele verifica uma por uma, na ordem, até encontrar uma que seja verdadeira. Quando
+                    encontra, executa aquela e ignora o resto.</p>
+                <p>Esse tipo de encadeamento é útil quando temos várias condições diferentes e apenas uma deve ser
+                    executada. O Arduino decide com sabedoria, sem entrar em conflito interno. Afinal, equilíbrio é o
+                    caminho da programação 🧘‍♂️💡</p>
                 <br>
                 <pre>
 if (condição1) {
@@ -686,13 +690,54 @@ if (condição1 && condição2) {
             <hr>
             <section id="topico5">
                 <h2>Aula 5 - Leitura Analógica: Luz de Cortesia</h2>
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
                 <h3 id="sub">🔎 O que vem pela frente</h3>
+                <p>Já fizemos o Arduino piscar LED e tomar decisões com base em botões e variáveis. Mas e quando
+                    precisamos lidar com algo que não é só ligado ou desligado? Chegou a hora de conhecer o mundo
+                    analógico. 😄</p>
+                <p>Nesta aula, você vai aprender a usar as entradas analógicas do Arduino, que servem para ler valores
+                    que variam continuamente. E o nosso guia nessa jornada será um sensor muito útil (e um pouco
+                    tímido): o LDR, que detecta a intensidade da luz ambiente.</p>
+                <p>Vamos montar uma simulação de uma luz de cortesia que acende sozinha quando o ambiente escurece,
+                    igualzinho aos carros modernos. É a tecnologia trabalhando a favor do conforto!
+                </p>
+                <p>Prepare o LDR, o resistor e o LED, porque nesta aula o Arduino vai aprender a enxergar o ambiente e
+                    reagir como um verdadeiro mordomo eletrônico.</p>
                 <h3 id="sub">🔋 Componentes Eletrônicos</h3>
+                <h3>LDR</h3>
+                <img src="../img/ldr.png" alt="ldr">
+                <p>O LDR (Resistor Dependente de Luz) é um tipo de resistor cujo valor de resistência varia conforme a
+                    intensidade da luz que incide sobre ele. Quanto mais luz, menor a resistência, quanto menos luz,
+                    maior a resistência.</p>
+                <p>Esse componente é bastante versátil e pode ser encontrado em câmeras, fotômetros, alarmes, sistemas
+                    de iluminação pública, sensores de linha e diversos outros dispositivos que precisam reagir à
+                    luminosidade do ambiente.</p>
                 <h3 id="sub">🔲 O papel do Arduino</h3>
-                <h3 id="sub">💻 Pensando como o Arduino</h3>
+                <p>Sensores como o LDR enviam sinais que variam de acordo com o ambiente, e para ler esses sinais usamos
+                    as entradas analógicas do Arduino, de A0 a A5.</p>
+                <br>
+                <img src="../img/analogin.png" alt="entradas analógicas">
+                <p>Como essas portas funcionam apenas como entrada analógica, não é necessário definir no setup e para
+                    fazer a leitura usamos a função:</p>
+                <br>
+                <pre>
+analogRead()
+                </pre>
+                <p>Esta função retorna um valor entre 0 e 1023, que representa a tensão elétrica medida no pino. Esses valores vêm de um conversor chamado ADC, que transforma a tensão de 0 a 5 volts em números que o Arduino entende.</p>
+                <p>Como esse conversor tem uma resolução de 10 bits, ele divide a faixa de 0 a 5V em 1024 partes iguais. Isso significa que 0 corresponde a 0V e 1023 corresponde a 5V. Com base nesses valores, o Arduino pode tomar decisões de forma mais precisa e inteligente.</p>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
-                <h3 id="sub">🎯 Desafio</h3>
+                <p>Objetivo: Desenvolver um projeto que irá identificar a luminosidade do ambiente e se estiver escuro irá acender o LED, senão (ambiente claro) o LED ficará apagado.</p>
+                <br>
+                <p>Lista de material:</p>
+                <br>
+                <img src="../img/listaLDR.png" alt="lista de material ldr">
+                <br><br>
+                <p>Diagrama elétrico:</p>
+                <br>
+                <img src="../img/luzCortesia.png" alt="diagrama ldr">
+                <br><br>
+                <p>Código fonte:</p>
+                <br>
+                <img src="../img/codigoLDR.png" alt="código fonte LDR">
             </section>
             <hr>
             <section id="topico6">
@@ -745,7 +790,7 @@ if (condição1 && condição2) {
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
                 <h3 id="sub">🎯 Desafio</h3>
             </section>
-            
+
             <hr>
             <section id="topico8">
                 <h2>Aula 8 - PWM e Aleatoriedade: Simulando Fogo</h2>
