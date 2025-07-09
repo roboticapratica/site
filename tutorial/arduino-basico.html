@@ -722,10 +722,15 @@ if (condição1 && condição2) {
                 <pre>
 analogRead()
                 </pre>
-                <p>Esta função retorna um valor entre 0 e 1023, que representa a tensão elétrica medida no pino. Esses valores vêm de um conversor chamado ADC, que transforma a tensão de 0 a 5 volts em números que o Arduino entende.</p>
-                <p>Como esse conversor tem uma resolução de 10 bits, ele divide a faixa de 0 a 5V em 1024 partes iguais. Isso significa que 0 corresponde a 0V e 1023 corresponde a 5V. Com base nesses valores, o Arduino pode tomar decisões de forma mais precisa e inteligente.</p>
+                <p>Esta função retorna um valor entre 0 e 1023, que representa a tensão elétrica medida no pino. Esses
+                    valores vêm de um conversor chamado ADC, que transforma a tensão de 0 a 5 volts em números que o
+                    Arduino entende.</p>
+                <p>Como esse conversor tem uma resolução de 10 bits, ele divide a faixa de 0 a 5V em 1024 partes iguais.
+                    Isso significa que 0 corresponde a 0V e 1023 corresponde a 5V. Com base nesses valores, o Arduino
+                    pode tomar decisões de forma mais precisa e inteligente.</p>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
-                <p>Objetivo: Desenvolver um projeto que irá identificar a luminosidade do ambiente e se estiver escuro irá acender o LED, senão (ambiente claro) o LED ficará apagado.</p>
+                <p>Objetivo: Desenvolver um projeto que irá identificar a luminosidade do ambiente e se estiver escuro
+                    irá acender o LED, senão (ambiente claro) o LED ficará apagado.</p>
                 <br>
                 <p>Lista de material:</p>
                 <br>
@@ -751,8 +756,6 @@ analogRead()
                 <p>Vamos colocar tudo isso em prática criando uma sequência de LEDs que simulam a seta de um carro
                     moderno, aquele efeito estiloso que todo mundo acha que é mágica, mas que na verdade é só código bem
                     feito. </p>
-                <br>
-                <div class="leds" id="ledContainer"></div>
                 <h3 id="sub">💻 Pensando como o Arduino</h3>
                 <h3>Laços de Repetição (for, while, do...while)</h3>
                 <p>Quando o Arduino percebe que precisa fazer a mesma coisa várias vezes, ele entra no modo repetição.
@@ -763,21 +766,69 @@ analogRead()
                     partida (início), a regra de parada (condição) e o ritmo (incremento).
                     É como dizer: comece no zero, vá até cinco e vá pulando de um em um. O Arduino adora essa clareza.
                 </p>
+                <br>
+                <pre>
+for (início; condição; incremento) {
+    //repetir enquanto a condição for verdadeira
+}
+                </pre>
                 <h3>Comando while</h3>
                 <p>O while é o loop que age enquanto a condição for verdadeira. Ele não sabe quando vai parar, só sabe
                     que vai continuar até alguém dizer chega. Se você não mudar a condição dentro dele, prepare-se, o
                     Arduino vai entrar num loop infinito e não sai nem com café. ☕😅</p>
                 <p>Útil para situações onde a repetição depende de algo externo, como um sensor ou botão</p>
+                <br>
+                <pre>
+while (condição) {
+    //repetir enquanto a condição for verdadeira
+}
+                </pre>
                 <h3>Comando do...while</h3>
                 <p>O do...while é o mais otimista dos laços. Ele acredita que deve agir pelo menos uma vez, mesmo que a
                     condição nem seja verdadeira. Depois, ele verifica se deve continuar.</p>
                 <p>É tipo: primeiro age, depois pergunta se devia. Ideal para menus ou ações que precisam acontecer ao
                     menos uma vez antes de decidir repetir.</p>
+                <br>
+                <pre>
+do {
+    //executar uma vez "mesmo se a condição for falsa"
+    //verificar a condição e repetir enquanto a condição for verdadeira
+} while (condição);
+                </pre>
+                <br>
                 <p>Com esses laços, o Arduino domina a repetição como um Jedi domina a Força… mas cuidado com loops
                     infinitos, eles levam ao lado negro da programação. 👾🧠✨</p>
                 <h3 id="sub">🛠️ Laboratório Prático</h3>
+                <p>Objetivo: Desenvolver um projeto com LEDs que simula a seta esquerda de um carro moderno.</p>
+                <br>
+                <div class="leds" id="ledContainer"></div>
+                <br>
+                <p>Lista de material:</p>
+                <br>
+                <img src="../img/tabelaSequencial.png" alt="lista de material leds">
+                <br><br>
+                <p>Diagrama elétrico:</p>
+                <br>
+                <img src="../img/diagramaSequencial.png" alt="diagrama sequencial de leds">
+                <br><br>
+                <p>Código fonte:</p>
+                <br>
+                <img src="../img/codigoSequencial.png" alt="codigo fonte sequencial de leds">
+                <br>
                 <h3 id="sub">🎯 Desafio</h3>
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
+                <h3>Objetivo:</h3>
+                <p>Treinar o uso dos laços de repetições.</p>
+                <br>
+                <ol>
+                    <li>Usar o laço while no lugar do for para o efeito sequencial de LEDs.</li>
+                    <li>Você já fez a seta piscar da direita para a esquerda. Agora é hora de inverter a força e fazer
+                        ela brilhar da esquerda para a direita. Que a luz esteja com você nessa missão!</li>
+                    <li>Quer um desafio digno de um mestre Jedi? Crie um efeito de vai e vem com os LEDs, tipo aquela
+                        luz que “corre” para um lado e volta para o outro, como nos carros futuristas da ficção ou nos
+                        robôs que você já viu em filmes de aventura espacial. Faça as luzes dançarem para frente e para
+                        trás com muito estilo!</li>
+                </ol>
+                <br>
             </section>
             <hr>
             <section id="topico7">
