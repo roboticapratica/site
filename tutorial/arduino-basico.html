@@ -831,14 +831,39 @@ do {
             </section>
             <hr>
             <section id="topico7">
-                <h2>Aula 7 - Semáforo de Pedestres</h2>
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
-                <h3 id="sub">🔎 O que vem pela frente</h3>
-                <h3 id="sub">🔋 Componentes Eletrônicos</h3>
-                <h3 id="sub">🔲 O papel do Arduino</h3>
-                <h3 id="sub">💻 Pensando como o Arduino</h3>
-                <h3 id="sub">🛠️ Laboratório Prático</h3>
+                <h2>Aula 7 - Semáforo de Pedestres</h2>                
                 <h3 id="sub">🎯 Desafio</h3>
+                <p>Desafio você, jovem padawan da programação, a encarar uma missão digna de um mestre Jedi do Arduino. Sua tarefa é construir um semáforo de pedestres funcional, com botão e tudo, que garante uma travessia segura para qualquer cidadão galáctico.</p>
+                <br>
+                <img src="../img/semaforoPedestres.png" alt="semaforo de pedestres">
+                <br>
+                <p>Este desafio é perfeito para colocar em prática tudo o que você aprendeu até agora: botões, condições com if, controle de tempo com delay, laços de repetição com for e lógica de programação.</p>
+                <p>Agora chegou o momento de combinar esses conhecimentos e criar um semáforo inteligente que ajude os pedestres a atravessarem a rua com segurança e estilo. Afinal, nem todo herói usa capa... alguns usam resistores e protoboard.</p>
+                <h3>Funcionamento esperado:</h3>
+                <ol>
+                    <li>O carro está com sinal verde, e o pedestre com o vermelho aceso.</li>
+                    <li>Quando o botão for pressionado, o sistema aguarda um pequeno tempo (simulando o tempo de reação).</li>
+                    <li>O LED amarelo do carro acende por um curto período (atenção!).</li>
+                    <li>Em seguida, o LED vermelho do carro acende, e o LED verde do pedestre libera a passagem.</li>
+                    <li>Depois de alguns segundos, o LED vermelho do pedestre começa a piscar (aviso: hora de apressar o passo!).</li>
+                    <li>E tudo volta ao início, em loop eterno... ou pelo menos até o próximo aperto de botão. 😄</li>
+                </ol>
+                <h3>Componentes:</h3>
+                <ul>
+                    <li>3 LEDs para o semáforo de carros (vermelho, amarelo, verde)</li>
+                    <li>2 LEDs para o semáforo de pedestres (vermelho e verde)</li>
+                    <li>1 botão (para o pedestre)</li>
+                    <li>Resistores para todos os LEDs</li>
+                    <li>Arduino UNO, protoboard e fios</li>
+                </ul>
+                <h3>Dicas:</h3>
+                <ul>
+                    <li>Para o LED do pedestre piscar, use um for com digitalWrite() e delay() alternando o estado.</li>
+                    <li>Não se esqueça do INPUT_PULLUP ao configurar o botão. O lado negro dos ruídos elétricos sempre espreita...</li>
+                    <li>Mantenha a lógica organizada. Confusão no código leva ao caos... e ao travamento do Arduino. 😬</li>
+                </ul>
+                <br>
+                <p>Que a lógica esteja com você. E lembre-se: em caso de travamento, aperte o botão de reset. Ou tome um café. Funciona quase sempre. ☕✨</p>
             </section>
 
             <hr>
