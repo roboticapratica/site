@@ -992,17 +992,40 @@ int sortear() {
             </section>
             <hr>
             <section id="topico9">
-                <h2>Missão 9 - Pianinho Intergaláctico</h2>
+                <h2>Missão 9 - Marcha Imperial</h2>
                 <h3 id="sub">🛰️ Plano da missão</h3>
                 <p>Nesta missão, o Arduino vai aprender a usar a Força... do som. Com a ajuda de um buzzer passivo, você vai descobrir como reproduzir notas musicais usando as funções especiais tone() e noTone().</p>
-                <p>Com isso, será possível montar um teclado intergaláctico e criar trilhas sonoras dignas de um verdadeiro Cavaleiro Jedi.</p>                
+                <p>Com isso, será possível montar um teclado musical e criar trilhas sonoras dignas de um verdadeiro Cavaleiro Jedi.</p>                
                 <h3 id="sub">🔋 Componentes da missão</h3>
-                <h3>Buzzer Passivo</h3>
+                <h3>Buzzer</h3>
                 <img src="../img/buzzer.png" alt="buzzer">
                 <p>O buzzer passivo funciona como um pequeno alto-falante. Para tocar alguma coisa, o Arduino precisa mandar sinais com diferentes frequências. Assim conseguimos gerar sons variados.</p>
-                <h3 id="sub">🧠 Comando Central</h3>                
+                <h3 id="sub">🧠 Comando Central</h3>
+                <h3>Como o Arduino reproduz notas musicais?</h3>
+                <p>Cada nota musical tem uma frequência associada. Por exemplo:</p>                
+                <img src="../img/notasMusicais.png" alt="Frequência notas musicais">
+                <p>A função tone(pino, frequência) faz o Arduino ligar e desligar rapidamente um pino digital para gerar uma frequência (em Hertz). Essa frequência faz o buzzer vibrar e produzir um som, ou seja, uma nota musical.</p>
+                <p>A função noTone(pino) serve para parar o som que o Arduino está tocando naquele pino.</p>
+                <br>
+                <pre>
+tone(6, 440); //toca a nota LÁ (440 Hz) no pino 6
+delay(500);   //duração da nota
+noTone(6);    //interromper o som no pino 6
+                </pre>
                 <h3 id="sub">🔧 Oficina da Rebelião</h3>                
-                <h3>🟦🟦🟦⬜️⬜️ Em produção...</h3>
+                <p>Objetivo: Desnvolver no Arduino um pininho musical luminoso.</p>
+                <br>
+                <p>Lista de material:</p>
+                <br>
+                <img src="../img/listaPianinho.png" alt="lista de material pianinho">
+                <br><br>
+                <p>Diagrama elétrico:</p>
+                <br>
+                <img src="../img/pianinho.png" alt="diagrama pianinho">
+                <br><br>
+                <p>Código fonte:</p>
+                <br>
+                <img src="../img/codigoPianinho.png" alt="codigo pianinho">
             </section>
             <hr>
             <section id="topico10">
