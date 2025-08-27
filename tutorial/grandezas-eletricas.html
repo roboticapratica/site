@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandezas elétricas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description"
+        content="Tutorial básico sobre as grandezas elétricas e uso do multímetro.">
+    <link rel="icon" href="../img/favicon.png">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="FlexMenu">
+            <div id="logo">
+                <img src="../img/logo.png" alt="logo robótica prática">
+            </div>
+            <!-- Menu -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268c;</label>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../sobre.html">Sobre</a></li>
+                    <li><a href="../projetos.html">Projetos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner das páginas -->
+    <main class="BannerPaginas Flex">
+        <div class="Container">
+            <h1>Grandezas elétricas</h1>
+        </div>
+    </main>
+
+    <!-- Conteúdo -->
+    <div class="Container main-content-wrapper">
+        <div class="trilha-container">
+            <nav class="trilha" aria-label="Trilha de tópicos">
+                <div class="linha"></div>
+                <div class="linha-progresso"></div>
+                <a href="#topico1">
+                    <div class="bullet"></div><span>Introdução</span>
+                </a>
+                <a href="#topico2">
+                    <div class="bullet"></div><span>Parte 1</span>
+                </a>
+                <a href="#topico3">
+                    <div class="bullet"></div><span>Parte 2</span>
+                </a>
+                <a href="#topico4">
+                    <div class="bullet"></div><span>Parte 3</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="content">
+            <section id="topico1">
+                <h2>Como configurar o módulo Bluetooth HC-06 no Arduino</h2>                
+                <p>Neste tutorial, você vai aprender passo a passo como configurar o módulo HC-06 para se comunicar com o Arduino usando Bluetooth. O HC-06 permite estabelecer uma comunicação sem fio com placas Arduino que não dispõem desse recurso. 
+                </p>
+                <br>
+                <img src="../img/modulo-bluetooth-hc06.png" alt="módulo bluetooth HC-06">
+                <br>
+                <h3>Por padrão, o HC-06 vem com os seguintes parâmetros:</h3>
+                <ul>
+                    <li>SSID: HC-06</li>
+                    <li>Senha: 1234</li>
+                    <li>Velocidade: 9600 bps</li>                    
+                </ul>
+                <br>
+                <p>Mas como bons makers, não vamos nos contentar com as configurações de fábrica. Para personalizar o
+                    SSID, a senha e alterar a velocidade, usaremos uma placa Arduino para enviar comandos AT, que são
+                    basicamente instruções que o módulo entende, como uma linguagem secreta dos modems. 🤖</p>
+                <p>Vamos montar o circuito, fazer o upload de um código simples, abrir o Serial Monitor e enviar os
+                    primeiros comandos para deixar o HC-06 do jeitinho que a gente quer.</p>
+                <p>Vamos lá!</p>
+            </section>
+            <hr>
+            <section id="topico2">
+                <h2>Parte 1 - Montagem do circuito elétrico:</h2>
+                <h3>Lista de material:</h3>
+                <ul>
+                    <li>1 Arduino UNO ou compatível</li>
+                    <li>1 módulo bluetooth HC-06</li>
+                    <li>1 resistor de 1KΩ (marrom preto vermelho dourado)</li>
+                    <li>1 resistor de 2KΩ (vermelho preto vermelho dourado)</li>
+                </ul>
+                <br>
+                <p>Ligue o módulo HC-06 ao Arduino conforme o diagrama abaixo. Os resistores são usados como divisor de
+                    tensão para reduzir os 5V do Arduino para 3,3V no pino RX do módulo (importante para não danificar o bluetooth).</p>
+                <br>
+                <img src="../img/diagrama-hc06.png" alt="diagrama elétrico HC-06">
+            </section>
+            <hr>
+            <section id="topico3">
+                <h2>Parte 2 - Código fonte</h2>
+                <p>Baixe o código no link abaixo e faça o upload para a placa Arduino.</p>
+                <br>
+                <a href="../codigo-fonte/setar_HC-06.ino">🔗 setar_HC-06.ino</a>
+                <br><br>
+                <img src="../img/arduino_ide.png" alt="arduino ide">
+            </section>
+            <hr>
+            <section id="topico4">
+                <h2>Parte 3 - Configuração</h2>
+                <ol>
+                    <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud].</li>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Pode ser necessário reiniciar o Serial Monitor.</p>
+                    <li>Digite o comando desejado na caixa de entrada.</li>
+                    <li>Se tudo estiver OK, o módulo irá responder e executar a ação desejada.</li>                    
+                </ol>
+                <br>
+                <p>✅ Por fim, faça um teste pareando o módulo no celular! 📱</p>
+                <br>
+                <img src="../img/serial_monitor.png" alt="arduino ide">
+            </section>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="Container Flex">
+            <div id="social">
+                <a href="https://www.youtube.com/c/RoboticapraticaBr" target="_blank"><img src="../img/youtube.png"
+                        alt="youtube"></a>
+                <a href="https://www.linkedin.com/in/professorjosedeassis" target="_blank"><img
+                        src="../img/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.facebook.com/professorjosedeassis" target="_blank"><img src="../img/facebook.png"
+                        alt="facebook"></a>
+                <a href="https://www.instagram.com/prof.joseassis/" target="_blank"><img src="../img/instagram.png"
+                        alt="instagram"></a>
+                <a href="https://twitter.com/joseassis" target="_blank"><img src="../img/twitter.png" alt="twitter"></a>
+            </div>
+            <div id="copyright">
+                <p>©<span id="copyrightYear"></span> - Robótica Prática</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Topo do site -->
+    <a href="#logo" id="topo"><img src="../img/topo.png" alt="seta topo"></a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/trilha.js"></script>
+</body>
+</body>
+
+</html>
