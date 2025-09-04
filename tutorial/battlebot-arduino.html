@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grandezas elétricas</title>
+    <title>BattleBot Arduino - Monte o Robô de Combate Bluetooth (Estoura Balão)</title>
     <link rel="stylesheet" href="../css/style.css">
     <meta name="description"
-        content="Tutorial básico sobre as grandezas elétricas e uso do multímetro.">
+        content="Aprenda a montar passo a passo de forma prática e divertida um robô de combate (estoura balão) usando Arduino e controlado por Bluetooth. Este robô também pode ser usado em outros projetos de robótica educacional como por exemplo robôs exploradores, robôs de resgate etc.">
     <link rel="icon" href="../img/favicon.png">
 </head>
 
@@ -34,7 +34,7 @@
     <!-- Banner das páginas -->
     <main class="BannerPaginas Flex">
         <div class="Container">
-            <h1>Grandezas elétricas</h1>
+            <h1>BattleBot Arduino</h1>
         </div>
     </main>
 
@@ -61,41 +61,25 @@
 
         <div class="content">
             <section id="topico1">
-                <h2>Como configurar o módulo Bluetooth HC-06 no Arduino</h2>                
-                <p>Neste tutorial, você vai aprender passo a passo como configurar o módulo HC-06 para se comunicar com o Arduino usando Bluetooth. O HC-06 permite estabelecer uma comunicação sem fio com placas Arduino que não dispõem desse recurso. 
-                </p>
-                <br>
-                <img src="../img/modulo-bluetooth-hc06.png" alt="módulo bluetooth HC-06">
-                <br>
-                <h3>Por padrão, o HC-06 vem com os seguintes parâmetros:</h3>
-                <ul>
-                    <li>SSID: HC-06</li>
-                    <li>Senha: 1234</li>
-                    <li>Velocidade: 9600 bps</li>                    
-                </ul>
-                <br>
-                <p>Mas como bons makers, não vamos nos contentar com as configurações de fábrica. Para personalizar o
-                    SSID, a senha e alterar a velocidade, usaremos uma placa Arduino para enviar comandos AT, que são
-                    basicamente instruções que o módulo entende, como uma linguagem secreta dos modems. 🤖</p>
-                <p>Vamos montar o circuito, fazer o upload de um código simples, abrir o Serial Monitor e enviar os
-                    primeiros comandos para deixar o HC-06 do jeitinho que a gente quer.</p>
-                <p>Vamos lá!</p>
+                <h2>BattleBot Arduino - Monte o Robô de Combate Bluetooth (Estoura Balão)</h2>
+                <p>Aprenda a montar passo a passo de forma prática e divertida um robô de combate (estoura balão) usando
+                    Arduino e controlado por Bluetooth. Este robô também pode ser usado em outros projetos de robótica
+                    educacional como por exemplo robôs exploradores, robôs de resgate etc.</p>
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Sc7SiG_-oFQ?si=w5ikxYj_ihlliK5l"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
             <hr>
             <section id="topico2">
-                <h2>Parte 1 - Montagem do circuito elétrico:</h2>
-                <h3>Lista de material:</h3>
-                <ul>
-                    <li>1 Arduino UNO ou compatível</li>
-                    <li>1 módulo bluetooth HC-06</li>
-                    <li>1 resistor de 1KΩ (marrom preto vermelho dourado)</li>
-                    <li>1 resistor de 2KΩ (vermelho preto vermelho dourado)</li>
-                </ul>
-                <br>
-                <p>Ligue o módulo HC-06 ao Arduino conforme o diagrama abaixo. Os resistores são usados como divisor de
-                    tensão para reduzir os 5V do Arduino para 3,3V no pino RX do módulo (importante para não danificar o bluetooth).</p>
-                <br>
-                <img src="../img/diagrama-hc06.png" alt="diagrama elétrico HC-06">
+                <h2>Parte 1 - Lista de material</h2>                
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/u9qgBlx2sac?si=Xv1QhW8lGt4sii9D"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </section>
             <hr>
             <section id="topico3">
@@ -113,7 +97,7 @@
                     <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud].</li>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Pode ser necessário reiniciar o Serial Monitor.</p>
                     <li>Digite o comando desejado na caixa de entrada.</li>
-                    <li>Se tudo estiver OK, o módulo irá responder e executar a ação desejada.</li>                    
+                    <li>Se tudo estiver OK, o módulo irá responder e executar a ação desejada.</li>
                 </ol>
                 <br>
                 <p>✅ Por fim, faça um teste pareando o módulo no celular! 📱</p>
