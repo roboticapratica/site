@@ -932,6 +932,9 @@ h4 {
         margin-left: 15px;
     }
 
+    #imgMargin {
+        margin: 15px 0px;
+    }
 }
 
 /* PCs ou notebooks HD <<<<<<<<<<<<<<<<< */
