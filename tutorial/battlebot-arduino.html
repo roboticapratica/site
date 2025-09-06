@@ -44,27 +44,60 @@
             <nav class="trilha" aria-label="Trilha de tópicos">
                 <div class="linha"></div>
                 <div class="linha-progresso"></div>
-                <a href="#topico1">
+                <a href="#topico0">
                     <div class="bullet"></div><span>Introdução</span>
                 </a>
+                <a href="#topico1">
+                    <div class="bullet"></div><span>Passo 1</span>
+                </a>
                 <a href="#topico2">
-                    <div class="bullet"></div><span>Parte 1</span>
+                    <div class="bullet"></div><span>Passo 2</span>
                 </a>
                 <a href="#topico3">
-                    <div class="bullet"></div><span>Parte 2</span>
+                    <div class="bullet"></div><span>Parte 3</span>
                 </a>
                 <a href="#topico4">
-                    <div class="bullet"></div><span>Parte 3</span>
+                    <div class="bullet"></div><span>Passo 4</span>
+                </a>
+                <a href="#topico5">
+                    <div class="bullet"></div><span>Passo 5</span>
+                </a>
+                <a href="#topico6">
+                    <div class="bullet"></div><span>Passo 6</span>
+                </a>
+                <a href="#topico7">
+                    <div class="bullet"></div><span>Passo 7</span>
+                </a>
+                <a href="#topico8">
+                    <div class="bullet"></div><span>Passo 8</span>
+                </a>
+                <a href="#topico9">
+                    <div class="bullet"></div><span>Passo 9</span>
+                </a>
+                <a href="#topico10">
+                    <div class="bullet"></div><span>Passo 10</span>
                 </a>
             </nav>
         </div>
 
         <div class="content">
+            <section id="topico0">
+                <h2> BattleBot Arduino - Monte o Robô de Combate Bluetooth (Estoura Balão)</h2>
+                <p>Prepare-se para entrar na arena! 🚀 Neste tutorial completo você vai aprender passo a passo como
+                    montar o BattleBot Arduino, um robô de combate Bluetooth estilo “estoura balão”.
+                    Com Arduino, ponte H L298N, micro servo e um módulo Bluetooth, você vai construir um robô de combate
+                    incrível que também pode ser adaptado para outros projetos de robótica educacional como
+                    exploradores, resgatistas e muito mais.</p>
+                <p>👉 Tudo explicado de forma prática, divertida e detalhada: lista de materiais, planejamento, montagem
+                    elétrica, programação, conexão Bluetooth, código fonte e controle via aplicativo no celular.</p>
+                <p>No final, o seu robô estará pronto para a guerra dos balões. Que vença o melhor bot! ⚔️🎈</p>
+                <hr>
+            </section>
             <section id="topico1">
-                <h2>BattleBot Arduino - Monte o Robô de Combate Bluetooth (Estoura Balão)</h2>
-                <p>Aprenda a montar passo a passo de forma prática e divertida um robô de combate (estoura balão) usando
-                    Arduino e controlado por Bluetooth. Este robô também pode ser usado em outros projetos de robótica
-                    educacional como por exemplo robôs exploradores, robôs de resgate etc.</p>
+                <h2>Passo 1 – Conheça o Projeto</h2>
+                <p>Abrindo a arena! Neste vídeo você vai conhecer o robô de combate “estoura balão”, feito com Arduino e
+                    controlado por Bluetooth. Além de guerreiro, ele pode virar explorador, resgatista e até guarda de
+                    planta (sim, é versátil assim!).</p>
                 <div class="Video">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Sc7SiG_-oFQ?si=w5ikxYj_ihlliK5l"
                         title="YouTube video player"
@@ -73,8 +106,10 @@
             </section>
             <hr>
             <section id="topico2">
-                <h2>Parte 1 - Lista de material</h2>                
+                <h2>Passo 2 - Lista de Materiais</h2>
                 <div class="Video">
+                    <p>Antes da batalha, precisamos do arsenal. No vídeo você confere todos os componentes necessários
+                        para montar seu robô de combate Arduino Bluetooth. Spoiler: não tem sabre de luz, mas quase!</p>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/u9qgBlx2sac?si=Xv1QhW8lGt4sii9D"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -83,26 +118,79 @@
             </section>
             <hr>
             <section id="topico3">
-                <h2>Parte 2 - Código fonte</h2>
-                <p>Baixe o código no link abaixo e faça o upload para a placa Arduino.</p>
-                <br>
-                <a href="../codigo-fonte/setar_HC-06.ino">🔗 setar_HC-06.ino</a>
-                <br><br>
-                <img src="../img/arduino_ide.png" alt="arduino ide">
+                <h2>Passo 3 - Planejamento da Montagem</h2>
+                <p>Um bom guerreiro sempre planeja sua batalha! Neste passo você vai aprender a organizar e fixar o Arduino, a ponte H L298N, o módulo Bluetooth HC-06, o micro servo, a haste do balão e o suporte de pilhas no chassi robótico, garantindo que todos os componentes fiquem firmes e prontos para a montagem seguinte.</p>
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uCqN_OJdl2Q?si=rZLY5elft7L1ciuZ"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </section>
             <hr>
             <section id="topico4">
-                <h2>Parte 3 - Configuração</h2>
-                <ol>
-                    <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud].</li>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Pode ser necessário reiniciar o Serial Monitor.</p>
-                    <li>Digite o comando desejado na caixa de entrada.</li>
-                    <li>Se tudo estiver OK, o módulo irá responder e executar a ação desejada.</li>
-                </ol>
-                <br>
-                <p>✅ Por fim, faça um teste pareando o módulo no celular! 📱</p>
-                <br>
-                <img src="../img/serial_monitor.png" alt="arduino ide">
+                <h2>Passo 4 – Montagem Elétrica</h2>
+                <p>Aqui você garante que o robô tenha energia para funcionar. O vídeo mostra como ligar o suporte de pilhas ao driver ponte H L298N e ao Arduino, distribuindo a alimentação de forma segura. Agora o robô já está “acordado”, mas ainda não se move.</p>
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bLGtS1Mz7Eg?si=x1sfXfZkgJOAnDun"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3>Diagrama elétrico</h3>
+                <img src="../img/diagrama-eletrico.png" alt="diagrama elétrico">
+            </section>
+            <hr>
+            <section id="topico5">
+                <h2>Passo 5 - Ligando a Ponte H</h2>
+                <p>Com a mecânica pronta e a energia ligada, chegou a hora de conectar a ponte H L298N ao Arduino e aos motores. Neste passo, você prepara tudo para que, no próximo passo, os comandos do código façam o robô se mover.</p>
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pSK2XkD0Hrg?si=3MvZekTA5gNi7Pjr"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h3>Diagrama elétrico</h3>
+                <img src="../img/diagrama-montagem.png" alt="diagrama montagem">
+            </section>
+            <hr>
+            <section id="topico6">
+                <h2>Passo 6 - Programação dos Movimentos</h2>
+                <p>Chegou o momento de dar vida ao seu robô! Aqui você programa a ponte H no Arduino para controlar os motores e colocar o robô de combate em movimento pela primeira vez.</p>
+                <div class="Video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bIkiPxOekJU?si=855Dw_Io4GedKctX"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+            <hr>
+            <section id="topico7">
+                <h2>Passo 7 - A Arma Secreta</h2>
+                <p> Todo combatente precisa de uma arma! Aqui você configura o micro servo no Arduino e monta a haste
+                    que vai estourar o balão inimigo.</p>
+                <h3>Diagrama elétrico</h3>
+                <img src="../img/diagrama-servo.png" alt="diagrama de ligação do servo motor">
+            </section>
+            <hr>
+            <section id="topico8">
+                <h2>Passo 8 - Conexão Bluetooth</h2>
+                <p>Chegou a hora de dar comandos ao robô. Você vai conectar o módulo Bluetooth HC-06 ao Arduino e
+                    preparar o Arduino para receber comandos do celular. É tipo domar um droide de combate!</p>
+                <h3>Diagrama elétrico</h3>
+                <img src="../img/diagrama-bluetooth.png" alt="diagrama de ligação do módulo bluetooth">
+            </section>
+            <hr>
+            <section id="topico9">
+                <h2>Passo 9 - Código Fonte</h2>
+                <p>Aqui está o grimório secreto do projeto: bibliotecas e código fonte comentado, explicando cada
+                    detalhe de como o Arduino controla o robô de combate Bluetooth.</p>
+            </section>
+            <hr>
+            <section id="topico10">
+                <h2>Passo 10 - Aplicativo de Controle</h2>
+                <p>O toque final: instalar e configurar o aplicativo para controlar o robô. Agora é só entrar na arena e
+                    começar a guerra dos balões. Que vença o melhor bot!</p>
             </section>
         </div>
     </div>
