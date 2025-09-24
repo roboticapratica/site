@@ -82,7 +82,7 @@
         <div class="content">
             <section id="topico0">
                 <h2>Introdução</h2>
-                <p>Olá, jovem Padawan! Seja muito bem-vindo(a) ao <strong>Tutorial de Arduino Básico</strong>, uma
+                <p>Olá, jovem Padawan! Seja muito bem-vindo(a) ao <strong>Tutorial de Arduino Básico para Makers</strong>, uma
                     jornada com 10 missões preparadas para iniciar você no universo da programação com Arduino.</p>
                 <br>
                 <img src="../img/arduino-uno-R3.png" alt="arduino uno r3">
@@ -565,7 +565,65 @@ if (condição1) {
             </section>
             <hr>
             <section id="topico4">
-                <h2>Missão 4 - Lado lógico da Força: AND, OR, NOT</h2>
+                <h2>Missão 4 - Sensor Jedi: Luz de Cortesia Analógica</h2>
+                <h3 id="sub">🛰️ Plano da missão</h3>
+                <p>Já fizemos o Arduino piscar LED e tomar decisões com base em botões e variáveis. Mas e quando
+                    precisamos lidar com algo que não é só ligado ou desligado? Chegou a hora de conhecer o mundo
+                    analógico. 😄</p>
+                <p>Nesta aula, você vai aprender a usar as entradas analógicas do Arduino, que servem para ler valores
+                    que variam continuamente. E o nosso guia nessa jornada será um sensor muito útil (e um pouco
+                    tímido): o LDR, que detecta a intensidade da luz ambiente.</p>
+                <p>Vamos montar uma simulação de uma luz de cortesia que se acende sozinha quando a escuridão toma conta
+                    do ambiente, como nos sistemas automatizados das naves da Nova República. É a tecnologia trabalhando
+                    a favor do conforto intergaláctico.
+                </p>
+                <p>Prepare o LDR, o resistor e o LED, porque nesta aula o Arduino vai aprender a sentir o ambiente e
+                    reagir como um verdadeiro droide sensorial a serviço da tripulação.</p>
+                <h3 id="sub">🔋 Componentes da missão</h3>
+                <h3>LDR</h3>
+                <img src="../img/ldr.png" alt="ldr">
+                <p>O LDR (Resistor Dependente de Luz) é um tipo de resistor cujo valor de resistência varia conforme a
+                    intensidade da luz que incide sobre ele. Quanto mais luz, menor a resistência, quanto menos luz,
+                    maior a resistência.</p>
+                <p>Esse componente é bastante versátil e pode ser encontrado em câmeras, fotômetros, alarmes, sistemas
+                    de iluminação pública, sensores de linha e diversos outros dispositivos que precisam reagir à
+                    luminosidade do ambiente.</p>
+                <h3 id="sub">🧠 Comando Central</h3>
+                <p>Sensores como o LDR enviam sinais que variam de acordo com o ambiente, e para ler esses sinais usamos
+                    as entradas analógicas do Arduino, de A0 a A5.</p>
+                <br>
+                <img src="../img/analogin.png" alt="entradas analógicas">
+                <p>Como essas portas funcionam apenas como entrada analógica, não é necessário definir no setup e para
+                    fazer a leitura usamos a função:</p>
+                <br>
+                <pre>
+analogRead()
+                </pre>
+                <p>Esta função retorna um valor entre 0 e 1023, que representa a tensão elétrica medida no pino. Esses
+                    valores vêm de um conversor chamado ADC, que transforma a tensão de 0 a 5 volts em números que o
+                    Arduino entende.</p>
+                <p>Como esse conversor tem uma resolução de 10 bits, ele divide a faixa de 0 a 5V em 1024 partes iguais.
+                    Isso significa que 0 corresponde a 0V e 1023 corresponde a 5V. Com base nesses valores, o Arduino
+                    pode tomar decisões de forma mais precisa e inteligente.</p>
+                <h3 id="sub">🔧 Oficina da Rebelião</h3>
+                <p>Objetivo: Desenvolver um projeto que irá identificar a luminosidade do ambiente e se estiver escuro
+                    irá acender o LED, senão (ambiente claro) o LED ficará apagado.</p>
+                <br>
+                <p>Lista de material:</p>
+                <br>
+                <img src="../img/listaLDR.png" alt="lista de material ldr">
+                <br><br>
+                <p>Diagrama elétrico:</p>
+                <br>
+                <img src="../img/luzCortesia.png" alt="diagrama ldr">
+                <br><br>
+                <p>Código fonte:</p>
+                <br>
+                <img src="../img/codigoLDR.png" alt="código fonte LDR">
+            </section>
+            <hr>
+            <section id="topico5">
+                <h2>Missão 5 - Lado lógico da Força: AND, OR, NOT</h2>
                 <h3 id="sub">🛰️ Plano da missão</h3>
                 <p>Depois de piscar LEDs, fazer contas e tomar decisões com if...else, chegou a hora de turbinar a
                     lógica do seu código 😄</p>
@@ -694,65 +752,7 @@ if (condição1 && condição2) {
                         seu circuito da destruição total. 🦸‍♂️💡</li>
                     <li>Teste bem cada circuito antes de passar para o próximo.</li>
                 </ul>
-            </section>
-            <hr>
-            <section id="topico5">
-                <h2>Missão 5 - Sensor Jedi: Luz de Cortesia Analógica</h2>
-                <h3 id="sub">🛰️ Plano da missão</h3>
-                <p>Já fizemos o Arduino piscar LED e tomar decisões com base em botões e variáveis. Mas e quando
-                    precisamos lidar com algo que não é só ligado ou desligado? Chegou a hora de conhecer o mundo
-                    analógico. 😄</p>
-                <p>Nesta aula, você vai aprender a usar as entradas analógicas do Arduino, que servem para ler valores
-                    que variam continuamente. E o nosso guia nessa jornada será um sensor muito útil (e um pouco
-                    tímido): o LDR, que detecta a intensidade da luz ambiente.</p>
-                <p>Vamos montar uma simulação de uma luz de cortesia que se acende sozinha quando a escuridão toma conta
-                    do ambiente, como nos sistemas automatizados das naves da Nova República. É a tecnologia trabalhando
-                    a favor do conforto intergaláctico.
-                </p>
-                <p>Prepare o LDR, o resistor e o LED, porque nesta aula o Arduino vai aprender a sentir o ambiente e
-                    reagir como um verdadeiro droide sensorial a serviço da tripulação.</p>
-                <h3 id="sub">🔋 Componentes da missão</h3>
-                <h3>LDR</h3>
-                <img src="../img/ldr.png" alt="ldr">
-                <p>O LDR (Resistor Dependente de Luz) é um tipo de resistor cujo valor de resistência varia conforme a
-                    intensidade da luz que incide sobre ele. Quanto mais luz, menor a resistência, quanto menos luz,
-                    maior a resistência.</p>
-                <p>Esse componente é bastante versátil e pode ser encontrado em câmeras, fotômetros, alarmes, sistemas
-                    de iluminação pública, sensores de linha e diversos outros dispositivos que precisam reagir à
-                    luminosidade do ambiente.</p>
-                <h3 id="sub">🧠 Comando Central</h3>
-                <p>Sensores como o LDR enviam sinais que variam de acordo com o ambiente, e para ler esses sinais usamos
-                    as entradas analógicas do Arduino, de A0 a A5.</p>
-                <br>
-                <img src="../img/analogin.png" alt="entradas analógicas">
-                <p>Como essas portas funcionam apenas como entrada analógica, não é necessário definir no setup e para
-                    fazer a leitura usamos a função:</p>
-                <br>
-                <pre>
-analogRead()
-                </pre>
-                <p>Esta função retorna um valor entre 0 e 1023, que representa a tensão elétrica medida no pino. Esses
-                    valores vêm de um conversor chamado ADC, que transforma a tensão de 0 a 5 volts em números que o
-                    Arduino entende.</p>
-                <p>Como esse conversor tem uma resolução de 10 bits, ele divide a faixa de 0 a 5V em 1024 partes iguais.
-                    Isso significa que 0 corresponde a 0V e 1023 corresponde a 5V. Com base nesses valores, o Arduino
-                    pode tomar decisões de forma mais precisa e inteligente.</p>
-                <h3 id="sub">🔧 Oficina da Rebelião</h3>
-                <p>Objetivo: Desenvolver um projeto que irá identificar a luminosidade do ambiente e se estiver escuro
-                    irá acender o LED, senão (ambiente claro) o LED ficará apagado.</p>
-                <br>
-                <p>Lista de material:</p>
-                <br>
-                <img src="../img/listaLDR.png" alt="lista de material ldr">
-                <br><br>
-                <p>Diagrama elétrico:</p>
-                <br>
-                <img src="../img/luzCortesia.png" alt="diagrama ldr">
-                <br><br>
-                <p>Código fonte:</p>
-                <br>
-                <img src="../img/codigoLDR.png" alt="código fonte LDR">
-            </section>
+            </section>     
             <hr>
             <section id="topico6">
                 <h2>Missão 6 – Laços em Ação: Sequência de LEDs</h2>
@@ -1079,6 +1079,8 @@ noTone(6);    //interromper o som no pino 6
                 <br>
                 <p>Que o código esteja com você! 💡🧠🔁</p>
             </section>
+            <hr>
+            <p>Nota: Os termos “Padawan”, “Jedi”, “Sabre de Luz”, “A Força” e outras expressões relacionadas ao universo Star Wars são utilizados neste conteúdo exclusivamente com propósito educacional e metafórico, como forma de tornar o aprendizado mais acessível e divertido. Este uso não implica qualquer vínculo, associação ou endosso por parte da franquia Star Wars, seus personagens, ou seus detentores legais de direitos autorais e marcas registradas.</p>
         </div>
     </div>
 
