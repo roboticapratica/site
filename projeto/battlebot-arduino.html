@@ -209,17 +209,26 @@
                     <li>Taxa de comunicação (baud rate): 9600 bps</li>
                 </ul>
                 <br>
-                <p>Essas configurações permitem a conexão inicial entre o celular e o módulo sem nenhuma alteração. No entanto, se você tiver dois robôs na arena, é importante modificar o nome e a senha de cada módulo para evitar confusão, assim, cada robô será identificado de forma única na conexão Bluetooth.</p>
-                <p>A boa notícia é que esse processo é simples e você já tem um guia completo no site explicando passo a passo como alterar o nome (SSID) e a senha (PIN) do módulo HC-06 usando comandos AT.</p>
+                <p>Essas configurações permitem a conexão inicial entre o celular e o módulo sem nenhuma alteração. No
+                    entanto, se você tiver dois robôs na arena, é importante modificar o nome e a senha de cada módulo
+                    para evitar confusão, assim, cada robô será identificado de forma única na conexão Bluetooth.</p>
+                <p>A boa notícia é que esse processo é simples e você já tem um guia completo no site explicando passo a
+                    passo como alterar o nome (SSID) e a senha (PIN) do módulo HC-06 usando comandos AT.</p>
                 <br>
                 <p>👉🏻 Acesse o tutorial completo em:</p>
-                <a href="../tutorial/arduino-hc-06.html" target="_blank">Configuração do módulo bluetooth HC-06</a> 
+                <a href="../tutorial/arduino-hc-06.html" target="_blank">Configuração do módulo bluetooth HC-06</a>
             </section>
             <hr>
             <section id="topico9">
                 <h2>Passo 9 - Código Fonte</h2>
                 <p>Aqui está o grimório secreto do projeto: bibliotecas e código fonte comentado, explicando cada
                     detalhe de como o Arduino controla o robô de combate Bluetooth.</p>
+                <h3>Lógica principal</h3>
+                <p>O BattleBot Arduino funciona recebendo comandos simples do celular, enviados via Bluetooth. Cada
+                    letra corresponde a uma ação: o "w" faz o robô andar para frente, o "s" coloca em marcha à ré, o "a"
+                    e o "d" fazem o robô girar sobre o próprio eixo para a esquerda ou direita, o "p" serve para parar,
+                    e os comandos "b" e "x" movimentam o servo como um braço extra para atacar. Em resumo, o celular
+                    envia as ordens, o Bluetooth entrega a mensagem e o Arduino transforma isso em movimento.</p>
                 <h3>Bibliotecas</h3>
                 <p>Este projeto usa duas bibliotecas: "SoftwareSerial.h" e "PWMServo.h".</p>
                 <br>
@@ -228,28 +237,31 @@
                     USB), e sem o SoftwareSerial não conseguiríamos usar o Bluetooth sem conflitos.</p>
                 <p>📌 Resumindo: ela abre uma nova “linha de comunicação” para o Arduino conversar com o módulo
                     Bluetooth.</p>
-                    <br>
-                    <p>A biblioteca "PWMServo.h" precisa ser instalada manualmente. Ela serve para controlar servomotores de forma mais estável quando usamos PWM ao mesmo tempo para os motores do robô. No projeto, é ela que permite movimentar o braço ou mecanismo do BattleBot.</p>
-                    <p>📌 Resumindo: ela dá ao robô o controle preciso de um braço ou garra sem atrapalhar os outros motores.</p>
-                    <br>
-                    <p>Para instalar esta biblioteca, pesquise pelo nome "PWMServo" (1) e clique no botão "INSTALL" (2)</p>
-                    <br>
-                    <img src="../img/bibliotecaPWMServo.png" alt="biblioteca PWMServo Arduino">
-                    <h3>Lógica principal</h3>
-                    <p>O BattleBot Bluetooth funciona recebendo comandos simples do celular, enviados via Bluetooth. Cada letra corresponde a uma ação: o "w" faz o robô andar para frente, o "s" coloca em marcha à ré, o "a" e o "d" fazem o robô girar sobre o próprio eixo para a esquerda ou direita, o "p" serve para parar, e os comandos "b" e "x" movimentam o servo como um braço extra para atacar. Em resumo, o celular envia as ordens, o Bluetooth entrega a mensagem e o Arduino transforma isso em movimento.</p>
-                    <h3>Código fonte</h3>
-                    <p>🔎 Hora de investigar o código! Baixe, leia cada função e descubra como cada comando vira movimento. Afinal, entender a lógica é o verdadeiro poder Jedi do programador. Depois disso, é só enviar para o Arduino e preparar o aplicativo para mandar os comandos via Bluetooth. ✨</p>
-                     <br>
+                <br>
+                <p>A biblioteca "PWMServo.h" precisa ser instalada manualmente. Ela serve para controlar servomotores de
+                    forma mais estável quando usamos PWM ao mesmo tempo para os motores do robô. No projeto, é ela que
+                    permite movimentar o braço ou mecanismo do BattleBot.</p>
+                <p>📌 Resumindo: ela dá ao robô o controle preciso de um braço ou garra sem atrapalhar os outros
+                    motores.</p>
+                <br>
+                <p>Para instalar esta biblioteca, pesquise pelo nome "PWMServo" (1) e clique no botão "INSTALL" (2)</p>
+                <br>
+                <img src="../img/bibliotecaPWMServo.png" alt="biblioteca PWMServo Arduino">
+                <h3>Código fonte</h3>
+                <p>🔎 Hora de investigar o código! Baixe, leia cada função e descubra como cada comando vira movimento.
+                    Afinal, entender a lógica é o verdadeiro poder Jedi do programador. Depois disso, é só enviar para o
+                    Arduino e preparar o aplicativo para mandar os comandos via Bluetooth. ✨</p>
+                <br>
                 <a href="../codigo-fonte/roboBT.ino">🔗 roboBT.ino</a>
-               <br>
+                <br>
             </section>
             <hr>
             <section id="topico10">
                 <h2>Passo 10 - Aplicativo de Controle</h2>
                 <p>O toque final: instalar e configurar o aplicativo para controlar o robô. Agora é só entrar na arena e
                     começar a guerra dos balões. Que vença o melhor bot!</p>
-                    <br>
-                    <p>🟦🟦🟦🟦⬜️⬜️ Em produção...</p>
+                <br>
+                <p>🟦🟦🟦🟦⬜️⬜️ Em produção...</p>
             </section>
         </div>
     </div>
