@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robô BUG</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description"
+        content="Robótica livre com uso de sucata - Um projeto divertido com base de CD-ROM e sensores de fim de curso que se move e desvia de obstáculos.">
+    <link rel="icon" href="../img/favicon.png">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="FlexMenu">
+            <div id="logo">
+                <img src="../img/logo.png" alt="logo robótica prática">
+            </div>
+            <!-- Menu -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268c;</label>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../sobre.html">Sobre</a></li>
+                    <li><a href="../projetos.html">Laboratório Maker</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner das páginas -->
+    <main class="BannerPaginas Flex">
+        <div class="Container">
+            <h1>Robô BUG</h1>
+        </div>
+    </main>
+
+    <!-- Conteúdo -->
+    <div class="Container main-content-wrapper">
+        <div class="trilha-container">
+            <nav class="trilha" aria-label="Trilha de tópicos">
+                <div class="linha"></div>
+                <div class="linha-progresso"></div>
+                <a href="#topico1">
+                    <div class="bullet"></div><span>Introdução</span>
+                </a>
+                <a href="#topico2">
+                    <div class="bullet"></div><span>Parte 1</span>
+                </a>
+                <a href="#topico3">
+                    <div class="bullet"></div><span>Parte 2</span>
+                </a>
+                <a href="#topico4">
+                    <div class="bullet"></div><span>Parte 3</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="content">
+            <section id="topico1">
+                <h2>Robô BUG</h2>
+                <p>Neste projeto, vou mostrar que o lixo eletrônico pode ganhar uma segunda vida cheia de movimento! O
+                    Robô BUG nasce sobre uma base de CD-ROM, com motores, fios e microswitches (chaves de fim de curso)
+                    reaproveitados de brinquedos, impressoras e outros eletrônicos aposentados. Sem programação, sem
+                    mistério, só criatividade e eletrônica raiz. Você vai aprender como um simples circuito faz o robô
+                    pensar que é um inseto e desviar de obstáculos como um mestre da gambiarra eletrônica. Prepare o
+                    ferro de solda e o bom humor, porque aqui o bug é o herói da história! 🪲⚡</p>
+                <br>
+                <img src="../img/roboBUG.png" alt="robô BUG">
+                <hr>
+                <section id="topico2">
+                    <h2>Parte 1 - Controle de motor DC com chaves fim de curso
+                    </h2>
+                    <p>Aqui está o cérebro do robô! Você vai descobrir como duas simples chaves fim de curso controlam
+                        os motores DC. Quando o BUG esbarra em um obstáculo, uma das chaves “avisa” o motor para mudar o
+                        sentido, e o robô faz uma manobra digna de um inseto esperto tentando escapar da vassoura!</p>
+                    <h3>Chave fim de curso</h3>
+                    <img src="../img/chave-fim-de-curso.png" alt="chave fim de curso">
+                    <p>A chave fim de curso é um botão mecânico muito sensível que consegue abrir ou fechar um circuito
+                        quando algo encosta nela.</p>
+                    <br>
+                    <p>Ela possui três pinos:</p>
+                    <ul>
+                        <li>COM (comum): pino principal, por onde a corrente entra ou sai.</li>
+                        <li>NO (normalmente aberto): conecta-se ao COM apenas quando a chave é pressionada.</li>
+                        <li>NC (normalmente fechado): está sempre conectado ao COM, mas se abre quando a chave é
+                            pressionada.</li>
+                    </ul>
+                    <h3>Controle do sentido de um motor DC</h3>
+                    <p>Um motor DC gira em um sentido ou em outro dependendo da direção da corrente elétrica. Se a
+                        corrente vai de um lado para o outro, ele gira para frente e se você inverte a corrente, ele
+                        gira
+                        para trás. É assim que podemos usar a chave fim de curso para controlar a direção do motor
+                        apenas mudando a polaridade da tensão.</p>
+                    <img src="../img/inverter-sentido-motorDC.png" alt="sentido motor DC">
+                    <h3>Lógica principal</h3>
+                    <p>No robô BUG, as “antenas” são hastes ligadas às suas respectivas chaves fim de curso, funcionando
+                        assim:</p>
+                    <br>
+                    <ol>
+                        <li>O robô anda sempre pra frente com os dois motores ligados às pilhas.</li>
+                        <li>Se a antena direita encosta em um obstáculo, ela pressiona a chave fim de curso
+                            correspondente. Essa chave inverte a corrente do motor esquerdo, fazendo-o girar para trás.
+                        </li>
+                        <li> Com o motor esquerdo indo pra trás e o direito pra frente, o robo gira para a esquerda,
+                            desviando do obstáculo.</li>
+                        <li>O mesmo acontece com a antena esquerda: ao bater, a chave inverte o motor direito, e o robo
+                            gira para a direita.</li>
+                        <li>Dessa forma, cada chave fim de curso age como um “detector mecânico” que decide qual motor
+                            inverter, permitindo que o robo desvie dos obstáculos automaticamente.</li>
+                    </ol>
+                    <h3>Diagrama elétrico</h3>
+                    <img src="../img/esquema-eletrico-robo-BUG.png" alt="esquema elétrico robô BUG">
+                </section>
+                <hr>
+                <section id="topico3">
+                    <h2>Parte 2 - Lista de materiais</h2>
+                    <p>Tudo que você precisa pode estar guardado no fundo da gaveta ou esperando uma segunda chance na
+                        caixa de sucata!</p>
+                    <br>
+                    <p>Separe:</p>                   
+                    <ul>
+                        <li>1 CD-ROM</li>
+                        <li>1 tubo vazio de desodorante roll-on</li>
+                        <li>2 motores DC 3 a 6 V</li>
+                        <li>2 chaves fim de curso (microswitches)</li>
+                        <li>suporte para uma bateria de íon de lítio (2 peças)</li>
+                        <li>2 Baterias íon de lítio de 3.7 V</li>
+                        <li>Chave HH 6 terminais e 2 posições</li>
+                        <li>Fios, parafusos, fita isolante, fita dupla face e cola quente</li>
+                    </ul>
+                    <br>
+                    <p>Observações:</p>
+                    <p>Os motores podem vir de carrinhos
+                        de brinquedo, as chaves fim de curso de impressoras e as baterias podem ser substituídas por
+                        pilhas AA ou AAA (neste caso, use dois suportes com duas pilhas cada). A chave HH também pode
+                        ser obtida de fontes antigas.</p>
+                    <br>
+                    <img src="../img/lista-material-robo-BUG.png" alt="materiais robô BUG">
+                </section>
+                <hr>
+                <section id="topico4">
+                    <h2>Parte 3 - Montagem</h2>
+                    <p>Agora é hora de colocar a mão na massa!</p>
+                    <ol>
+                        <li>Comece furando o CD e cortando o tubo de desodorante roll-on.</li>
+                        <li>Instale as chaves fim de curso na frente como se fossem as antenas do inseto.</li>
+                        <li>Fixe os motores e a parte cortada do tubo de desodorante.</li>
+                        <li>Fixe os suportes de bateria e a chave HH.</li>
+                    </ol>
+                    <br>
+                    <img src="../img/montagem-robo-BUG.png" alt="montagem-robo-BUG">
+                    <p>⚡Por fim, solde os fios conforme o diagrama elétrico do projeto.</p>
+                    <br>
+                    <p>Teste, ajuste e veja seu robô ganhar vida — ou melhor, movimento! Se tudo der certo, o Robô BUG
+                        vai sair andando por aí, desviando de obstáculos como quem está fugindo da faxina!</p>
+
+
+                </section>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="Container Flex">
+            <div id="social">
+                <a href="https://www.youtube.com/c/RoboticapraticaBr" target="_blank"><img src="../img/youtube.png"
+                        alt="youtube"></a>
+                <a href="https://www.linkedin.com/in/professorjosedeassis" target="_blank"><img
+                        src="../img/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.facebook.com/professorjosedeassis" target="_blank"><img src="../img/facebook.png"
+                        alt="facebook"></a>
+                <a href="https://www.instagram.com/prof.joseassis/" target="_blank"><img src="../img/instagram.png"
+                        alt="instagram"></a>
+                <a href="https://twitter.com/joseassis" target="_blank"><img src="../img/twitter.png" alt="twitter"></a>
+            </div>
+            <div id="copyright">
+                <p>©<span id="copyrightYear"></span> - Robótica Prática</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Topo do site -->
+    <a href="#logo" id="topo"><img src="../img/topo.png" alt="seta topo"></a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/trilha.js"></script>
+</body>
+</body>
+
+</html>
