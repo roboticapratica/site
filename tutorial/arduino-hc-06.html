@@ -23,9 +23,10 @@
                 <input type="checkbox" id="check">
                 <label for="check">&#x268c;</label>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../sobre.html">Sobre</a></li>
-                    <li><a href="../projetos.html">Laboratório Maker</a></li>
+                    <li><a href="../index.html"><span id="s1">&#9733;</span> Home</a></li>
+                    <li><a href="../robotica.html"><span id="s4">&#9733;</span> Robótica</a></li>
+                    <li><a href="../projetos.html"><span id="s3">&#9733;</span> Laboratório Maker</a></li>
+                    <li><a href="../sobre.html"><span id="s2">&#9733;</span> Sobre</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,8 +62,10 @@
 
         <div class="content">
             <section id="topico1">
-                <h2>Como configurar o módulo Bluetooth HC-06 no Arduino</h2>                
-                <p>Neste tutorial, você vai aprender passo a passo como configurar o módulo HC-06 para se comunicar com o Arduino usando Bluetooth. O HC-06 permite estabelecer uma comunicação sem fio com placas Arduino que não dispõem desse recurso. 
+                <h2>Como configurar o módulo Bluetooth HC-06 no Arduino</h2>
+                <p>Neste tutorial, você vai aprender passo a passo como configurar o módulo HC-06 para se comunicar com
+                    o Arduino usando Bluetooth. O HC-06 permite estabelecer uma comunicação sem fio com placas Arduino
+                    que não dispõem desse recurso.
                 </p>
                 <br>
                 <img src="../img/modulo-bluetooth-hc06.png" alt="módulo bluetooth HC-06">
@@ -71,7 +74,7 @@
                 <ul>
                     <li>SSID: HC-06</li>
                     <li>Senha: 1234</li>
-                    <li>Velocidade: 9600 bps</li>                    
+                    <li>Velocidade: 9600 bps</li>
                 </ul>
                 <br>
                 <p>Mas como bons makers, não vamos nos contentar com as configurações de fábrica. Para personalizar o
@@ -93,7 +96,8 @@
                 </ul>
                 <br>
                 <p>Ligue o módulo HC-06 ao Arduino conforme o diagrama abaixo. Os resistores são usados como divisor de
-                    tensão para reduzir os 5V do Arduino para 3,3V no pino RX do módulo (importante para não danificar o bluetooth).</p>
+                    tensão para reduzir os 5V do Arduino para 3,3V no pino RX do módulo (importante para não danificar o
+                    bluetooth).</p>
                 <br>
                 <img src="../img/diagrama-hc06.png" alt="diagrama elétrico HC-06">
             </section>
@@ -113,7 +117,7 @@
                     <li>Ative o Serial Monitor e configure para [No Line Ending] e [115200 baud].</li>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⚠️ Pode ser necessário reiniciar o Serial Monitor.</p>
                     <li>Digite o comando desejado na caixa de entrada.</li>
-                    <li>Se tudo estiver OK, o módulo irá responder e executar a ação desejada.</li>                    
+                    <li>Se tudo estiver OK, o módulo irá responder e executar a ação desejada.</li>
                 </ol>
                 <br>
                 <p>✅ Por fim, faça um teste pareando o módulo no celular! 📱</p>

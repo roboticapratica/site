@@ -72,6 +72,11 @@ h4 {
     justify-content: space-evenly;
 }
 
+#indice .FlexCard {
+    margin: 0 auto;
+    max-width: 780px;
+}
+
 .FlexMenu,
 .FlexMenu {
     justify-content: space-between;
@@ -459,7 +464,7 @@ nav ul li a {
 }
 
 /* projetos */
-#projetos h2 {
+#projetos h2, #robotica h2 {
     text-align: center;
     font-weight: 500;
     font-size: 1.4em;
@@ -675,9 +680,9 @@ h4 {
     }
 
     /* Projetos */
-    #projetos h2 {
+    #projetos h2, #robotica h2 {
         font-size: 1.5em;
-    }
+    }   
 }
 
 /* Tablet portrait <<<<<<<<<<<<<<<<<<<<< */
@@ -722,9 +727,9 @@ h4 {
     }
 
     /* Projetos */
-    #projetos h2 {
+    #projetos h2, #robotica h2 {
         font-size: 2em;
-    }
+    }    
 
     /*** Página Sobre ***/
     .FlexPage {
@@ -785,7 +790,7 @@ h4 {
     #index span#s1,
     #sobre span#s2,
     #projetos span#s3,
-    #apoio span#s4 {
+    #robotica span#s4 {
         display: inline;
         color: var(--vermelho);
     }
@@ -832,11 +837,10 @@ h4 {
     }
 
     /* Projetos */
-    #projetos h2 {
+    #projetos h2, #robotica h2 {
         font-size: 2.5em;
         font-weight: 500;
     }
-
 
     /*** Conteúdo ***/
     /* Container principal que envolve trilha e conteúdo */
