@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho mecatrônico</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="description"
+        content="Robótica livre com uso de sucata – Um carrinho mecatrônico feito com garrafa PET e materiais recicláveis que se movimenta ao receber luz, acionando uma hélice por meio de um sensor.">
+    <link rel="icon" href="../img/favicon.png">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="FlexMenu">
+            <div id="logo">
+                <img src="../img/logo.png" alt="logo robótica prática">
+            </div>
+            <!-- Menu -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268c;</label>
+                <ul>
+                    <li><a href="../index.html"><span id="s1">&#9733;</span> Home</a></li>
+                    <li><a href="../robotica.html"><span id="s4">&#9733;</span> Robótica</a></li>
+                    <li><a href="../projetos.html"><span id="s3">&#9733;</span> Laboratório Maker</a></li>
+                    <li><a href="../sobre.html"><span id="s2">&#9733;</span> Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner das páginas -->
+    <main class="BannerPaginas Flex">
+        <div class="Container">
+            <h1>Carrinho Mecatrônico</h1>
+        </div>
+    </main>
+
+    <!-- Conteúdo -->
+    <div class="Container main-content-wrapper">
+        <div class="trilha-container">
+            <nav class="trilha" aria-label="Trilha de tópicos">
+                <div class="linha"></div>
+                <div class="linha-progresso"></div>
+                <a href="#topico1">
+                    <div class="bullet"></div><span>Introdução</span>
+                </a>
+                <a href="#topico2">
+                    <div class="bullet"></div><span>Lógica</span>
+                </a>
+                <a href="#topico3">
+                    <div class="bullet"></div><span>Materiais</span>
+                </a>
+                <a href="#topico4">
+                    <div class="bullet"></div><span>Montagem</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="content">
+            <section id="topico1">
+                <h2>Carrinho Mecatrônico</h2>
+                <p>Neste projeto, vamos transformar uma simples garrafa PET em um carrinho mecatrônico cheio de
+                    personalidade!</p>
+                <p>O Carrinho Mecatrônico é construído com uma pequena garrafa PET, um motor com hélice e um sensor de
+                    luz feito com LDR e transistor TIP120. E o melhor: aqui não tem controle remoto, aplicativo ou
+                    Wi-Fi. Quem assume o volante é uma simples lanterna!</p>
+                <p>Ao iluminar o sensor, o circuito aciona o motor, a hélice começa a girar e o carrinho sai andando.
+                    Com a lanterna na mão, você vai aprendendo a “pilotar” o carrinho enquanto descobre, na prática,
+                    como a luz, a eletrônica e a mecânica podem trabalhar juntas..</p>
+                <p>Tudo será construído passo a passo, reaproveitando materiais e colocando a criatividade para
+                    funcionar. Então, prepare a garrafa PET, a lanterna, o ferro de solda e o bom humor, porque neste
+                    projeto a gambiarra é permitida — desde que funcione! 🚗🔦⚡</p>
+                <br>
+                <img src="../img/carrinho-mecatronico.jpg" alt="carrinho mecatrônico">
+                <br><br>
+                <!--
+                <p><a href="https://youtube.com/shorts/KyAKiTyG2ws?si=BWPU91z3_wt1ewrM" target="_blank">▶️ Ver no
+                        YouTube</a></p>
+                -->
+                <hr>
+                <section id="topico2">
+                    <h2>Sensor de luz que controla o motor</h2>
+                    <p>Aqui começa a mágica do Carrinho Mecatrônico! 🚗🔦</p>
+                    <p>Neste projeto, uma simples lanterna vai fazer o papel de controle remoto. Quando a luz é apontada
+                        para o sensor, o circuito percebe a iluminação, aciona o motor e a hélice começa a girar. Quando
+                        a luz deixa de iluminar o sensor, o motor para.</p>
+                    <p>Mas como um circuito consegue “perceber” a luz?</p>
+                    <p>A resposta está em um componente muito simples: o LDR.</p>
+                    <h3>LDR</h3>
+                    <img src="../img/ldr.png" alt="ldr">
+                    <p>O LDR (Light Dependent Resistor), também conhecido como resistor dependente de luz, é um
+                        componente cuja resistência elétrica varia de acordo com a quantidade de luz que recebe.</p>
+                    <br>
+                    <p>Podemos pensar no LDR como um “olho eletrônico” do nosso carrinho:</p>
+                    <p>🟡 Com muita luz: a resistência do LDR diminui.</p>
+                    <p>⚫️ Com pouca luz: a resistência do LDR aumenta.</p>
+                    <br>
+                    <p>Essa característica permite transformar uma mudança de iluminação em uma mudança no comportamento
+                        do circuito. E é exatamente isso que vamos aproveitar para controlar o motor.</p>
+                    <h3>TIP 120</h3>
+                    <img src="../img/tip120.png" alt="tip120">
+                    <p>O TIP120 é um transistor do tipo Darlington e será utilizado neste projeto para controlar a
+                        corrente que alimenta o motor. Para simplificar, podemos imaginar o TIP120 como um interruptor
+                        eletrônico.</p>
+                    <br>
+                    <p>Podemos resumir o funcionamento do Carrinho Mecatrônico em quatro passos:</p>
+                    <p>🔦 A lanterna ilumina o LDR.</p>
+                    <p>💡 A resistência do LDR diminui, permitindo o acionamento do TIP120.</p>
+                    <p>⚡ O TIP120 conduz corrente, alimentando o motor.</p>
+                    <p>🚗 O motor gira a hélice e o carrinho se movimenta.</p>
+                    <br>
+                    <p>O circuito também possui um resistor de 10 kΩ. Ele ajuda a definir o comportamento do circuito de
+                        controle do TIP120, evitando que a entrada do transistor fique sem uma referência definida
+                        quando a iluminação sobre o LDR diminui. Para o nosso projeto, podemos pensar nele como um
+                        componente que ajuda a manter o circuito sob controle quando a lanterna não está iluminando o
+                        sensor.</p>
+                    <p>Este circuito também possui um pequeno diodo que ajuda a proteger o TIP120 dos efeitos elétricos
+                        produzidos pelo motor.</p>
+                    <h3>Circuito elétrico</h3>
+                    <img src="../img/circuito-carrinho.png" alt="circuito elétrico carrinho mecatrônico">
+                </section>
+                <hr>
+                <section id="topico3">
+                    <h2>Lista de materiais</h2>
+                    <p>Tudo o que você precisa para construir o carrinho é uma garrafa PET, alguns componentes
+                        eletrônicos de baixo custo e materiais que podem ser reaproveitados de carrinhos de brinquedo,
+                        brinquedos quebrados e outras sucatas.</p>
+                    <p>A ideia aqui é simples: antes de comprar alguma coisa, dê uma olhada naquela caixa de "coisas que
+                        um dia podem ser úteis". Você provavelmente sabe qual é. 😄</p>
+
+                    <img src="../img/lista-material-carrinho.jpg" alt="materiais carrinho mecatrônico">
+                    <br>
+                    <p>Separe os seguintes materiais:</p>
+                    <br>
+                    <ul>
+                        <li>1 Garrafa PET</li>
+                        <li>2 conjuntos de rodas</li>
+                        <li>1 hélice de qualquer tipo que possa ser adaptada ao motor</li>
+                        <li>1 motor DC (3 a 6 V)</li>
+                        <li>1 LDR de 5mm</li>
+                        <li>1 Transistor TIP120 ou equivalente</li>
+                        <li>1 Diodo 1N4007 ou equivalente</li>
+                        <li>1 resistor de 10 kΩ — código de cores: marrom, preto, laranja e dourado</li>
+                        <li>1 Suporte para uma bateria de íon de lítio</li>
+                        <li>1 bateria íon de lítio de 3.7 V</li>
+                        <li>1 barra de conectores parafusados (4 terminais)</li>
+                        <li>Fios, parafusos, fita isolante e cola quente</li>
+                    </ul>
+                    <br>
+                    <p>Dica: não precisa comprar tudo novo. A graça do projeto está justamente em reaproveitar
+                        materiais. Um carrinho quebrado pode perder as rodas, mas ganhar uma segunda chance na vida. 😄
+                    </p>
+                    <br>
+                    <p>Observações:</p>
+                    <p>Neste projeto, utilizei uma garrafa PET pequena como estrutura do carrinho e uma bateria de íons
+                        de lítio de 3,7 V como fonte de alimentação.</p>
+                    <p>Mas você não precisa seguir a receita à risca. A garrafa PET pode ser substituída por papelão,
+                        plástico, madeira fina ou outro material leve e resistente que você tenha disponível.</p>
+                    <p>A bateria de íons de lítio também pode ser substituída por pilhas AA. Nesse caso, utilize um
+                        suporte para:</p>
+                    <ul>
+                        <li>3 pilhas AA = 4,5 V</li>
+                        <li>4 pilhas AA = 6 V</li>
+                    </ul>
+                    <br>
+                    <p>Como o motor utilizado trabalha entre 3 e 6 V, essas duas opções são adequadas. A versão com 6 V
+                        tende a proporcionar melhor desempenho.</p>
+                    <br>
+                    <p>⚠️ Atenção: baterias de íons de lítio devem ser utilizadas com cuidado. Não provoque
+                        curto-circuitos, não perfure a bateria e utilize um suporte adequado. Se houver qualquer sinal
+                        de aquecimento anormal, interrompa o uso.</p>
+
+                </section>
+                <hr>
+                <section id="topico4">
+                    <h2>Montagem</h2>
+                    <p>Agora é hora de colocar a mão na massa!</p>
+                    <h3>1. Comece montando o circuito elétrico</h3>
+                    <img src="../img/montagem-carrinho-mecatrônico.png" alt="montagem carrinho mecatrônico">
+                    <br>
+                    <p>Montagem na barra de conectores parafusados:</p>
+                    <br>
+                    <img src="../img/sensor-LDR.png" alt="sensor LDR">
+                    <p>⚠️ Atenção: Encaixe a hélice no eixo do motor e faça um teste do circuito. Ilumine o LDR e
+                        verifique se o motor é acionado corretamente. Observe também o sentido do vento produzido pela
+                        hélice. Ela deve empurrar o ar para trás, para que, quando o conjunto for instalado no carrinho,
+                        o vento possa impulsioná-lo para frente.</p>
+                    <p>Se o motor estiver girando no sentido errado, inverta os fios do motor para mudar o sentido de
+                        rotação da hélice e, consequentemente, o fluxo de ar. Faça todos esses testes antes de fixar o
+                        circuito e o motor no carrinho. Assim, quando chegar a hora da montagem, tudo já estará
+                        funcionando — e evitamos construir um carrinho que resolveu andar de ré! 😄</p>
+                    <h3>2. Monte as rodas e os eixos</h3>
+                    <p>Comece preparando a garrafa PET, que será a estrutura do carrinho. Fixe os dois conjuntos de
+                        rodas utilizando os eixos, deixando as rodas paralelas entre si e bem alinhadas. Antes de
+                        continuar, faça um teste simples: empurre o carrinho com a mão sobre uma superfície plana.</p>
+                    <p>Observe se:</p>
+                    <ul>
+                        <li>As quatro rodas encostam corretamente no chão</li>
+                        <li>O carrinho anda em linha reta</li>
+                        <li>As rodas giram livremente</li>
+                        <li>Os eixos não estão tortos</li>
+                        <li>Não existe excesso de atrito</li>
+                    </ul>
+                    <br>
+                    <p>Se o carrinho estiver “puxando” para um lado ou alguma roda estiver travando, aproveite este
+                        momento para corrigir o alinhamento. É muito mais fácil consertar agora do que depois que toda a
+                        eletrônica estiver instalada. 😄</p>
+                    <h3>3. Prepare a garrafa PET</h3>
+                    <p>Com as rodas alinhadas, faça os cortes e furos necessários na garrafa PET para acomodar os eixos,
+                        o motor, a hélice e os demais componentes.</p>
+                    <br>
+                    <p>⚠️ Atenção: Tenha muito cuidado ao cortar e furar a garrafa. O plástico pode produzir bordas
+                        afiadas e causar cortes.</p>
+                    <h3>4. Instale o circuito e a alimentação</h3>
+                    <p>Agora fixe o motor, o circuito, e o suporte das pilhas na estrutura do carrinho. Organize
+                        os fios de forma que não encostem nas rodas, nos eixos ou na hélice. A hélice também deve ficar
+                        livre para girar sem tocar na garrafa ou em outros componentes. Antes de seguir para o próximo
+                        passo, faça novamente um teste: ilumine o LDR e confirme se o motor liga e a hélice gira
+                        corretamente.</p>
+                    <h3>5. Prepare o sensor de luz</h3>
+                    <p>Para controlar melhor o carrinho com uma lanterna, coloque um pequeno tubo sobre o LDR. Ele
+                        funciona como uma espécie de “viseira”, deixando o sensor mais direcionado para a luz.</p>
+                    <p>Ligue a alimentação e faça o teste final utilizando uma lanterna. Aponte a luz para o LDR e
+                        observe: luz no sensor → motor ligado → hélice girando → carrinho em movimento! 🔦🚗💨</p>
+                    <p>Agora é só pilotar direcionando a lanterna para o sensor. Tente controlar o carrinho movimentando
+                        a luz devagar — afinal, você acabou de transformar uma simples lanterna em um controle remoto
+                        sem fio! 😄</p>
+                </section>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="Container Flex">
+            <div id="social">
+                <a href="https://www.youtube.com/c/RoboticapraticaBr" target="_blank"><img src="../img/youtube.png"
+                        alt="youtube"></a>
+                <a href="https://www.linkedin.com/in/professorjosedeassis" target="_blank"><img
+                        src="../img/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.facebook.com/professorjosedeassis" target="_blank"><img src="../img/facebook.png"
+                        alt="facebook"></a>
+                <a href="https://www.instagram.com/prof.joseassis/" target="_blank"><img src="../img/instagram.png"
+                        alt="instagram"></a>
+                <a href="https://twitter.com/joseassis" target="_blank"><img src="../img/twitter.png" alt="twitter"></a>
+            </div>
+            <div id="copyright">
+                <p>©<span id="copyrightYear"></span> - Robótica Prática</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Topo do site -->
+    <a href="#logo" id="topo"><img src="../img/topo.png" alt="seta topo"></a>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/trilha.js"></script>
+</body>
+</body>
+
+</html>
