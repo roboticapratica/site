@@ -77,10 +77,9 @@
                 <br>
                 <img src="../img/carrinho-mecatronico.jpg" alt="carrinho mecatrônico">
                 <br><br>
-                <!--
-                <p><a href="https://youtube.com/shorts/KyAKiTyG2ws?si=BWPU91z3_wt1ewrM" target="_blank">▶️ Ver no
-                        YouTube</a></p>
-                -->
+                <a href="https://youtube.com/shorts/AtaQXMchPVs?si=YJsaZPvkYGarFasA" target="_blank"><img
+                        src="../img/tvyoutube.png" alt="YouTube" title="Ver no YouTube"></a>
+
                 <hr>
                 <section id="topico2">
                     <h2>Sensor de luz que controla o motor</h2>
@@ -122,6 +121,10 @@
                         produzidos pelo motor.</p>
                     <h3>Circuito elétrico</h3>
                     <img src="../img/circuito-carrinho.png" alt="circuito elétrico carrinho mecatrônico">
+                    <img src="../img/montagem-carrinho-mecatrônico.png" alt="montagem carrinho mecatrônico">
+                    <br>
+                    <a href="https://www.tinkercad.com/things/7IZL6gWjd0L-carrinho-mecatronico" target="_blank"><img
+                            src="../img/tinkercad-simular.png" alt="Tinkercad" title="Simular no Thinkercad"></a>
                 </section>
                 <hr>
                 <section id="topico3">
@@ -131,7 +134,7 @@
                         brinquedos quebrados e outras sucatas.</p>
                     <p>A ideia aqui é simples: antes de comprar alguma coisa, dê uma olhada naquela caixa de "coisas que
                         um dia podem ser úteis". Você provavelmente sabe qual é. 😄</p>
-
+                    <br>
                     <img src="../img/lista-material-carrinho.jpg" alt="materiais carrinho mecatrônico">
                     <br>
                     <p>Separe os seguintes materiais:</p>
@@ -180,11 +183,65 @@
                     <h2>Montagem</h2>
                     <p>Agora é hora de colocar a mão na massa!</p>
                     <h3>1. Comece montando o circuito elétrico</h3>
-                    <img src="../img/montagem-carrinho-mecatrônico.png" alt="montagem carrinho mecatrônico">
-                    <br>
-                    <p>Montagem na barra de conectores parafusados:</p>
+                    <p>Não quer usar ferro de solda ou prefere uma montagem mais rápida e fácil de ajustar? A barra de
+                        conectores parafusados (tipo sindal) é a nossa grande aliada aqui! Ela funciona como um "lego"
+                        da eletrônica: você encaixa os terminais dos componentes, aperta o parafuso com uma chave de
+                        fenda e pronto. 🪛⚡</p>
                     <br>
                     <img src="../img/sensor-LDR.png" alt="sensor LDR">
+                    <p>Siga este passo a passo para montar o circuito nos 4 terminais da barra (vamos numerar da
+                        esquerda para a direita como 1, 2, 3 e 4):</p>
+                    <br>
+                    <ul>
+                        <li>
+                            Posicione o transistor TIP120: Olhando o transistor de frente (com a parte escrita virada
+                            para você), encaixe os três pinos dele diretamente nos terminais 2, 3 e 4 da barra. Aperte
+                            os parafusos com cuidado para prender bem.
+                            <ul>
+                                <li>Terminal 2: Base (B)</li>
+                                <li>Terminal 3: Coletor (C)</li>
+                                <li>Terminal 4: Emissor (E)</li>
+                            </ul>
+                            <br>
+                        </li>
+
+                        <li>
+                            Instale o resistor de 10 k&Omega;: Encaixe uma perninha do resistor no Terminal 2 (junto com
+                            a Base do TIP120) e a outra perninha no Terminal 4 (junto com o Emissor). Ele não tem
+                            polaridade, então qualquer lado serve.
+                            <br><br>
+                        </li>
+
+                        <li>
+                            Conecte o sensor LDR, encaixe uma ponta no Terminal 2 e a outra
+                            no Terminal 1 da barra. Assim como o resistor, o LDR também não tem lado certo.
+                            <br><br>
+                        </li>
+
+                        <li>
+                            Proteja o circuito com o diodo 1N4007: Atenção à faixa cinza no corpo do diodo! Encaixe o
+                            lado com a faixa no Terminal 1 e o lado sem a faixa no Terminal 3 (junto com o Coletor do
+                            transistor).
+                            <br><br>
+                        </li>
+
+                        <li>
+                            Ligue o motor DC: Conecte um fio do motor no Terminal 3 e o outro fio do motor no Terminal 1
+                            (exatamente nos mesmos terminais do diodo).
+                            <br><br>
+                        </li>
+
+                        <li>
+                            Conecte a bateria (alimentação): Por fim, ligue o fio positivo (+ / vermelho) do suporte da
+                            bateria no Terminal 1 e o fio negativo (- / preto) no Terminal 4.
+                        </li>
+                    </ul>
+                    <br>
+                    <p>💡 Dica de ouro: Antes de apertar os parafusos até o final, dê uma puxadinha de leve em cada fio
+                        e componente para ter certeza de que nenhum escapou ou ficou frouxo. Mau contato é o inimigo
+                        número 1 das gambiarras que funcionam! 😄</p>
+
+                        <br>
                     <p>⚠️ Atenção: Encaixe a hélice no eixo do motor e faça um teste do circuito. Ilumine o LDR e
                         verifique se o motor é acionado corretamente. Observe também o sentido do vento produzido pela
                         hélice. Ela deve empurrar o ar para trás, para que, quando o conjunto for instalado no carrinho,
