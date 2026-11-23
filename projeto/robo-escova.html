@@ -64,38 +64,37 @@
             <section id="topico1">
                 <h2>Robô Escova</h2>
                 <p>Prepare-se para dar uma missão especial àquela escova de limpeza esquecida na lavanderia! Neste projeto, vamos transformar uma simples escova em um robô vibratório capaz de se movimentar sozinho. E o melhor: sem programação, sem Arduino e sem precisar recorrer ao lado sombrio da tecnologia! 🪥⚡</p>
+                <p>A ideia é reaproveitar um motor DC com contrapeso, uma escova de limpeza e algumas pilhas para criar um pequeno robô que se movimenta por vibração. É um projeto de robótica livre que mostra como princípios simples da eletrônica e da mecânica podem gerar resultados surpreendentes.
+</p>
                 <br>
-                <img src="../img/roboBUG.png" alt="robô BUG">
+                <img src="../img/robo-escova.jpg" alt="robô escova">
                 <br><br>
-                <a href="https://youtube.com/shorts/KyAKiTyG2ws?si=BWPU91z3_wt1ewrM" target="_blank"><img src="../img/tvyoutube.png" alt="YouTube" title="Ver no YouTube"></a>
-                
+                <a href="#" target="_blank"><img
+                        src="../img/youtube_assistir.png" alt="YouTube" title="Ver no YouTube"></a>
                 <hr>
                 <section id="topico2">
-                    <h2>Controle de motores DC com chaves fim de curso
-                    </h2>
-                    <p>Aqui está o cérebro do robô! Você vai descobrir como duas simples chaves fim de curso controlam
-                        os motores DC. Quando o BUG esbarra em um obstáculo, uma das chaves “avisa” o motor para mudar o
-                        sentido, e o robô faz uma manobra digna de um inseto esperto tentando escapar da vassoura!</p>
-                    <h3>Chave fim de curso</h3>
-                    <img src="../img/chave-fim-de-curso.png" alt="chave fim de curso">
-                    <p>A chave fim de curso é um botão mecânico muito sensível que consegue abrir ou fechar um circuito
-                        quando algo encosta nela.</p>
-                    <br>
-                    <p>Ela possui três pinos:</p>
+                    <h2>Como funciona o Robô Escova?</h2>
+                    <p>O segredo deste projeto está na vibração! Diferentemente de um carrinho robótico convencional, que utiliza rodas para se movimentar, o Robô Escovão aproveita a vibração produzida por um motor elétrico para deslocar sua própria estrutura.</p>
+                    <h3>O motor com contrapeso</h3>
+                    <img src="../img/motor contrapeso.jpg" alt="motor dc com contrapeso">
+                    <p>O motor DC utilizado neste projeto possui um pequeno peso preso ao eixo, chamado de contrapeso excêntrico. Quando o motor começa a girar, esse peso provoca um desequilíbrio no eixo, produzindo vibrações que são transmitidas diretamente para o corpo da escova.</p>
+                    <p>É o mesmo princípio utilizado nos motores vibratórios de celulares e controles de videogame. Uma pequena peça girando fora do centro é suficiente para fazer toda a estrutura vibrar!</p>
+                    <h3>A lógica do movimento</h3>
+                    <p>O funcionamento do Robô Escova é simples:</p>                    
                     <ul>
-                        <li>COM (comum): pino principal, por onde a corrente entra ou sai.</li>
-                        <li>NO (normalmente aberto): conecta-se ao COM apenas quando a chave é pressionada.</li>
-                        <li>NC (normalmente fechado): está sempre conectado ao COM, mas se abre quando a chave é
-                            pressionada.</li>
+                        <li>As pilhas fornecem energia elétrica para o motor DC.</li>
+                        <li>Ao receber energia, o motor começa a girar.</li>
+                        <li>O contrapeso instalado no eixo provoca uma vibração contínua.</li>
+                        <li>Essa vibração é transmitida para o corpo da escova e suas cerdas.</li>
+                        <li>As cerdas entram em contato com a superfície, transformando parte da vibração em pequenos deslocamentos.</li>
+                        <li>Como resultado, o Robô Escovão começa a se movimentar de maneira aparentemente aleatória.</li>
                     </ul>
-                    <h3>Controle do sentido de um motor DC</h3>
-                    <p>Um motor DC gira em um sentido ou em outro dependendo da direção da corrente elétrica. Se a
-                        corrente vai de um lado para o outro, ele gira para frente e se você inverte a corrente, ele
-                        gira
-                        para trás. É assim que podemos usar a chave fim de curso para controlar a direção do motor
-                        apenas mudando a polaridade da tensão.</p>
-                    <img src="../img/inverter-sentido-motorDC.png" alt="sentido motor DC">
-                    <h3>Lógica principal</h3>
+                    <br>
+                    <p>Observação: O comportamento do robô depende de fatores como a posição do motor, a distribuição do peso e o contato das cerdas com a superfície.</p>
+                    <h3>Em produção...</h3>
+                   
+                    <!--
+                    
                     <p>No robô BUG, as “antenas” são hastes ligadas às suas respectivas chaves fim de curso, funcionando
                         assim:</p>
                     <br>
@@ -111,8 +110,14 @@
                         <li>Dessa forma, cada chave fim de curso age como um “detector mecânico” que decide qual motor
                             inverter, permitindo que o robo desvie dos obstáculos automaticamente.</li>
                     </ol>
+                    <h3>Circuito elétrico</h3>
+                    <img src="../img/robobug_circuito.png" alt="circuito elétrico robô bug">
+                    <img src="../img/robobug_tinkercad.png" alt="montagem robô bug">
+                    <br>
+                    <a href="https://www.tinkercad.com/things/1t7U4cDHytb-robo-bug" target="_blank"><img
+                            src="../img/tinkercad-simular.png" alt="Tinkercad" title="Simular no Thinkercad"></a>
                 </section>
-                <hr>
+                <hr>               
                 <section id="topico3">
                     <h2>Lista de materiais</h2>
                     <p>Tudo que você precisa pode estar guardado no fundo da gaveta ou esperando uma segunda chance na
@@ -140,28 +145,48 @@
                 </section>
                 <hr>
                 <section id="topico4">
-                    <h2>Montagem</h2>                    
-                    <p>Agora é hora de colocar a mão na massa!</p>
+                    <h2>Montagem</h2>
+                    <p>Agora é hora de colocar a mão na massa! Siga o passo a passo abaixo para dar forma ao seu inseto
+                        robótico:</p>
                     <br>
                     <ol>
-                        <li>Comece furando o CD e cortando o tubo de desodorante roll-on.</li>
-                        <li>Instale as chaves fim de curso na frente como se fossem as antenas do inseto.</li>
-                        <li>Fixe os motores e a parte cortada do tubo de desodorante.</li>
-                        <li>Fixe os suportes de bateria e a chave HH.</li>
+                        <li>Prepare o chassi e o apoio frontal: Faça furos no CD-ROM para passar os fios e prender os
+                            componentes. Em seguida, corte o tubo de desodorante roll-on para aproveitar apenas a parte
+                            da esfera (a bolinha). Ela vai funcionar como uma "roda boba" do robô para dar
+                            equilíbrio.</li>
+                        <li>Instale as antenas (sensores): Fixe as duas chaves fim de curso na parte frontal do CD,
+                            apontando para os lados em formato de "V", como se fossem as antenas de um inseto. Dica:
+                            Cole ou prenda pequenas hastes (arame rígido ou clipes abertos) nas alavancas das chaves
+                            para aumentar o alcance do toque.</li>
+                        <li>Fixe os motores e a esfera: Cole a parte cortada do desodorante na frente (por baixo do CD).
+                            Depois, fixe os dois motores DC na parte traseira (um de cada lado) usando cola quente ou
+                            fita dupla face reforçada. Certifique-se de que os eixos estejam alinhados para o robô não
+                            andar torto.</li>
+                        <li>Posicione a energia e o botão: Na parte de cima ou de baixo do CD, cole os suportes de
+                            bateria (buscando distribuir bem o peso) e fixe a chave HH em um local de fácil acesso para
+                            ligar e desligar o robô.</li>
+                        <li>Faça as ligações elétricas: Com tudo no lugar, solde os fios seguindo o diagrama elétrico de
+                            montagem. Tome cuidado para não encostar o ferro de solda nas partes plásticas do CD ou dos
+                            suportes.</li>
                     </ol>
+                    <br><a href="https://youtu.be/MJF3RquRH34?si=JLc9o8oZuM8N2-14" target="_blank">&nbsp;▶️ Como usar
+                        um ferro
+                        de solda</a></p>
                     <br>
                     <img src="../img/montagem-robo-BUG.png" alt="montagem-robo-BUG">
-                    <p>5. Por fim, solde os fios conforme o diagrama elétrico do projeto. <a
-                            href="https://youtu.be/MJF3RquRH34?si=JLc9o8oZuM8N2-14" target="_blank">&nbsp;▶️ Como usar
-                            um ferro
-                            de solda</a></p>
-                    <h3>Diagrama elétrico</h3>
+
+                    <h3>5. Diagrama elétrico (montagem)</h3>
                     <img src="../img/esquema-eletrico-robo-BUG.png" alt="esquema elétrico robô BUG">
 
                     <br><br>
-                    <p>⚡Teste, ajuste e veja seu robô ganhar vida — ou melhor, movimento! Se tudo der certo, o Robô BUG
-                        vai sair andando por aí, desviando de obstáculos como quem está fugindo da faxina!</p>
+                    <p>⚡ Hora do teste! Ligue a chave, coloque o robô no chão e veja sua criação ganhar vida! Se ele
+                        girar em círculos em vez de andar para frente, basta inverter os fios de um dos motores. Se tudo
+                        der certo, o Robô BUG vai sair explorando a casa e desviando de obstáculos como quem está
+                        fugindo da faxina!</p>
+                         
                 </section>
+            </section>
+        -->
         </div>
     </div>
 
